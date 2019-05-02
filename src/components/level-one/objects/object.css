@@ -2,7 +2,7 @@
     object-fit: cover;
     width: 100%;
     max-width: 250px;
-    max-height: 250px;
+    max-height: 110px;
     cursor: pointer;
 }
 
@@ -29,5 +29,11 @@
 @media screen and (min-width: 1200px) {
     .level-one-objects-grid .row .col.s4 {
         width: 26%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .level-one-objects-grid img {
+        max-height: 250px;
     }
 }

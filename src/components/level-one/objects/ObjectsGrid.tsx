@@ -9,6 +9,7 @@ interface Props {
     objects: string[],
     selected: string[],
     setSelected: Dispatch<SetStateAction<string[]>>,
+    setCurrentPage: Dispatch<SetStateAction<string>>
 }
 
 
@@ -19,7 +20,7 @@ const ObjectsGrid = (props: Props) => {
 
     useEffect(() => {
         if (submitted) {
-            if (props.selected.every(object => exhibitedObjects.includes(object))) {
+            if (props.selected.every(object => exhibitedObjects.some((obj) => obj.src == object))) {
                 setCanContinue(true);
             } else {
                 setCanContinue(false);
@@ -48,14 +49,14 @@ const ObjectsGrid = (props: Props) => {
         <h6> Select the objects you think you will see in the exhibit and click on submit to see if you are right</h6>
         <Row className='image-grid'>
             {props.objects.slice(0, 3).map(object => <Col s={4} key={object}>
-                <img src={require(`./img/${object}`)} alt={object}
+                <img src={require(`../../../assets/img/${object}`)} alt={object}
                      className={props.selected.includes(object) ? 'selected' : ''}
                      onClick={() => handleClick(object)}/>
             </Col>)}
         </Row>
         <Row>
             {props.objects.slice(3, 6).map(object => <Col s={4} key={object}>
-                <img src={require(`./img/${object}`)} className={props.selected.includes(object) ? 'selected' : ''}
+                <img src={require(`../../../assets/img/${object}`)} className={props.selected.includes(object) ? 'selected' : ''}
                      alt={object} onClick={() => handleClick(object)}/>
             </Col>)}
         </Row>
@@ -75,7 +76,7 @@ const ObjectsGrid = (props: Props) => {
                 <h6>Congratulations! You identified the three objects correctly!</h6>
             </Row>
             <Row>
-                <Button>Continue</Button>
+                <Button onClick={() => props.setCurrentPage('level-two')}>Continue</Button>
             </Row>
         </React.Fragment>}
         {submitted && props.selected.length === 3 && !canContinue && <Row>

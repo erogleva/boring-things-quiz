@@ -7,6 +7,9 @@ import HelpPage from "./components/HelpPage";
 // @ts-ignore
 import { Container, Breadcrumb } from 'react-materialize';
 import {exhibitedObjects, nonExhibitedObjects} from "./components/level-one/objects/data";
+import TextsQuiz from "./components/level-two/TextsQuiz";
+import {ExhibitionObject} from "./interfaces/ExhibitionObject";
+import { shuffleArray, getRandomObjects } from "./utils/arrayUtils";
 
 const App = () => {
 
@@ -15,45 +18,28 @@ const App = () => {
     const [selected, setSelected] = useState<string[]>([]);
 
     // Global state
+    const [correctItems, setCorrectItems] = useState<ExhibitionObject[]>([]);
     const [currentPage, setCurrentPage] = useState<string>('level-one');
-    const [component, setComponent] = useState<JSX.Element>(<ObjectsGrid objects={objects} selected={selected} setSelected={setSelected}/>);
+    const [component, setComponent] = useState<JSX.Element>(<ObjectsGrid objects={objects} selected={selected} setSelected={setSelected} setCurrentPage={setCurrentPage}/>);
     const [showHelp, setShowHelp] = useState<boolean>(false);
 
-    // utility function that returns a random number within a given range
-    const getRandomInt = (min: number, max: number): number => {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
 
 
-    const shuffleArray = (array: string[]) => {
-        const shuffled = [...array];
+    useEffect(() => {
+        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects).map(obj => obj.src);
+        const randomNonExhibitedObjects: string[] = nonExhibitedObjects.slice(0, 3);
 
-        for (let i = shuffled.length - 1; i > 0; i -= 1) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
+        let correctItems: ExhibitionObject[] = [];
 
-        return shuffled;
-    };
+        for (let objectSrc of randomExhibitedObjects) {
+            const object = exhibitedObjects.find(object => object.src === objectSrc);
 
-    // get three random objects from the lists
-    const getRandomObjects = (objects: string[]): string[] => {
-        const randomObjects: string[] = [];
-
-        while (randomObjects.length < 3) {
-            const number = getRandomInt(0, objects.length - 1);
-            if (!randomObjects.includes(objects[number])) {
-                randomObjects.push(objects[number]);
+            if (object) {
+                correctItems.push(object);
             }
         }
 
-        return randomObjects
-    };
-
-    useEffect(() => {
-        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects);
-        const randomNonExhibitedObjects: string[] = getRandomObjects(nonExhibitedObjects);
-
+        setCorrectItems((prevState: ExhibitionObject[]) => ([...prevState, ...correctItems]));
         const objectsSet = shuffleArray([...randomExhibitedObjects, ...randomNonExhibitedObjects]);
         setObjects(prevState => [...prevState, ...objectsSet])
     }, []);
@@ -61,8 +47,10 @@ const App = () => {
     useEffect(() => {
         switch (currentPage){
             case 'level-one':
-                setComponent(<ObjectsGrid selected={selected} setSelected={setSelected} objects={objects}/>);
+                setComponent(<ObjectsGrid selected={selected} setSelected={setSelected} objects={objects} setCurrentPage={setCurrentPage}/>);
                 break;
+            case 'level-two':
+                setComponent(<TextsQuiz correctItems={correctItems}/>)
         }
     });
 
@@ -71,9 +59,9 @@ const App = () => {
             <nav className="row teal">
                 <div className="nav-wrapper">
                     <div className="col s12">
-                        <a className={currentPage === 'level-one' ? 'active breadcrumb' : 'breadcrumb'}> Level One </a>
-                        <a className={currentPage === 'level-two' ? 'active breadcrumb' : 'breadcrumb'}> Level Two </a>
-                        <a className={currentPage === 'level-three' ? 'active breadcrumb' : 'breadcrumb'}> Level Three </a>
+                        <a className={currentPage === 'level-one' ? 'active breadcrumb' : 'breadcrumb'}> Level 1 </a>
+                        <a className={currentPage === 'level-two' ? 'active breadcrumb' : 'breadcrumb'}> Level 2 </a>
+                        <a className={currentPage === 'level-three' ? 'active breadcrumb' : 'breadcrumb'}> Level 3 </a>
                     </div>
                 </div>
             </nav>

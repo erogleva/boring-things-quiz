@@ -2,14 +2,19 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min';
-import ObjectsGrid from "./components/level-one/objects/ObjectsGrid";
+import ObjectsGrid from "./components/level-one/ObjectsGrid";
 import HelpPage from "./components/HelpPage";
 // @ts-ignore
 import { Container, Breadcrumb } from 'react-materialize';
-import {exhibitedObjects, nonExhibitedObjects} from "./components/level-one/objects/data";
+import {exhibitedObjects, nonExhibitedObjects} from "./data";
 import TextsQuiz from "./components/level-two/TextsQuiz";
 import {ExhibitionObject} from "./interfaces/ExhibitionObject";
 import { shuffleArray, getRandomObjects } from "./utils/arrayUtils";
+import CalculatorWrapper from "./components/level-three/CalculatorWrapper";
+
+// @ts-ignore
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from './components/level-three/sketch';
 
 const App = () => {
 
@@ -50,7 +55,10 @@ const App = () => {
                 setComponent(<ObjectsGrid selected={selected} setSelected={setSelected} objects={objects} setCurrentPage={setCurrentPage}/>);
                 break;
             case 'level-two':
-                setComponent(<TextsQuiz correctItems={correctItems}/>)
+                setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage}/>)
+                break;
+            case 'level-three':
+                setComponent(<CalculatorWrapper/>)
         }
     });
 
@@ -66,9 +74,7 @@ const App = () => {
                 </div>
             </nav>
             <a onClick={() => setShowHelp(true)}>Help</a>
-            {!showHelp && <Container>
-                {component}
-                </Container>}
+            {!showHelp && component}
             {showHelp && <HelpPage setShowHelp={setShowHelp}/>}
         </div>
     );

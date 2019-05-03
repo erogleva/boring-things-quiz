@@ -1,14 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {Dispatch, SetStateAction, useEffect, useState} from 'react';
 import {DragDropContext, Draggable, Droppable, DropResult} from 'react-beautiful-dnd';
 import {ExhibitionObject} from "../../interfaces/ExhibitionObject";
 //@ts-ignore
 import {Col, Collection, CollectionItem, Icon, Row} from 'react-materialize';
 import './TextQuiz.css';
 import {getRandomObjects, shuffleArray} from "../../utils/arrayUtils";
-import {exhibitedObjects} from "../level-one/objects/data";
+import {exhibitedObjects} from "../../data";
+import Continue from '../common/Continue';
 
 interface Props {
     correctItems: ExhibitionObject[];
+    setCurrentPage: Dispatch<SetStateAction<string>>
 }
 
 const TextsQuiz = (props: Props) => {
@@ -18,20 +20,8 @@ const TextsQuiz = (props: Props) => {
             return;
         }
 
-        console.log(result);
-
-        const newIdx: number = +result.destination.droppableId;
-        const srcIdx: number = +result.source.droppableId;
-
-        const item = descriptions[srcIdx];
-        console.log(item);
-
-        const destItem = descriptions[newIdx];
-        console.log(destItem);
-
-        if (newIdx === items.findIndex((object) => object.id === destItem.id)) {
-            return
-        }
+        const newIdx: number = +result.destination.index;
+        const srcIdx: number = +result.source.index;
 
         const descriptionsReordered = [...descriptions];
 
@@ -56,15 +46,14 @@ const TextsQuiz = (props: Props) => {
         <DragDropContext onDragEnd={onDragEnd}>
             <div className='row'>
                 <Col s={6} className='descriptions'>
-                    {descriptions.map((item, index) => (
-                        <Droppable droppableId={index.toString()} isDropDisabled={index === items.findIndex((object) => object.id === item.id)}>
+                        <Droppable droppableId='description-droppable'>
                             {(provided) => (
                                 <div className='descriptions-collection'
                                      ref={provided.innerRef}
                                      {...provided.droppableProps}
                                 >
-                                    <Draggable key={item.id} draggableId={item.id} index={0}
-                                               isDragDisabled={index === items.findIndex((object) => object.id === item.id)}>
+                                    {descriptions.map((item, index) => (
+                                    <Draggable key={item.id} draggableId={item.id} index={index}>
                                         {(provided, snapshot) => (
                                             <div
                                                 className={index === items.findIndex((object) => object.id === item.id) ? 'description correct' : 'description'}
@@ -81,12 +70,13 @@ const TextsQuiz = (props: Props) => {
                                             </div>
                                         )}
                                     </Draggable>
+                                    ))}
 
                                     {provided.placeholder}
                                 </div>
                             )}
                         </Droppable>
-                    ))}
+
                 </Col>
                 <Col s={6} className='images'>
                     <div>
@@ -99,6 +89,9 @@ const TextsQuiz = (props: Props) => {
                 </Col>
             </div>
         </DragDropContext>
+        {descriptions.every((description, index) => items[index].id === description.id) &&
+        <Continue text='Congratulations! All descriptions are now matched correctly!'
+                  handleClick={() => props.setCurrentPage('level-three')}/>}
     </div>;
 };
 

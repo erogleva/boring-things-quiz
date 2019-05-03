@@ -1,15 +1,18 @@
 import {ExhibitionObject} from "../interfaces/ExhibitionObject";
 
+// shuffle the elements of a given array
 export function shuffleArray<Type> (array: Array<Type>): Array<Type> {
     const shuffled = [...array];
 
     for (let i = shuffled.length - 1; i > 0; i -= 1) {
         let j = i;
 
+        // ensure that the element is not in the same position as in the source array
         while (j == i){
             j = Math.floor(Math.random() * (i + 1));
         }
 
+        // swap the positions
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
 
@@ -23,7 +26,7 @@ const getRandomInt = (min: number, max: number): number => {
 
 
 // get three random objects from the lists
-export const getRandomObjects = (objects: ExhibitionObject[], initialList: ExhibitionObject[] = []): ExhibitionObject[] => {
+export function getRandomObjects<Type> (objects: ExhibitionObject[], initialList: ExhibitionObject[] = []): ExhibitionObject[] {
     let randomObjects: ExhibitionObject[];
 
     if (!initialList) {
@@ -43,4 +46,4 @@ export const getRandomObjects = (objects: ExhibitionObject[], initialList: Exhib
     }
 
     return additionalObjects
-};
+}

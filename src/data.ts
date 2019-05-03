@@ -1,4 +1,4 @@
-import {ExhibitionObject} from "../../../interfaces/ExhibitionObject";
+import {ExhibitionObject} from "./interfaces/ExhibitionObject";
 
 export const exhibitedObjects: ExhibitionObject[] = [{
     id: '00581',

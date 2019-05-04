@@ -17,7 +17,7 @@
     "react-dom": "^16.8.6",
     "react-materialize": "^3.0.5",
     "react-p5-wrapper": "0.0.4",
-    "react-scripts": "2.1.8",
+    "react-scripts": "^2.1.8",
     "typescript": "3.4.3"
   },
   "scripts": {

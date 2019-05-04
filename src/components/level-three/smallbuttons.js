@@ -1,5 +1,5 @@
 export default class infoButton {
-    constructor (c,e, p){
+    constructor (c,e,rf, p){
         this.xc = 0;
         this.yc = 0;
         this.w = 0;
@@ -7,14 +7,15 @@ export default class infoButton {
         this.e = e;
         this.color = c;
         this.textString = '';
+        this.resizeFactor = rf;
         this.p = p;
     }
 
     update(x,y,w,h,e){
         this.xc = x;
         this.yc = y;
-        this.w = w;
-        this.h = h;
+        this.w = w/this.resizeFactor;
+        this.h = h/this.resizeFactor;
     }
 
     show(){
@@ -27,7 +28,8 @@ export default class infoButton {
     showText() {
         this.p.fill('black');
         this.p.textFont('Courier');
-        this.p.textSize(28);
+        let tSize = parseInt(28/this.resizeFactor)
+        this.p.textSize(tSize);
         this.p.textAlign(this.p.CENTER, this.p.CENTER)
         this.p.text(this.p.str(this.textString), this.xc, this.yc);
         

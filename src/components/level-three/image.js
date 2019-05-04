@@ -1,9 +1,9 @@
 export default class picture {
-    constructor(x,y,img, p){
+    constructor(x,y,img,rf,p){
         this.img = img;
         this.xc = x;
         this.yc = y;
-
+        this.resizeFactor = rf;
         this.p = p;
     }
     show(){
@@ -29,10 +29,9 @@ export default class picture {
         return this.yc
     }
     getButtonY(){
-        //return parseInt(this.getHeight()*0.685) + this.getY()
         return parseInt(this.getHeight()*0.65)+2 + this.getY()
     }
     getButtonX(n){
-        return parseInt(this.getWidth()*0.29) + this.getX() + 68*n
+        return parseInt(this.getWidth()*0.29) + this.getX() + (parseInt((68/this.resizeFactor)*n));
     }
 }

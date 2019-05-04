@@ -1,9 +1,10 @@
 export default class display {
-    constructor (w,h,e,p){
+    constructor (w,h,e,rf,p){
         
-        this.w = w;
-        this.h = h;
-        this.e = e;
+        this.w = parseInt(w/rf);
+        this.h = parseInt(h/rf);
+        this.e = parseInt(e/rf);
+        this.resizeFactor = rf
         this.r = p.random(255);
         this.g = p.random(255);
         this.b = p.random(255);
@@ -26,9 +27,10 @@ export default class display {
     }
 
     text(t) {
+        let tSize = parseInt(25/this.resizeFactor);
         this.p.fill('black');
         this.p.textFont('Verdana');
-        this.p.textSize(25);
+        this.p.textSize(tSize);
         this.p.textAlign(this.p.CENTER, this.p.CENTER);
         this.p.text(this.p.str(t), this.x, this.y);
     }

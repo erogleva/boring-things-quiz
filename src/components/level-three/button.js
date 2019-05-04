@@ -1,7 +1,6 @@
 export default class button {
-    constructor (d,img,sound,connectedIndex,base, p){
+    constructor (img,sound,connectedIndex,base, p){
         
-        this.d = d;
         this.r = p.random(255);
         this.g = p.random(255);
         this.b = p.random(255);
@@ -50,7 +49,7 @@ export default class button {
     }
 
     isPressed() {
-	    if (this.p.dist(this.p.mouseX, this.p.mouseY, this.x, this.y) < (this.d/2)) {
+	    if (this.p.dist(this.p.mouseX, this.p.mouseY, this.x, this.y) < (this.img.height/2)) {
             this.playSound()
             return true;
         }

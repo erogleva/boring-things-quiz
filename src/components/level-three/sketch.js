@@ -52,7 +52,7 @@ export default function sketch(p) {
     console.log(p);
 
     p.preload = () => {
-        buttonPic = p.loadImage(require('./data/knopf3.gif'));
+        buttonPic = p.loadImage(require('./data/Knopf3.gif'));
         machinePic = p.loadImage(require('./data/Rechenmaschine_neu6.gif'));
         p.soundFormats('mp3');
         buttonSound = p.loadSound(require('./data/sound.mp3'));

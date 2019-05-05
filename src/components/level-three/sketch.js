@@ -11,7 +11,7 @@ export default function sketch(p) {
     let imgPosX;
     let imgPosY;
     const numLevelMax = 1000;
-    var numLevel = 1;
+    var numLevel = 10;
     var resizeFactor; 
     const originalPictureSize = 800;
     var buttonPic;
@@ -24,7 +24,7 @@ export default function sketch(p) {
     var display1, display2, display3, display4, display5, display6;
     var ibutton1, ibutton2, ibutton3, ibutton4;
     var score;
-    const maxScore = 4;
+    const maxScore = 3;
 
     var context = new AudioContext();
     //let backgroundTint = "#009688"; //Original
@@ -240,7 +240,7 @@ export default function sketch(p) {
             }
             else {
                 // False answer
-                score.setFalseSymbol();
+                //score.setFalseSymbol();
                 playSound(falseSound);
             }
         }

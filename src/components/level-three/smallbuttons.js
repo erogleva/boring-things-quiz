@@ -18,10 +18,18 @@ export default class infoButton {
         this.h = h/this.resizeFactor;
     }
 
-    show(){
+    show(tBlinkFlag=false){
         this.p.fill(this.color);
+        if (!tBlinkFlag){
+            this.p.noStroke()
+        }
+        else{
+            this.p.stroke(0)
+            this.p.strokeWeight(parseInt(3/this.resizeFactor))
+        }
         this.p.rectMode(this.p.CENTER);
         this.p.rect(this.xc, this.yc, this.w,this.h, this.e);
+        this.p.noStroke()
         this.showText();
     }
 

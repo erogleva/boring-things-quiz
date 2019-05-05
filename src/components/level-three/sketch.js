@@ -3,6 +3,7 @@ import numberObj from './numbers';
 import button from './button';
 import display from './display';
 import infoButton from './smallbuttons';
+import scoreObj from './score';
 
 
 export default function sketch(p) {
@@ -11,42 +12,40 @@ export default function sketch(p) {
     let imgPosY;
     const numLevelMax = 1000;
     var numLevel = 1;
-    var points = 0;
     var resizeFactor; 
     const originalPictureSize = 800;
     var buttonPic;
     var machinePic;
-    var buttonSound;
+    var buttonSound, correctSound, falseSound;
 
     var calculator;
     var number;
     var button1, button2, button3, button4, button5, button6;
     var display1, display2, display3, display4, display5, display6;
     var ibutton1, ibutton2, ibutton3, ibutton4;
+    var score;
+    const maxScore = 4;
 
-    //?? map function to map wheel and number together ? :)
-
+    var context = new AudioContext();
+    //let backgroundTint = "#009688"; //Original
+    let backgroundTint = "#7fcac3";
+    var blinkFlag = false;
     var buttonArray = [];
     var displayArray = [];
-
-    //object oriented programming, one for every circle :)
-
-    var ranColor = {
-        r: 0,
-        g: 0,
-        b: 0
-    };
-
-    function LoadRanCol() {
-        ranColor.r = p.random(255);
-        ranColor.g = p.random(255);
-        ranColor.b = p.random(255);
-    }
 
     function interateNumbers() {
         number.generateRandomNumbers(numLevel * 10, 1);
         numLevel = numLevel * 10;
         if (numLevel >= numLevelMax) numLevel = numLevelMax;
+    }
+
+    function SymbolTimerFunc() {
+        if(number.isActive()){
+            blinkFlag = !blinkFlag;
+        }
+        else{
+            blinkFlag = false;
+        }
     }
 
     console.log(p);
@@ -56,14 +55,17 @@ export default function sketch(p) {
         machinePic = p.loadImage(require('./data/Rechenmaschine_neu6.gif'));
         p.soundFormats('mp3');
         buttonSound = p.loadSound(require('./data/sound.mp3'));
+        correctSound = p.loadSound(require('./data/CorrectSound.mp3'));
+        falseSound =p.loadSound(require('./data/FalseSound.mp3'));
     };
 
     p.setup = () => {
         p.createCanvas(window.innerWidth, window.innerHeight);
-        imgPosX = p.windowWidth / 2;
-        imgPosY = p.windowHeight / 2;
-        // pick colors randomly
-        LoadRanCol();
+        imgPosX = window.innerWidth / 2;
+        imgPosY = window.innerHeight / 2;
+
+        // Set Timer intervall
+        setInterval(SymbolTimerFunc, 500);
 
         // Calculate the reset factor based on the original size of the calculator
         resizeFactor = originalPictureSize/Math.min(window.innerWidth,window.innerHeight);
@@ -110,11 +112,13 @@ export default function sketch(p) {
         ibutton3 = new infoButton(250, 20,resizeFactor, p);
         // done button
         ibutton4 = new infoButton(250, 20,resizeFactor, p);
+
+        score = new scoreObj(5,maxScore);
     };
 
     p.draw = () => {
         // Draws the Background
-        p.background(ranColor.r, ranColor.g, ranColor.b);
+        p.background(backgroundTint);
 
         // Show the Machine
         calculator.show();
@@ -130,20 +134,31 @@ export default function sketch(p) {
         });
 
         ibutton1.update(imgPosX, calculator.getY() + 0.168 * calculator.getHeight(), 300, 45);
-        ibutton1.setText(p.str(number.getNumber(0)) + '+' + p.str(number.getNumber(1)) + ' =  ? ');
+        ibutton1.setText(p.str(number.getNumber(0)) + '+' + p.str(number.getNumber(1)) + ' = '+p.str(score.getSymbol()));
         ibutton1.show();
 
         ibutton2.update(imgPosX - (0.25) * calculator.getWidth(), calculator.getY() + 0.168 * calculator.getHeight(), 45, 45);
-        ibutton2.setText(p.str(points));
+        ibutton2.setText(p.str(score.getPoints()));
         ibutton2.show();
 
         ibutton3.update(imgPosX - (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
-        ibutton3.setText('Reset');
-        ibutton3.show();
+        if (number.isActive()){
+            ibutton3.setText('Next');
+        }
+        else{
+            ibutton3.setText('Reset');
+        }
+        ibutton3.show(blinkFlag);
 
         ibutton4.update(imgPosX + (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
         ibutton4.setText('Done!');
         ibutton4.show();
+
+        // Game is over
+        if (score.isMaxScore()){
+            // Dont know what the next step is
+            throw new Error();
+        }
     };
 
     p.windowResized = () => {
@@ -164,16 +179,14 @@ export default function sketch(p) {
         }
     }
 
-
     function ButtonPressed(PressedButton, ConnectedDisplay) {
         // If the button is pressed
         if (PressedButton.isPressed()) {
-            // Loads new random colors
-            LoadRanCol();
             if (PressedButton.rotateRight()) {
                 RotateConnectedButton(PressedButton);
             }
-            ConnectedDisplay.color(p.random(255), p.random(255), p.random(255))
+            ConnectedDisplay.loadColor();
+            score.setResetSymbol();
         }
     }
 
@@ -181,8 +194,12 @@ export default function sketch(p) {
         buttonArray.forEach(function (buttonElement, i) {
             buttonElement.reset();
         });
-        buttonSound.setVolume(0.4);
-        buttonSound.play();
+        playSound(buttonSound);
+    }
+
+    function playSound(tSound){
+        tSound.setVolume(0.4);
+        tSound.play();
     }
 
     function CalculateMainNumber() {
@@ -193,17 +210,9 @@ export default function sketch(p) {
         return value;
     }
 
-    p.keyPressed = () => {
-        // If Enter is pressed
-        if (p.keyCode === p.ENTER) {
-            // Generate new numbers
-            //interateNumbers();
-            interateNumbers();
-        }
-    };
-
     // when user clicks mouse
     p.mouseClicked = () => {
+        context.resume();
         // Goes through all the button objects
         buttonArray.forEach(function (buttonElement, i) {
             // Calls the Button pressed function for each object with the connected display
@@ -212,20 +221,27 @@ export default function sketch(p) {
 
         // Check if reset button is pressed
         if ((ibutton3.isPressed()) && (CalculateMainNumber() !== 0)) {
+            if (number.isActive()){
+                // "Confirm with reset"
+                interateNumbers();
+                number.deactivate();
+                blinkFlag = false;
+            }
             resetButtons();
+            score.setResetSymbol();
         }
         // Check if "done" button is pressed
-        if (ibutton4.isPressed()) {
+        if ((ibutton4.isPressed()) && (!number.isActive())) {
             if (number.checkNumber(CalculateMainNumber())) {
-                interateNumbers();
-                resetButtons();
-                points = points + 1;
+                number.activate();
+                score.setSymbol(CalculateMainNumber());
+                score.addPoint();
+                playSound(correctSound);
             }
             else {
                 // False answer
-                buttonSound.setVolume(0.4);
-                buttonSound.play();
-                points = 0;
+                score.setFalseSymbol();
+                playSound(falseSound);
             }
         }
     }

@@ -33,5 +33,14 @@ export default class numberObj{
             return false;
         }
     }
+    isActive(){
+        return this.active;
+    }
+    activate(){
+        this.active = true;
+    }
+    deactivate(){
+        this.active = false;
+    }
 
 }

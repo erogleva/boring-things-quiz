@@ -5,10 +5,8 @@ export default class display {
         this.h = parseInt(h/rf);
         this.e = parseInt(e/rf);
         this.resizeFactor = rf
-        this.r = p.random(255);
-        this.g = p.random(255);
-        this.b = p.random(255);
         this.p = p;
+        this.loadColor();
     }
     show(x,y,t) {
         this.x = x;
@@ -19,13 +17,6 @@ export default class display {
         this.p.rect(this.x, this.y, this.w, this.h, this.e);
         this.text(t);
     }
-
-    color(r, g, b) {
-        this.r = r;
-        this.g = g;
-        this.b = b;
-    }
-
     text(t) {
         let tSize = parseInt(25/this.resizeFactor);
         this.p.fill('black');
@@ -33,6 +24,11 @@ export default class display {
         this.p.textSize(tSize);
         this.p.textAlign(this.p.CENTER, this.p.CENTER);
         this.p.text(this.p.str(t), this.x, this.y);
+    }
+    loadColor(){
+        this.r = this.p.random(50,255);
+        this.g = this.p.random(50,255);
+        this.b = this.p.random(50,255);
     }
 
 }

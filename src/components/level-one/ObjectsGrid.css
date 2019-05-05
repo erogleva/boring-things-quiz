@@ -14,6 +14,7 @@
 .level-one-objects-grid .row .col.s4 {
     display: flex;
     margin-left: 0;
+    justify-content: center;
 }
 
 .level-one-objects-grid .image-grid {

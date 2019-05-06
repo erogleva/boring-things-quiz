@@ -7,10 +7,13 @@ import './TextQuiz.css';
 import {getRandomObjects, shuffleArray} from "../../utils/arrayUtils";
 import {exhibitedObjects} from "../../data";
 import Continue from '../common/Continue';
+import { Trans } from '@lingui/macro';
+import {LanguageString} from "../../App";
 
 interface Props {
     correctItems: ExhibitionObject[];
     setCurrentPage: Dispatch<SetStateAction<string>>
+    language: LanguageString
 }
 
 const TextsQuiz = (props: Props) => {
@@ -43,6 +46,8 @@ const TextsQuiz = (props: Props) => {
     }, [items]);
 
     return <div className='level-two-objects'>
+        <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen? </Trans>
+        <Trans render="h6">Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst.</Trans>
         <DragDropContext onDragEnd={onDragEnd}>
             <div className='row'>
                 <Col s={6} className='descriptions'>
@@ -62,7 +67,7 @@ const TextsQuiz = (props: Props) => {
                                                 {...provided.dragHandleProps}
                                                 style={{...provided.draggableProps.style}}
                                             >
-                                                {item.quizDescription}
+                                                {props.language === 'de' ? item.quizDescription : item.locales.en.quizDescription}
                                                 {index === items.findIndex((object) => object.id === item.id) &&
                                                 <Icon small>
                                                     check

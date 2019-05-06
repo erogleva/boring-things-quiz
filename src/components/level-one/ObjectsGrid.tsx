@@ -6,6 +6,7 @@ import {Button, Col, Icon, Row} from 'react-materialize';
 import './ObjectsGrid.css';
 import Object from "./Object";
 import Continue from "../common/Continue";
+import { Trans } from '@lingui/macro';
 
 interface Props {
     objects: string[],
@@ -46,8 +47,9 @@ const ObjectsGrid = (props: Props) => {
     };
 
     return <div className='level-one-objects-grid'>
-        <h6>Some objects may seem boring but actually have an exciting story to tell! </h6>
-        <h6>Three of these objects are part of the exhibition in the museum - can you guess which?</h6>
+        <Trans render="h6">
+            Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen. </Trans>
+            <Trans render="h6">Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?</Trans>
         <Row className='image-grid'>
             {props.objects.slice(0, props.objects.length / 2).map(object => <Object key={object}
                 selected={props.selected.includes(object)} source={object}

@@ -1,0 +1,16 @@
+.select-wrapper {
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.select-dropdown.dropdown-content li.selected {
+    background-color: white !important;
+}
+
+.select-dropdown.dropdown-content li:hover {
+    background-color: #eeeeee !important;
+}
+
+/*.select-dropdown.dropdown-content li.selected:hover {*/
+    /*background-color: #eeeeee !important;*/
+/*}*/

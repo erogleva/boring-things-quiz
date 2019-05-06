@@ -13,16 +13,22 @@
     text-align: left;
 }
 
+h6 {
+    margin-bottom: 10px;
+}
+
 .descriptions-collection {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .description {
     border: 1px solid #e0e0e0;
     padding: 0.5em;
     height: 155px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;

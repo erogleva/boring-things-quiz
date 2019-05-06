@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-05-06 20:27+0200\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/landing-page/LandingPage.tsx:13
+msgid "Auch langweilige Sachen können eine Geschichte erzählen."
+msgstr "Even boring objects have a story to tell."
+
+#: src/components/level-one/ObjectsGrid.tsx:41
+msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
+msgstr "Three of these objects are part of the exhibition in the museum - can you guess which?"
+
+#: src/components/level-two/TextsQuiz.tsx:32
+msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
+msgstr "Let’s make it a bit more challenging. Can you match the description with the correct object?"
+
+#: src/components/landing-page/LandingPage.tsx:17
+msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
+msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the Stadtmuseum Tübingen."
+
+#: src/components/landing-page/LandingPage.tsx:29
+msgid "Los geht’s!"
+msgstr "Off we go!"
+
+#: src/components/level-one/ObjectsGrid.tsx:39
+msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
+msgstr "Some objects may seem boring but actually have an exciting story to tell!"
+
+#: src/components/level-two/TextsQuiz.tsx:33
+msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
+msgstr "If you are correct you will see a green tick. "
+
+#: src/components/level-two/TextsQuiz.tsx:32
+#~ msgid "leveltwo.text"
+#~ msgstr "Let’s make it a bit more challenging. Can you match the description with the correct object? If you are correct you will see a green tick."

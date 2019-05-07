@@ -14,12 +14,11 @@ import CalculatorWrapper from "./components/level-three/CalculatorWrapper";
 import {I18nProvider} from '@lingui/react'
 import LandingPage from "./components/landing-page/LandingPage";
 import catalog_en from "./locales/en/messages";
+import catalog_de from "./locales/de/messages";
 
 export type LanguageString = 'en' | 'de'
 
 const App = () => {
-
-    console.log('App');
 
     // Level one state
     const [objects, setObjects] = useState<string[]>([]);
@@ -73,7 +72,7 @@ const App = () => {
     }, [currentPage, selected, objects, correctItems]);
 
     return (
-        <I18nProvider language={language} catalogs={{'en': catalog_en}}>
+        <I18nProvider language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
             <div className='app'>
                 <nav className="row teal">
                     <div className="nav-wrapper">

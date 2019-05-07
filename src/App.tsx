@@ -34,7 +34,10 @@ const App = () => {
 
 
     useEffect(() => {
-        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects).map(obj => obj.src);
+
+        const calculator = exhibitedObjects.find(obj => obj.id === '06413b');
+
+        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects, calculator ? [calculator]: [], 2).map(obj => obj.src);
         const randomNonExhibitedObjects: string[] = nonExhibitedObjects.slice(0, 3);
 
         let correctItems: ExhibitionObject[] = [];

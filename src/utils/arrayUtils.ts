@@ -26,18 +26,15 @@ const getRandomInt = (min: number, max: number): number => {
 
 
 // get three random objects from the lists
-export function getRandomObjects<Type> (objects: ExhibitionObject[], initialList: ExhibitionObject[] = []): ExhibitionObject[] {
+export function getRandomObjects<Type> (objects: ExhibitionObject[], initialList: ExhibitionObject[] = [], number = 3): ExhibitionObject[] {
     let randomObjects: ExhibitionObject[];
 
-    if (!initialList) {
-        randomObjects = [];
-    } else {
-        randomObjects = initialList.slice();
-    }
+
+    randomObjects = initialList.slice();
 
     let additionalObjects: ExhibitionObject[] = [];
 
-    while (additionalObjects.length < 3) {
+    while (additionalObjects.length < number) {
         const number = getRandomInt(0, objects.length - 1);
         if (!randomObjects.some(object => object.id === objects[number].id)
             && !additionalObjects.some((object => object.id === objects[number].id ))) {
@@ -45,5 +42,5 @@ export function getRandomObjects<Type> (objects: ExhibitionObject[], initialList
         }
     }
 
-    return additionalObjects
+    return additionalObjects.concat(initialList);
 }

@@ -38,7 +38,7 @@ const TextsQuiz = (props: Props) => {
 
     useEffect(() => {
         const additionalItems = getRandomObjects(exhibitedObjects, props.correctItems);
-        setItems([...additionalItems, ...props.correctItems]);
+        setItems([...additionalItems]);
     }, [props.correctItems]);
 
     useEffect(() => {

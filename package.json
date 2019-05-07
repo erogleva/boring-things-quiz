@@ -20,7 +20,8 @@
     "react-materialize": "^3.0.5",
     "react-p5-wrapper": "0.0.4",
     "react-scripts": "^2.1.8",
-    "typescript": "3.4.3"
+    "typescript": "3.4.3",
+    "video-react": "^0.13.7"
   },
   "scripts": {
     "start": "npm run compile && react-scripts start",

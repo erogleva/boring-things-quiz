@@ -3,6 +3,9 @@ import React from 'react';
 import { Row, Button, Container } from 'react-materialize';
 import { Trans } from '@lingui/macro';
 import './HelpPage.css';
+import "video-react/dist/video-react.css";
+//@ts-ignore
+import { Player } from 'video-react';
 
 interface Props  {
     setShowHelp (shouldShowHelp: boolean): void,
@@ -18,11 +21,17 @@ const HelpPage = (props: Props) => {
             case 'level-two':
                 return <Trans>Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild.</Trans>;
             case 'level-three':
-                return <React.Fragment><Trans>Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten! </Trans>
+                return <React.Fragment><Trans>Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten! </Trans> <br/>
                     <Trans>Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit. </Trans> <br />
                     <Trans> Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt. </Trans> <br/>
                     <Trans>Um neu anzufangen drücke auf Reset </Trans><br/>
-                    <Trans> Wir wünschen dir viel Spass! </Trans></React.Fragment>
+                    <Trans> Wir wünschen dir viel Spass! </Trans>
+
+                    <Player
+                        playsInline
+                        src={require('../assets/videos/screencast_calculator.mp4')}
+                    />
+                </React.Fragment>
         }
     };
 

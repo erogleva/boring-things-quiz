@@ -13,6 +13,7 @@ import {getRandomObjects, shuffleArray} from "./utils/arrayUtils";
 import CalculatorWrapper from "./components/level-three/CalculatorWrapper";
 import {I18nProvider} from '@lingui/react'
 import LandingPage from "./components/landing-page/LandingPage";
+import {Trans} from '@lingui/macro';
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
 
@@ -86,9 +87,9 @@ const App = () => {
                         </div>
                     </div>
                 </nav>
-                <a onClick={() => setShowHelp(true)}>Help</a>
+                {currentPage !== 'landing-page' && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}
-                {showHelp && <HelpPage setShowHelp={setShowHelp}/>}
+                {showHelp && <HelpPage setShowHelp={setShowHelp} currentPage={currentPage}/>}
             </div>
         </I18nProvider>
     );

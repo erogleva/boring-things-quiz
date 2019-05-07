@@ -17,13 +17,38 @@ msgstr ""
 msgid "Auch langweilige Sachen können eine Geschichte erzählen."
 msgstr "Even boring objects have a story to tell."
 
+#: src/components/level-three/CalculatorWrapper.js:23
+msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
+msgstr "Use Schickards calculator to solve the problem!"
+
+#: src/App.tsx:70
+#: src/components/HelpPage.tsx:22
+msgid "Brauchst du Hilfe?"
+msgstr "Do you need help?"
+
 #: src/components/level-one/ObjectsGrid.tsx:41
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which?"
 
+#: src/components/HelpPage.tsx:15
+msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
+msgstr "Now enter the second number. The calculator automatically tracks the changes."
+
+#: src/components/HelpPage.tsx:12
+msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
+msgstr "Each text matches with one image. Drag the text to the matching image."
+
 #: src/components/level-two/TextsQuiz.tsx:32
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 msgstr "Let’s make it a bit more challenging. Can you match the description with the correct object?"
+
+#: src/components/HelpPage.tsx:14
+msgid "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten!"
+msgstr "Click on the dials to enter the first number. Always start with the digit on the right and then move left!"
+
+#: src/components/HelpPage.tsx:10
+msgid "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
+msgstr "Select an image by clicking on it. If you want undo the selection you have to click on the image a second time."
 
 #: src/components/landing-page/LandingPage.tsx:17
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
@@ -41,6 +66,18 @@ msgstr "Some objects may seem boring but actually have an exciting story to tell
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "If you are correct you will see a green tick. "
 
-#: src/components/level-two/TextsQuiz.tsx:32
-#~ msgid "leveltwo.text"
-#~ msgstr "Let’s make it a bit more challenging. Can you match the description with the correct object? If you are correct you will see a green tick."
+#: src/components/HelpPage.tsx:17
+msgid "Um neu anzufangen drücke auf Reset"
+msgstr "Click on Reset! to reset the calculator."
+
+#: src/components/HelpPage.tsx:16
+msgid "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
+msgstr "Click on Done! when you have entered the second number. If the answer is correct you will receive a point."
+
+#: src/components/HelpPage.tsx:18
+msgid "Wir wünschen dir viel Spass!"
+msgstr "We wish you a lot of fun!"
+
+#: src/components/HelpPage.tsx:25
+msgid "Zurück zum Spiel"
+msgstr "Go back"

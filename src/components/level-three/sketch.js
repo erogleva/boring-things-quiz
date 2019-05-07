@@ -220,7 +220,7 @@ export default function sketch(p) {
         });
 
         // Check if reset button is pressed
-        if ((ibutton3.isPressed()) && (CalculateMainNumber() !== 0)) {
+        if ((ibutton3 && ibutton3.isPressed()) && (CalculateMainNumber() !== 0)) {
             if (number.isActive()){
                 // "Confirm with reset"
                 interateNumbers();
@@ -231,7 +231,7 @@ export default function sketch(p) {
             score.setResetSymbol();
         }
         // Check if "done" button is pressed
-        if ((ibutton4.isPressed()) && (!number.isActive())) {
+        if ((ibutton4 && ibutton4.isPressed()) && (!number.isActive())) {
             if (number.checkNumber(CalculateMainNumber())) {
                 number.activate();
                 score.setSymbol(CalculateMainNumber());

@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-05-07 17:05+0200\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: de\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/landing-page/LandingPage.tsx:13
+msgid "Auch langweilige Sachen können eine Geschichte erzählen."
+msgstr "Auch langweilige Sachen können eine Geschichte erzählen."
+
+#: src/components/level-one/ObjectsGrid.tsx:41
+msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
+msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
+
+#: src/components/level-two/TextsQuiz.tsx:32
+msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
+msgstr "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
+
+#: src/components/landing-page/LandingPage.tsx:17
+msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
+msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
+
+#: src/components/landing-page/LandingPage.tsx:29
+msgid "Los geht’s!"
+msgstr "Los geht’s!"
+
+#: src/components/level-one/ObjectsGrid.tsx:39
+msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
+msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
+
+#: src/components/level-two/TextsQuiz.tsx:33
+msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
+msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."

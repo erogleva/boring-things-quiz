@@ -21,12 +21,16 @@ msgstr "Auch langweilige Sachen können eine Geschichte erzählen."
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 
+#: src/components/level-one/ObjectsGrid.tsx:27
+msgid "Bitte wähle drei Objekte aus!"
+msgstr "Bitte wähle drei Objekte aus!"
+
 #: src/App.tsx:72
 #: src/components/HelpPage.tsx:28
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
 
-#: src/components/level-one/ObjectsGrid.tsx:41
+#: src/components/level-one/ObjectsGrid.tsx:54
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
@@ -37,6 +41,14 @@ msgstr "Fertig!"
 #: src/components/HelpPage.tsx:18
 msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
 msgstr "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
+
+#: src/components/level-one/ObjectsGrid.tsx:34
+msgid "Gehe zu Level 2"
+msgstr "Gehe zu Level 2"
+
+#: src/components/level-one/ObjectsGrid.tsx:34
+#~ msgid "Gehe zu Level 3"
+#~ msgstr "Gehe zu Level 3"
 
 #: src/components/HelpPage.tsx:15
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
@@ -62,11 +74,15 @@ msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, 
 #~ msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
 #~ msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
 
+#: src/components/level-one/ObjectsGrid.tsx:45
+msgid "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
+msgstr "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
+
 #: src/components/landing-page/LandingPage.tsx:31
 msgid "Los geht’s!"
 msgstr "Los geht’s!"
 
-#: src/components/level-one/ObjectsGrid.tsx:39
+#: src/components/level-one/ObjectsGrid.tsx:51
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 
@@ -81,6 +97,10 @@ msgstr "Nächste!"
 #: src/components/level-two/TextsQuiz.tsx:33
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
+
+#: src/components/level-one/ObjectsGrid.tsx:34
+msgid "Super! Du hast alle Objekte richtig identifiziert!'"
+msgstr "Super! Du hast alle Objekte richtig identifiziert!'"
 
 #: src/components/HelpPage.tsx:20
 msgid "Um neu anzufangen drücke auf Neustart."
@@ -117,3 +137,7 @@ msgstr "Wähle deine Sprache"
 #: src/components/HelpPage.tsx:31
 msgid "Zurück zum Spiel"
 msgstr "Zurück zum Spiel"
+
+#: src/components/level-one/ObjectsGrid.tsx:39
+msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
+msgstr "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"

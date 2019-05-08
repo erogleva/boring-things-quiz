@@ -96,6 +96,7 @@ const TextsQuiz = (props: Props) => {
         </DragDropContext>
         {descriptions.every((description, index) => items[index].id === description.id) &&
         <Continue text='Congratulations! All descriptions are now matched correctly!'
+                  buttonText='Gehe zu Level 3'
                   handleClick={() => props.setCurrentPage('level-three')}/>}
     </div>;
 };

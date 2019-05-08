@@ -21,12 +21,16 @@ msgstr "Even boring objects have a story to tell."
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Use Schickards calculator to solve the problem!"
 
+#: src/components/level-one/ObjectsGrid.tsx:27
+msgid "Bitte wähle drei Objekte aus!"
+msgstr "Please select three objects!"
+
 #: src/App.tsx:72
 #: src/components/HelpPage.tsx:28
 msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
 
-#: src/components/level-one/ObjectsGrid.tsx:41
+#: src/components/level-one/ObjectsGrid.tsx:54
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which?"
 
@@ -37,6 +41,14 @@ msgstr "Done!"
 #: src/components/HelpPage.tsx:18
 msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
 msgstr "Now enter the second number. The calculator automatically tracks the changes."
+
+#: src/components/level-one/ObjectsGrid.tsx:34
+msgid "Gehe zu Level 2"
+msgstr "Go to Level 2"
+
+#: src/components/level-one/ObjectsGrid.tsx:34
+#~ msgid "Gehe zu Level 3"
+#~ msgstr "Go to Level 3"
 
 #: src/components/HelpPage.tsx:15
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
@@ -58,12 +70,15 @@ msgstr "Select an image by clicking on it. If you want undo the selection you ha
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
 msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the <0>Stadtmuseum Tübingen </0>."
 
+#: src/components/level-one/ObjectsGrid.tsx:45
+msgid "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
+msgstr "Unfortunately these are not the correct objects. Try again!"
 
 #: src/components/landing-page/LandingPage.tsx:31
 msgid "Los geht’s!"
 msgstr "Off we go!"
 
-#: src/components/level-one/ObjectsGrid.tsx:39
+#: src/components/level-one/ObjectsGrid.tsx:51
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Some objects may seem boring but actually have an exciting story to tell!"
 
@@ -79,15 +94,17 @@ msgstr "Next!"
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "If you are correct you will see a green tick. "
 
+#: src/components/level-one/ObjectsGrid.tsx:34
+msgid "Super! Du hast alle Objekte richtig identifiziert!'"
+msgstr "Great! You have identified all correct objects!"
+
 #: src/components/HelpPage.tsx:20
 msgid "Um neu anzufangen drücke auf Neustart."
 msgstr "Click on Reset to reset the calculator."
 
-
 #: src/components/HelpPage.tsx:19
 msgid "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
 msgstr "Click on Done! when you have entered the second number. If the answer is correct you will receive a point."
-
 
 #: src/components/HelpPage.tsx:21
 msgid "Wir wünschen dir viel Spaß!"
@@ -100,3 +117,7 @@ msgstr "Choose your language"
 #: src/components/HelpPage.tsx:31
 msgid "Zurück zum Spiel"
 msgstr "Go back"
+
+#: src/components/level-one/ObjectsGrid.tsx:39
+msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
+msgstr "{0, plural, one {Unfortunately you have identified only one object correctly. Try again!} other {Unfortunately you have identified only # objects correctly. Try again!}}"

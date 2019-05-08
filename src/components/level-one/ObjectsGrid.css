@@ -1,5 +1,6 @@
 .level-one-objects-grid img {
     object-fit: cover;
+    object-position: top;
     width: 100%;
     max-width: 250px;
     max-height: 110px;

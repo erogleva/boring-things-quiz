@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, useEffect, useState} from 'react';
+import React, {Dispatch, ReactElement, SetStateAction, useEffect, useState} from 'react';
 import {DragDropContext, Draggable, Droppable, DropResult} from 'react-beautiful-dnd';
 import {ExhibitionObject} from "../../interfaces/ExhibitionObject";
 //@ts-ignore
@@ -7,8 +7,27 @@ import './TextQuiz.css';
 import {getRandomObjects, shuffleArray} from "../../utils/arrayUtils";
 import {exhibitedObjects} from "../../data";
 import Continue from '../common/Continue';
-import { Trans } from '@lingui/macro';
+import {Trans} from '@lingui/macro';
 import {LanguageString} from "../../App";
+import ModalDialog from "../common/Modal";
+
+
+interface ModalContentProps {
+    item: ExhibitionObject
+}
+
+const ModalContent = ({item}: ModalContentProps) => {
+
+    return <div className='modal-content'>
+        <div className='image-wrapper'>
+            <img src={require(`../../assets/img/${item.src}`)}/>
+        </div>
+        <div className='text-wrapper'>
+            <p>{item.detailedDescription}</p>
+        </div>
+    </div>
+};
+
 
 interface Props {
     correctItems: ExhibitionObject[];
@@ -18,86 +37,118 @@ interface Props {
 
 const TextsQuiz = (props: Props) => {
 
+    let modalTriggerRef: any;
+
+    const getItemStyle = (draggablePropsStyle: any, isDragging: boolean) => {
+        if (!isDragging) {
+            return {...draggablePropsStyle}
+        } else {
+            return {
+                ...draggablePropsStyle,
+            }
+        }
+    };
+
     const onDragEnd = (result: DropResult): void => {
         if (!result.destination) {
             return;
         }
 
-        const newIdx: number = +result.destination.index;
-        const srcIdx: number = +result.source.index;
+        if (result.destination.droppableId === result.draggableId) {
+            setCorrectlyIdentifiedDescriptions(prevState => ([...prevState, result.draggableId]));
+            const item = items.find(item => item.id === result.draggableId);
+            if (item) {
+                setModalContent(<ModalContent item={item}/>);
+                modalTriggerRef.click();
+            }
 
-        const descriptionsReordered = [...descriptions];
-
-        const [removed] = descriptionsReordered.splice(srcIdx, 1);
-        descriptionsReordered.splice(newIdx, 0, removed);
-        setDescriptions(descriptionsReordered);
+        }
     };
 
-    const [items, setItems] = useState<ExhibitionObject[]>([]);
+    const [items, setItems] = useState<ExhibitionObject[]>(props.correctItems);
     const [descriptions, setDescriptions] = useState<ExhibitionObject[]>([]);
+    const [correctlyIdentifiedDescriptions, setCorrectlyIdentifiedDescriptions] = useState<string[]>([]);
+    const [modalContent, setModalContent] = useState<ReactElement>(<React.Fragment/>);
 
-    useEffect(() => {
-        const additionalItems = getRandomObjects(exhibitedObjects, props.correctItems);
-        setItems([...additionalItems]);
-    }, [props.correctItems]);
+    // useEffect(() => {
+    //     const additionalItems = getRandomObjects(exhibitedObjects, props.correctItems);
+    //     setItems([...additionalItems]);
+    // }, [props.correctItems]);
 
     useEffect(() => {
         setDescriptions(shuffleArray(items));
     }, [items]);
 
     return <div className='level-two-objects'>
-        <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen? </Trans>
+        <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent}/>
+
+        {descriptions.every((description) => correctlyIdentifiedDescriptions.includes(description.id)) &&
+        <Continue text='Congratulations! All descriptions are now matched correctly!'
+                  buttonText='Gehe zu Level 3'
+                  handleClick={() => props.setCurrentPage('level-three')}/>}
+
+        <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
+            zuordnen? </Trans>
         <Trans render="h6">Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst.</Trans>
         <DragDropContext onDragEnd={onDragEnd}>
+            <Droppable droppableId='images' isDropDisabled={true} direction='horizontal'>
+                {(provided) => (
+                    <div className='row images-droppable'
+                         ref={provided.innerRef}
+                         {...provided.droppableProps}>
+
+                        {items.map((item, index) => {
+                            return <Draggable key={item.id} draggableId={item.id} index={index}>
+                                {(provided, snapshot) => (
+                                    <img src={require(`../../assets/img/${item.src}`)} alt={item.name}
+                                         ref={provided.innerRef}
+                                         {...provided.draggableProps}
+                                         {...provided.dragHandleProps}
+                                         style={getItemStyle(provided.draggableProps.style, snapshot.isDragging)}/>
+                                )}
+                            </Draggable>
+                        })}
+                        {provided.placeholder}
+                    </div>
+                )}
+            </Droppable>
             <div className='row'>
                 <Col s={6} className='descriptions'>
-                        <Droppable droppableId='description-droppable'>
-                            {(provided) => (
-                                <div className='descriptions-collection'
-                                     ref={provided.innerRef}
-                                     {...provided.droppableProps}
-                                >
-                                    {descriptions.map((item, index) => (
-                                    <Draggable key={item.id} draggableId={item.id} index={index}>
-                                        {(provided, snapshot) => (
-                                            <div
-                                                className={index === items.findIndex((object) => object.id === item.id) ? 'description correct' : 'description'}
-                                                ref={provided.innerRef}
-                                                {...provided.draggableProps}
-                                                {...provided.dragHandleProps}
-                                                style={{...provided.draggableProps.style}}
-                                            >
-                                                {props.language === 'de' ? item.quizDescription : item.locales.en.quizDescription}
-                                                {index === items.findIndex((object) => object.id === item.id) &&
-                                                <Icon small>
-                                                    check
-                                                </Icon>}
-                                            </div>
-                                        )}
-                                    </Draggable>
-                                    ))}
-
-                                    {provided.placeholder}
-                                </div>
-                            )}
-                        </Droppable>
-
+                    <div className='descriptions-collection'>
+                        {descriptions.map((item, index) => (
+                            <div key={index}
+                                 className={correctlyIdentifiedDescriptions.includes(item.id) ? 'description correct' : 'description'}>
+                                {props.language === 'de' ? item.quizDescription : item.locales.en.quizDescription}
+                                {correctlyIdentifiedDescriptions.includes(item.id) &&
+                                <Icon small>
+                                    check
+                                </Icon>}
+                            </div>))}
+                    </div>
                 </Col>
                 <Col s={6} className='images'>
                     <div>
-                        {items.map(item =>
-                            <div key={item.src}>
-                                <img src={require(`../../assets/img/${item.src}`)} alt={item.name}/>
+                        {descriptions.map(description =>
+                            <div key={description.src}>
+                                <Droppable droppableId={description.id}>
+                                    {(provided) => (
+                                        <div className='placeholder'
+                                             ref={provided.innerRef}
+                                             {...provided.droppableProps}>
+                                            {correctlyIdentifiedDescriptions.includes(description.id) ?
+                                                <img src={require(`../../assets/img/${description.src}`)}/> :
+                                                <span>Drag one of the pictures here</span>}
+                                        </div>
+                                    )}
+
+                                </Droppable>
                             </div>
                         )}
                     </div>
                 </Col>
             </div>
         </DragDropContext>
-        {descriptions.every((description, index) => items[index].id === description.id) &&
-        <Continue text='Congratulations! All descriptions are now matched correctly!'
-                  buttonText='Gehe zu Level 3'
-                  handleClick={() => props.setCurrentPage('level-three')}/>}
+
     </div>;
 };
 

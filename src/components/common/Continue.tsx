@@ -10,12 +10,8 @@ interface Props {
 
 const Continue = (props: Props) => {
     return <React.Fragment>
-        <Row>
             <h6>{props.text}</h6>
-        </Row>
-        <Row>
             <Button onClick={props.handleClick}>{props.buttonText}</Button>
-        </Row>
     </React.Fragment>
 };
 

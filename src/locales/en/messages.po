@@ -54,7 +54,7 @@ msgstr "Go to Level 2"
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Each text matches with one image. Drag the text to the matching image."
 
-#: src/components/level-two/TextsQuiz.tsx:32
+#: src/components/level-two/TextsQuiz.tsx:60
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 msgstr "Let’s make it a bit more challenging. Can you match the description with the correct object?"
 
@@ -87,10 +87,10 @@ msgid "Neustart"
 msgstr "Reset"
 
 #: src/components/level-three/sketch.js:150
-msgid "Nächste!"
-msgstr "Next!"
+#~ msgid "Nächste!"
+#~ msgstr "Next!"
 
-#: src/components/level-two/TextsQuiz.tsx:33
+#: src/components/level-two/TextsQuiz.tsx:62
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "If you are correct you will see a green tick. "
 
@@ -101,6 +101,10 @@ msgstr "Great! You have identified all correct objects!"
 #: src/components/HelpPage.tsx:20
 msgid "Um neu anzufangen drücke auf Neustart."
 msgstr "Click on Reset to reset the calculator."
+
+#: src/components/level-three/sketch.js:150
+msgid "Weiter!"
+msgstr "Next!"
 
 #: src/components/HelpPage.tsx:19
 msgid "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."

@@ -30,7 +30,6 @@ workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
         return id
     };
 
-
     // the inventory number is used as an id
     const id = getId(object[0]);
     const name = object[1];
@@ -39,7 +38,9 @@ workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
     const quizDescription = object[13];
     const quizDescriptionEN = object[14];
 
-    objects.push({id, name, quizDescription, locales: { en: { quizDescription: quizDescriptionEN }}})
+    const detailedDescription = object[15];
+
+    objects.push({id, name, quizDescription, detailedDescription, locales: { en: { quizDescription: quizDescriptionEN }}})
 }));
 
 // read the files

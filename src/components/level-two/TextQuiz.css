@@ -9,12 +9,30 @@
     width: 150px;
 }
 
+.images-droppable img {
+    margin: 0 5px;
+}
+
 .level-two-objects .col.s6.images {
     text-align: left;
 }
 
 h6 {
     margin-bottom: 10px;
+}
+
+.modal-content img {
+    float: left;
+    margin-right: 20px;
+    max-height: 300px;
+}
+
+.placeholder {
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #b5b5b5;
 }
 
 .descriptions-collection {

@@ -54,7 +54,7 @@ msgstr "Gehe zu Level 2"
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 
-#: src/components/level-two/TextsQuiz.tsx:32
+#: src/components/level-two/TextsQuiz.tsx:60
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 msgstr "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 
@@ -90,11 +90,7 @@ msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber
 msgid "Neustart"
 msgstr "Neustart"
 
-#: src/components/level-three/sketch.js:150
-msgid "Nächste!"
-msgstr "Nächste!"
-
-#: src/components/level-two/TextsQuiz.tsx:33
+#: src/components/level-two/TextsQuiz.tsx:62
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 
@@ -106,25 +102,13 @@ msgstr "Super! Du hast alle Objekte richtig identifiziert!'"
 msgid "Um neu anzufangen drücke auf Neustart."
 msgstr "Um neu anzufangen drücke auf Neustart."
 
-#: src/components/HelpPage.tsx:20
-#~ msgid "Um neu anzufangen drücke auf Reset"
-#~ msgstr "Um neu anzufangen drücke auf Reset"
-
-#: src/components/HelpPage.tsx:20
-#~ msgid "Um neu anzufangen drücke auf Reset."
-#~ msgstr "Um neu anzufangen drücke auf Reset."
-
-#: src/components/HelpPage.tsx:19
-#~ msgid "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
-#~ msgstr "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
+#: src/components/level-three/sketch.js:150
+msgid "Weiter!"
+msgstr "Weiter!"
 
 #: src/components/HelpPage.tsx:19
 msgid "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
 msgstr "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
-
-#: src/components/HelpPage.tsx:21
-#~ msgid "Wir wünschen dir viel Spass!"
-#~ msgstr "Wir wünschen dir viel Spaß!"
 
 #: src/components/HelpPage.tsx:21
 msgid "Wir wünschen dir viel Spaß!"

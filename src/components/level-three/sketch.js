@@ -147,7 +147,7 @@ export default function sketch(p) {
 
         ibutton3.update(imgPosX - (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
         if (number.isActive()){
-            ibutton3.setText(i18n._(t`Nächste!`));
+            ibutton3.setText(i18n._(t`Weiter!`));
         }
         else{
             ibutton3.setText(i18n._(t`Neustart`));

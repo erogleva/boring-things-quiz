@@ -3,6 +3,7 @@ export interface ExhibitionObject {
     name: string,
     src: string,
     quizDescription: string,
+    detailedDescription: string,
     locales: {
         en: {
             quizDescription: string

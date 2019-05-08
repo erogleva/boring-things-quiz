@@ -21,7 +21,7 @@ msgstr "Auch langweilige Sachen können eine Geschichte erzählen."
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 
-#: src/App.tsx:70
+#: src/App.tsx:72
 #: src/components/HelpPage.tsx:28
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
@@ -29,6 +29,10 @@ msgstr "Brauchst du Hilfe?"
 #: src/components/level-one/ObjectsGrid.tsx:41
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
+
+#: src/components/level-three/sketch.js:158
+msgid "Fertig!"
+msgstr "Fertig!"
 
 #: src/components/HelpPage.tsx:18
 msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
@@ -66,20 +70,44 @@ msgstr "Los geht’s!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 
+#: src/components/level-three/sketch.js:153
+msgid "Neustart"
+msgstr "Neustart"
+
+#: src/components/level-three/sketch.js:150
+msgid "Nächste!"
+msgstr "Nächste!"
+
 #: src/components/level-two/TextsQuiz.tsx:33
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 
 #: src/components/HelpPage.tsx:20
-msgid "Um neu anzufangen drücke auf Reset"
-msgstr "Um neu anzufangen drücke auf Reset"
+msgid "Um neu anzufangen drücke auf Neustart."
+msgstr "Um neu anzufangen drücke auf Neustart."
+
+#: src/components/HelpPage.tsx:20
+#~ msgid "Um neu anzufangen drücke auf Reset"
+#~ msgstr "Um neu anzufangen drücke auf Reset"
+
+#: src/components/HelpPage.tsx:20
+#~ msgid "Um neu anzufangen drücke auf Reset."
+#~ msgstr "Um neu anzufangen drücke auf Reset."
 
 #: src/components/HelpPage.tsx:19
-msgid "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
-msgstr "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
+#~ msgid "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
+#~ msgstr "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
+
+#: src/components/HelpPage.tsx:19
+msgid "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
+msgstr "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
 
 #: src/components/HelpPage.tsx:21
-msgid "Wir wünschen dir viel Spass!"
+#~ msgid "Wir wünschen dir viel Spass!"
+#~ msgstr "Wir wünschen dir viel Spaß!"
+
+#: src/components/HelpPage.tsx:21
+msgid "Wir wünschen dir viel Spaß!"
 msgstr "Wir wünschen dir viel Spaß!"
 
 #: src/components/landing-page/LandingPage.tsx:20

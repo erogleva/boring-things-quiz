@@ -5,6 +5,9 @@ import display from './display';
 import infoButton from './smallbuttons';
 import scoreObj from './score';
 
+import { i18n } from "./../../App";
+import { t } from "@lingui/macro"
+
 
 export default function sketch(p) {
 
@@ -60,6 +63,7 @@ export default function sketch(p) {
     };
 
     p.setup = () => {
+
         p.createCanvas(window.innerWidth, window.innerHeight);
         imgPosX = window.innerWidth / 2;
         imgPosY = window.innerHeight / 2;
@@ -143,15 +147,15 @@ export default function sketch(p) {
 
         ibutton3.update(imgPosX - (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
         if (number.isActive()){
-            ibutton3.setText('Next');
+            ibutton3.setText(i18n._(t`Nächste!`));
         }
         else{
-            ibutton3.setText('Reset');
+            ibutton3.setText(i18n._(t`Neustart`));
         }
         ibutton3.show(blinkFlag);
 
         ibutton4.update(imgPosX + (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
-        ibutton4.setText('Done!');
+        ibutton4.setText(i18n._(t`Fertig!`));
         ibutton4.show();
 
         // Game is over

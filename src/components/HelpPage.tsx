@@ -23,9 +23,9 @@ const HelpPage = (props: Props) => {
             case 'level-three':
                 return <React.Fragment><Trans>Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten! </Trans> <br/>
                     <Trans>Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit. </Trans> <br />
-                    <Trans> Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt. </Trans> <br/>
-                    <Trans>Um neu anzufangen drücke auf Reset </Trans><br/>
-                    <Trans> Wir wünschen dir viel Spass! </Trans>
+                    <Trans> Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt. </Trans> <br/>
+                    <Trans>Um neu anzufangen drücke auf Neustart. </Trans><br/>
+                    <Trans>Wir wünschen dir viel Spaß!</Trans>
 
                     <Player
                         playsInline

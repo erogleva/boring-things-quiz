@@ -21,7 +21,7 @@ msgstr "Even boring objects have a story to tell."
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Use Schickards calculator to solve the problem!"
 
-#: src/App.tsx:70
+#: src/App.tsx:72
 #: src/components/HelpPage.tsx:28
 msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
@@ -29,6 +29,10 @@ msgstr "Do you need help?"
 #: src/components/level-one/ObjectsGrid.tsx:41
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which?"
+
+#: src/components/level-three/sketch.js:158
+msgid "Fertig!"
+msgstr "Done!"
 
 #: src/components/HelpPage.tsx:18
 msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
@@ -54,9 +58,6 @@ msgstr "Select an image by clicking on it. If you want undo the selection you ha
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
 msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the <0>Stadtmuseum Tübingen </0>."
 
-#: src/components/landing-page/LandingPage.tsx:17
-#~ msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
-#~ msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the Stadtmuseum Tübingen."
 
 #: src/components/landing-page/LandingPage.tsx:31
 msgid "Los geht’s!"
@@ -66,25 +67,35 @@ msgstr "Off we go!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Some objects may seem boring but actually have an exciting story to tell!"
 
+#: src/components/level-three/sketch.js:153
+msgid "Neustart"
+msgstr "Reset"
+
+#: src/components/level-three/sketch.js:150
+msgid "Nächste!"
+msgstr "Next!"
+
 #: src/components/level-two/TextsQuiz.tsx:33
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "If you are correct you will see a green tick. "
 
 #: src/components/HelpPage.tsx:20
-msgid "Um neu anzufangen drücke auf Reset"
-msgstr "Click on Reset! to reset the calculator."
+msgid "Um neu anzufangen drücke auf Neustart."
+msgstr "Click on Reset to reset the calculator."
+
 
 #: src/components/HelpPage.tsx:19
-msgid "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
+msgid "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
 msgstr "Click on Done! when you have entered the second number. If the answer is correct you will receive a point."
 
+
 #: src/components/HelpPage.tsx:21
-msgid "Wir wünschen dir viel Spass!"
+msgid "Wir wünschen dir viel Spaß!"
 msgstr "We wish you a lot of fun!"
 
 #: src/components/landing-page/LandingPage.tsx:20
 msgid "Wähle deine Sprache"
-msgstr ""
+msgstr "Choose your language"
 
 #: src/components/HelpPage.tsx:31
 msgid "Zurück zum Spiel"

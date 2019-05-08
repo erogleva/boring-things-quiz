@@ -14,10 +14,12 @@ import CalculatorWrapper from "./components/level-three/CalculatorWrapper";
 import {I18nProvider} from '@lingui/react'
 import LandingPage from "./components/landing-page/LandingPage";
 import {Trans} from '@lingui/macro';
+import { setupI18n } from "@lingui/core";
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
 
 export type LanguageString = 'en' | 'de'
+export const i18n = setupI18n();
 
 const App = () => {
 
@@ -73,7 +75,7 @@ const App = () => {
     }, [currentPage, selected, objects, correctItems]);
 
     return (
-        <I18nProvider language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
+        <I18nProvider i18n={i18n} language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
             <div className='app'>
                 <nav className="row teal">
                     <div className="nav-wrapper">

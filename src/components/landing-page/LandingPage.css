@@ -11,6 +11,18 @@
     background-color: #eeeeee !important;
 }
 
+.choose-language {
+    margin-top: 40px;
+}
+
+.landing-page {
+    padding: 20px;
+}
+
+.landing-page h6 {
+    line-height: 1.6;
+}
+
 /*.select-dropdown.dropdown-content li.selected:hover {*/
     /*background-color: #eeeeee !important;*/
 /*}*/

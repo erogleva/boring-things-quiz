@@ -22,7 +22,7 @@ msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 
 #: src/App.tsx:70
-#: src/components/HelpPage.tsx:22
+#: src/components/HelpPage.tsx:28
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
 
@@ -30,11 +30,11 @@ msgstr "Brauchst du Hilfe?"
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
-#: src/components/HelpPage.tsx:15
+#: src/components/HelpPage.tsx:18
 msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
 msgstr "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
 
-#: src/components/HelpPage.tsx:12
+#: src/components/HelpPage.tsx:15
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 
@@ -42,23 +42,23 @@ msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 msgstr "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 
-#: src/components/HelpPage.tsx:14
+#: src/components/HelpPage.tsx:17
 msgid "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten!"
 msgstr "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten!"
 
 #: src/components/HelpPage.tsx:13
-#~ msgid "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten! Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit. <0/>Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt. Um neu anzufangen drücke auf Reset <1/>Wir wünschen dir viel Spass!"
-#~ msgstr "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten! Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit. <0/>Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt. Um neu anzufangen drücke auf Reset <1/>Wir wünschen dir viel Spass!"
-
-#: src/components/HelpPage.tsx:10
 msgid "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
 msgstr "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
 
 #: src/components/landing-page/LandingPage.tsx:17
-msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
-msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
+msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
+msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
 
-#: src/components/landing-page/LandingPage.tsx:29
+#: src/components/landing-page/LandingPage.tsx:17
+#~ msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
+#~ msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im Stadtmuseum Tübingen ausgestellt sind."
+
+#: src/components/landing-page/LandingPage.tsx:31
 msgid "Los geht’s!"
 msgstr "Los geht’s!"
 
@@ -70,18 +70,22 @@ msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 
-#: src/components/HelpPage.tsx:17
+#: src/components/HelpPage.tsx:20
 msgid "Um neu anzufangen drücke auf Reset"
 msgstr "Um neu anzufangen drücke auf Reset"
 
-#: src/components/HelpPage.tsx:16
+#: src/components/HelpPage.tsx:19
 msgid "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
 msgstr "Wenn du fertig bist drücke auf Done! Ist das Ergebnis richtig bekommst du einen Punkt."
 
-#: src/components/HelpPage.tsx:18
+#: src/components/HelpPage.tsx:21
 msgid "Wir wünschen dir viel Spass!"
-msgstr "Wir wünschen dir viel Spass!"
+msgstr "Wir wünschen dir viel Spaß!"
 
-#: src/components/HelpPage.tsx:25
+#: src/components/landing-page/LandingPage.tsx:20
+msgid "Wähle deine Sprache"
+msgstr "Wähle deine Sprache"
+
+#: src/components/HelpPage.tsx:31
 msgid "Zurück zum Spiel"
 msgstr "Zurück zum Spiel"

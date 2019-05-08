@@ -24,7 +24,8 @@
     "video-react": "^0.13.7"
   },
   "scripts": {
-    "start": "npm run compile && react-scripts start",
+    "start": "react-scripts start",
+    "prestart": "npm run compile",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

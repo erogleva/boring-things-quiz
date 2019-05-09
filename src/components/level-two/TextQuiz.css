@@ -25,6 +25,7 @@ h6 {
     float: left;
     margin-right: 20px;
     max-height: 300px;
+    max-width: 200px;
 }
 
 .placeholder {

@@ -59,6 +59,7 @@ const TextsQuiz = (props: Props) => {
             const item = items.find(item => item.id === result.draggableId);
             if (item) {
                 setModalContent(<ModalContent item={item}/>);
+                // setItems(prevState => prevState.filter(item => item.id !== result.draggableId))
                 modalTriggerRef.click();
             }
 
@@ -97,7 +98,7 @@ const TextsQuiz = (props: Props) => {
                          ref={provided.innerRef}
                          {...provided.droppableProps}>
 
-                        {items.map((item, index) => {
+                        {items.filter(item => !correctlyIdentifiedDescriptions.includes(item.id)).map((item, index) => {
                             return <Draggable key={item.id} draggableId={item.id} index={index}>
                                 {(provided, snapshot) => (
                                     <img src={require(`../../assets/img/${item.src}`)} alt={item.name}

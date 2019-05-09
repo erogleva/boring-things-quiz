@@ -23,7 +23,7 @@
 }
 
 .level-one-objects-grid .selected {
-    border: 3px solid #4e4d4d;
+    border: 3px solid teal;
     opacity: 0.7;
 }
 

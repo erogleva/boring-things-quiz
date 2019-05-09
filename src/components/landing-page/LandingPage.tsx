@@ -3,8 +3,8 @@ import { Trans } from '@lingui/macro';
 //@ts-ignore
 import { Row, Button, Select } from 'react-materialize';
 import './LandingPage.css';
-import FlagIcon from './../common/FlagIcon.tsx';
 import {LanguageString} from "../../App";
+import { LEVEL_ONE } from "../../constants";
 
 interface Props {
     setCurrentPage: Dispatch<SetStateAction<string>>,
@@ -39,7 +39,7 @@ const LandingPage = (props: Props) => {
             </option>
         </Select>
 
-        <Button onClick={() => props.setCurrentPage('level-one')}><Trans>Los geht’s!</Trans></Button>
+        <Button onClick={() => props.setCurrentPage(LEVEL_ONE)}><Trans>Los geht’s!</Trans></Button>
     </div>;
 };
 

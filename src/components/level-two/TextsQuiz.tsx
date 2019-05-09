@@ -4,12 +4,12 @@ import {ExhibitionObject} from "../../interfaces/ExhibitionObject";
 //@ts-ignore
 import {Col, Collection, CollectionItem, Icon, Row} from 'react-materialize';
 import './TextQuiz.css';
-import {getRandomObjects, shuffleArray} from "../../utils/arrayUtils";
-import {exhibitedObjects} from "../../data";
+import {shuffleArray} from "../../utils/arrayUtils";
 import Continue from '../common/Continue';
 import {Trans} from '@lingui/macro';
 import {LanguageString} from "../../App";
 import ModalDialog from "../common/Modal";
+import { LEVEL_THREE } from "../../constants";
 
 
 interface ModalContentProps {
@@ -86,7 +86,7 @@ const TextsQuiz = (props: Props) => {
         {descriptions.every((description) => correctlyIdentifiedDescriptions.includes(description.id)) &&
         <Continue text='Congratulations! All descriptions are now matched correctly!'
                   buttonText='Gehe zu Level 3'
-                  handleClick={() => props.setCurrentPage('level-three')}/>}
+                  handleClick={() => props.setCurrentPage(LEVEL_THREE)}/>}
 
         <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
             zuordnen? </Trans>

@@ -17,9 +17,12 @@ import {Trans} from '@lingui/macro';
 import { setupI18n } from "@lingui/core";
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
+import { LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE } from "./constants";
 
 export type LanguageString = 'en' | 'de'
 export const i18n = setupI18n();
+
+
 
 const App = () => {
 
@@ -30,7 +33,7 @@ const App = () => {
     // Global state
     const [language, setLanguage] = useState<LanguageString>('de');
     const [correctItems, setCorrectItems] = useState<ExhibitionObject[]>([]);
-    const [currentPage, setCurrentPage] = useState<string>('landing-page');
+    const [currentPage, setCurrentPage] = useState<string>(LANDING_PAGE);
     const [component, setComponent] = useState<JSX.Element>(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
     const [showHelp, setShowHelp] = useState<boolean>(false);
 
@@ -59,14 +62,14 @@ const App = () => {
 
     useEffect(() => {
         switch (currentPage) {
-            case 'level-one':
+            case LEVEL_ONE:
                 setComponent(<ObjectsGrid selected={selected} setSelected={setSelected} objects={objects}
                                           setCurrentPage={setCurrentPage}/>);
                 break;
-            case 'level-two':
+            case LEVEL_TWO:
                 setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage} language={language}/>);
                 break;
-            case 'level-three':
+            case LEVEL_THREE:
                 setComponent(<CalculatorWrapper/>);
                 break;
             default:
@@ -74,17 +77,25 @@ const App = () => {
         }
     }, [currentPage, selected, objects, correctItems]);
 
+    const handleClick = () => {
+        if (currentPage === LEVEL_ONE) {
+            return
+        }
+
+        setCurrentPage(LEVEL_TWO)
+    };
+
     return (
         <I18nProvider i18n={i18n} language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
             <div className='app'>
                 <nav className="row teal">
                     <div className="nav-wrapper">
                         <div className="col s12">
-                            <a className={currentPage === 'level-one' ? 'active breadcrumb' : 'breadcrumb'}> Level
+                            <a className={currentPage === LEVEL_ONE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => setCurrentPage(LEVEL_ONE)}> Level
                                 1 </a>
-                            <a className={currentPage === 'level-two' ? 'active breadcrumb' : 'breadcrumb'}> Level
+                            <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'} onClick={handleClick}> Level
                                 2 </a>
-                            <a className={currentPage === 'level-three' ? 'active breadcrumb' : 'breadcrumb'}> Level
+                            <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'}> Level
                                 3 </a>
                         </div>
                     </div>

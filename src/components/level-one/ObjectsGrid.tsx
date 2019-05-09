@@ -9,6 +9,7 @@ import Continue from "../common/Continue";
 import {Plural, t, Trans} from '@lingui/macro';
 import ModalDialog from "../common/Modal";
 import {I18n} from "@lingui/react"
+import { LEVEL_TWO } from "../../constants";
 
 interface Props {
     objects: string[],
@@ -45,7 +46,7 @@ const ObjectsGrid = (props: Props) => {
                         <Continue
                             text={i18n._(t`Super! Du hast alle Objekte richtig identifiziert!'`)}
                             buttonText={i18n._(t`Gehe zu Level 2`)}
-                            handleClick={() => props.setCurrentPage('level-two')}/>
+                            handleClick={() => props.setCurrentPage(LEVEL_TWO)}/>
                     )}
                 </I18n>
             } else if (correctObjects.length > 0) {

@@ -38,6 +38,7 @@ interface Props {
 const TextsQuiz = (props: Props) => {
 
     let modalTriggerRef: any;
+    let modalRef: any;
 
     const getItemStyle = (draggablePropsStyle: any, isDragging: boolean) => {
         if (!isDragging) {

@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from 'react';
+import React, {Dispatch, SetStateAction, useEffect} from 'react';
 // @ts-ignore
 import {exhibitedObjects} from "../../data";
 // @ts-ignore
@@ -29,6 +29,10 @@ const ObjectsGrid = (props: Props) => {
             }
             props.setSelected(prevSelection => [...prevSelection, objectName]);
         }
+    };
+
+    const modalOnCloseEnd = () => {
+        props.setSelected(prevState => prevState.filter(object => exhibitedObjects.some((obj) => obj.src == object)));
     };
 
     const getModalContent = () => {
@@ -82,9 +86,10 @@ const ObjectsGrid = (props: Props) => {
                                                                                                        handleClick={(object) => handleClick(object)}/>)}
         </Row>
         <Row>
-            <ModalDialog trigger={<Button>Submit <Icon right>
+
+            <ModalDialog options={{onCloseEnd: modalOnCloseEnd}} trigger={<Button>Submit <Icon right>
                 send
-            </Icon> </Button>} content={getModalContent()}/>
+            </Icon> </Button>} content={getModalContent()} />
         </Row>
     </div>;
 };

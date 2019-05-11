@@ -1,0 +1,9 @@
+.col.s4.level-one-object {
+    position: relative;
+}
+
+i.material-icons.small {
+    position: absolute;
+    right: 11%;
+    color: teal;
+}

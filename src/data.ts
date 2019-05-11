@@ -396,8 +396,14 @@ export const exhibitedObjects: ExhibitionObject[] = [{
     }];
 
 export const nonExhibitedObjects: string[] = [
-    'camera-vintage-lens-old.jpg',
-    'pexels-photo-1393319.jpeg',
-    'pexels-photo-194101.jpeg',
-    'torx-bits-metal-iron-60049.jpeg'
+    'other/Klassische_Archaeologie.jpg',
+    'other/kz_gedenkstaette.jpg',
+    'other/Landesarchiv_BadenWuerttemberg.jpg',
+    'other/Museen_der_Stadt_Nuernberg.jpg',
+    'other/parzival_zyklus.jpg',
+    'other/StadtmuseumLandsbergAmLech.jpg',
+    'other/StaedtischeGalerie.jpg',
+    'other/UBStuttgart.jpg',
+    'other/Zeppelin Museum.jpg',
+    'other/ZoologischeSammlung.jpg'
 ];

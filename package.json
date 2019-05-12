@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "http://erogleva.github.io/boring-things-quiz",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@lingui/core": "^2.7.4",
     "@lingui/react": "^2.7.4",

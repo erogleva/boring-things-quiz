@@ -104,8 +104,8 @@ msgid "Senden"
 msgstr "Senden"
 
 #: src/components/level-one/ObjectsGrid.tsx:38
-msgid "Super! Du hast alle Objekte richtig identifiziert!'"
-msgstr "Super! Du hast alle Objekte richtig identifiziert!'"
+msgid "Super! Du hast alle Objekte richtig identifiziert!"
+msgstr "Super! Du hast alle Objekte richtig identifiziert!"
 
 #: src/components/HelpPage.tsx:21
 msgid "Um neu anzufangen drücke auf Neustart."

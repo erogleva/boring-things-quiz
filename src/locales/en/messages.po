@@ -104,7 +104,7 @@ msgid "Senden"
 msgstr "Submit"
 
 #: src/components/level-one/ObjectsGrid.tsx:38
-msgid "Super! Du hast alle Objekte richtig identifiziert!'"
+msgid "Super! Du hast alle Objekte richtig identifiziert!"
 msgstr "Great! You have identified all correct objects!"
 
 #: src/components/HelpPage.tsx:21

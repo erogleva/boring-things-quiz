@@ -48,7 +48,7 @@ const ObjectsGrid = (props: Props) => {
                 return <I18n>
                     {({i18n}) => (
                         <Continue
-                            text={i18n._(t`Super! Du hast alle Objekte richtig identifiziert!'`)}
+                            text={i18n._(t`Super! Du hast alle Objekte richtig identifiziert!`)}
                             buttonText={i18n._(t`Gehe zu Level ${'2'}`)}
                             handleClick={() => props.setCurrentPage(LEVEL_TWO)}/>
                     )}

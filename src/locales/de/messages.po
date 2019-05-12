@@ -17,7 +17,7 @@ msgstr ""
 msgid "Auch langweilige Sachen können eine Geschichte erzählen."
 msgstr "Auch langweilige Sachen können eine Geschichte erzählen."
 
-#: src/components/level-three/CalculatorWrapper.js:23
+#: src/components/level-three/CalculatorWrapper.js:24
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 
@@ -25,7 +25,7 @@ msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Bitte wähle drei Objekte aus!"
 
-#: src/App.tsx:79
+#: src/App.tsx:81
 #: src/components/HelpPage.tsx:29
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
@@ -34,7 +34,7 @@ msgstr "Brauchst du Hilfe?"
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
-#: src/components/level-three/sketch.js:158
+#: src/components/level-three/sketch.js:159
 msgid "Fertig!"
 msgstr "Fertig!"
 
@@ -43,11 +43,15 @@ msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
 msgstr "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
 
 #: src/components/level-one/ObjectsGrid.tsx:38
-#: src/components/level-two/TextsQuiz.tsx:65
+#: src/components/level-two/TextsQuiz.tsx:27
 msgid "Gehe zu Level {0}"
 msgstr "Gehe zu Level {0}"
 
-#: src/components/level-two/TextsQuiz.tsx:65
+#: src/components/restart-page/RestartPage.tsx:27
+msgid "Gibt es im Stadtmuseum Tübingen noch mehr \"langweilige Sachen\"?"
+msgstr "Gibt es im Stadtmuseum Tübingen noch mehr \"langweilige Sachen\"?"
+
+#: src/components/level-two/TextsQuiz.tsx:27
 msgid "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 msgstr "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 
@@ -55,7 +59,7 @@ msgstr "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 
-#: src/components/level-two/TextsQuiz.tsx:67
+#: src/components/level-two/TextsQuiz.tsx:66
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 msgstr "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 
@@ -83,11 +87,15 @@ msgstr "Los geht’s!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 
-#: src/components/level-three/sketch.js:153
+#: src/components/restart-page/RestartPage.tsx:29
+msgid "Neue Runde"
+msgstr "Neue Runde"
+
+#: src/components/level-three/sketch.js:154
 msgid "Neustart"
 msgstr "Neustart"
 
-#: src/components/level-two/TextsQuiz.tsx:69
+#: src/components/level-two/TextsQuiz.tsx:68
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 
@@ -103,7 +111,7 @@ msgstr "Super! Du hast alle Objekte richtig identifiziert!'"
 msgid "Um neu anzufangen drücke auf Neustart."
 msgstr "Um neu anzufangen drücke auf Neustart."
 
-#: src/components/level-three/sketch.js:150
+#: src/components/level-three/sketch.js:151
 msgid "Weiter!"
 msgstr "Weiter!"
 
@@ -119,11 +127,11 @@ msgstr "Wir wünschen dir viel Spaß!"
 msgid "Wähle deine Sprache"
 msgstr "Wähle deine Sprache"
 
-#: src/components/level-two/TextsQuiz.tsx:101
+#: src/components/level-two/TextsQuiz.tsx:100
 msgid "Zieh ein Bild hierher"
 msgstr "Zieh ein Bild hierher"
 
-#: src/components/common/Modal.tsx:6
+#: src/components/common/Modal.tsx:12
 msgid "Zurück"
 msgstr "Zurück"
 

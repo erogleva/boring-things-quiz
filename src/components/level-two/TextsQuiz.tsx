@@ -75,6 +75,7 @@ const TextsQuiz = (props: Props) => {
                 setModalContent(<ModalContent item={item} showContinue={shouldShowContinue}/>);
                 // setItems(prevState => prevState.filter(item => item.id !== result.draggableId))
                 modalTriggerRef.click();
+
             }
 
         }
@@ -95,7 +96,7 @@ const TextsQuiz = (props: Props) => {
     }, [items]);
 
     return <div className='level-two-objects'>
-        <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent} />
+        <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent}/>
         <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
             zuordnen? </Trans>
         <Trans render="h6">Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst.</Trans>

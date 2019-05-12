@@ -7,6 +7,7 @@ import scoreObj from './score';
 
 import { i18n } from "./../../App";
 import { t } from "@lingui/macro"
+import {RESTART_PAGE} from "../../constants";
 
 
 export default function sketch(p) {
@@ -160,8 +161,8 @@ export default function sketch(p) {
 
         // Game is over
         if (score.isMaxScore()){
-            // Dont know what the next step is
-            throw new Error();
+            // Go to the next page
+            p.props.setCurrentPage(RESTART_PAGE);
         }
     };
 

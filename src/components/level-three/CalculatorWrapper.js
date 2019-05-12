@@ -5,7 +5,8 @@ import { Trans } from '@lingui/macro';
 class CalculatorWrapper extends Component {
 
     componentDidMount() {
-        this.canvas = new window.p5(sketch, 'calculator-container')
+        this.canvas = new window.p5(sketch, 'calculator-container');
+        this.canvas.props = {setCurrentPage: this.props.setCurrentPage};
     }
 
     shouldComponentUpdate() {

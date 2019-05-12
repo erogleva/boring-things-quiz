@@ -17,11 +17,11 @@ import {Trans} from '@lingui/macro';
 import { setupI18n } from "@lingui/core";
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
-import { LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE } from "./constants";
+import {LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE, RESTART_PAGE} from "./constants";
+import RestartPage from "./components/restart-page/RestartPage";
 
 export type LanguageString = 'en' | 'de'
 export const i18n = setupI18n();
-
 
 
 const App = () => {
@@ -70,10 +70,14 @@ const App = () => {
                 setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage} language={language}/>);
                 break;
             case LEVEL_THREE:
-                setComponent(<CalculatorWrapper/>);
+                setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage}/>);
                 break;
-            default:
-                setComponent(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>)
+            case LANDING_PAGE:
+                setComponent(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
+                break;
+            case RESTART_PAGE:
+                setComponent(<RestartPage setCurrentPage={setCurrentPage} setSelected={setSelected} setCorrectItems={setCorrectItems} setObjects={setObjects}/>)
+
         }
     }, [currentPage, selected, objects, correctItems]);
 

@@ -101,7 +101,7 @@ const App = () => {
                         </div>
                     </div>
                 </nav>
-                {currentPage !== LANDING_PAGE && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
+                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}
                 {showHelp && <HelpPage setShowHelp={setShowHelp} currentPage={currentPage}/>}
             </div>

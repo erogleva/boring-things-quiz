@@ -49,7 +49,7 @@ const ObjectsGrid = (props: Props) => {
                     {({i18n}) => (
                         <Continue
                             text={i18n._(t`Super! Du hast alle Objekte richtig identifiziert!'`)}
-                            buttonText={i18n._(t`Gehe zu Level 2`)}
+                            buttonText={i18n._(t`Gehe zu Level ${'2'}`)}
                             handleClick={() => props.setCurrentPage(LEVEL_TWO)}/>
                     )}
                 </I18n>
@@ -87,7 +87,7 @@ const ObjectsGrid = (props: Props) => {
         </Row>
         <Row>
 
-            <ModalDialog options={{onCloseEnd: modalOnCloseEnd}} trigger={<Button>Submit <Icon right>
+            <ModalDialog options={{onCloseEnd: modalOnCloseEnd}} trigger={<Button><Trans>Senden</Trans> <Icon right>
                 send
             </Icon> </Button>} content={getModalContent()} />
         </Row>

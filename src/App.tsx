@@ -77,12 +77,9 @@ const App = () => {
         }
     }, [currentPage, selected, objects, correctItems]);
 
-    const handleClick = () => {
-        if (currentPage === LEVEL_ONE) {
-            return
-        }
-
-        setCurrentPage(LEVEL_TWO)
+    const handleClick = (level: string) => {
+        setCurrentPage(level);
+        setShowHelp(false);
     };
 
     return (
@@ -91,16 +88,16 @@ const App = () => {
                 <nav className="row teal">
                     <div className="nav-wrapper">
                         <div className="col s12">
-                            <a className={currentPage === LEVEL_ONE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => setCurrentPage(LEVEL_ONE)}> Level
+                            <a className={currentPage === LEVEL_ONE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => {handleClick(LEVEL_ONE)}}> Level
                                 1 </a>
-                            <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'} onClick={handleClick}> Level
+                            <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_TWO)}> Level
                                 2 </a>
-                            <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'}> Level
+                            <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_THREE)}> Level
                                 3 </a>
                         </div>
                     </div>
                 </nav>
-                {currentPage !== 'landing-page' && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
+                {currentPage !== LANDING_PAGE && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}
                 {showHelp && <HelpPage setShowHelp={setShowHelp} currentPage={currentPage}/>}
             </div>

@@ -33,7 +33,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "add-locale": "lingui add-locale",
-    "extract": "lingui extract",
+    "extract": "lingui extract --clean",
     "compile": "lingui compile"
   },
   "eslintConfig": {

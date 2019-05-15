@@ -255,7 +255,9 @@ export default function sketch(p) {
             }
         }
 
-        if (event.target.className === 'p5Canvas') {
+        console.log(event.target.tagName);
+
+        if (event.target.tagName.toLowerCase() === 'canvas') {
             return false
         }
     }

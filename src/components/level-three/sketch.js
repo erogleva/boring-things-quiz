@@ -167,7 +167,6 @@ export default function sketch(p) {
     };
 
     p.windowResized = () => {
-        console.log('here');
         p.resizeCanvas(p.windowWidth, p.windowHeight);
     };
 
@@ -216,7 +215,7 @@ export default function sketch(p) {
     }
 
     // when user clicks mouse
-    p.mouseClicked = () => {
+    p.mousePressed = () => {
         context.resume();
         // Goes through all the button objects
         buttonArray.forEach(function (buttonElement, i) {
@@ -249,5 +248,7 @@ export default function sketch(p) {
                 playSound(falseSound);
             }
         }
+
+        return false
     }
 }

@@ -248,7 +248,5 @@ export default function sketch(p) {
                 playSound(falseSound);
             }
         }
-
-        return false
     }
 }

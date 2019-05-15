@@ -215,7 +215,7 @@ export default function sketch(p) {
     }
 
     // when user clicks mouse
-    p.mouseClicked = (event) => {
+    p.mousePressed = (event) => {
         context.resume();
         // Goes through all the button objects
         buttonArray.forEach(function (buttonElement, i) {

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import sketch from './sketch';
 import { Trans } from '@lingui/macro';
+import ModalDialog from "../common/Modal";
+import CalculatorHelp from "./CalculatorHelp";
+
 
 class CalculatorWrapper extends Component {
 
@@ -21,11 +24,13 @@ class CalculatorWrapper extends Component {
 
     render() {
         return <React.Fragment>
+            <ModalDialog open={this.props.modalOpen} content={<CalculatorHelp isHelpPage={false}/>}/>
             <Trans render="h6">Benutze Schickards Rechenmaschine um die Lösung zu finden!</Trans>
             <div
             id="calculator-container"
             style={{ width: "100%", textAlign: "center" }}
-        /></React.Fragment>
+        />
+        </React.Fragment>
     }
 }
 

@@ -62,6 +62,9 @@ const App = () => {
     }, []);
 
     useEffect(() => {
+
+        // determines whether to show the modal dialog
+        const shouldNotShowModal = currentPage === LEVEL_THREE && showHelp;
         switch (currentPage) {
             case LEVEL_ONE:
                 setComponent(<ObjectsGrid selected={selected} setSelected={setSelected} objects={objects}
@@ -71,7 +74,7 @@ const App = () => {
                 setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage} language={language}/>);
                 break;
             case LEVEL_THREE:
-                setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage}/>);
+                setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage} modalOpen={!shouldNotShowModal}/>);
                 break;
             case LANDING_PAGE:
                 setComponent(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
@@ -80,7 +83,7 @@ const App = () => {
                 setComponent(<RestartPage setCurrentPage={setCurrentPage} setSelected={setSelected} setCorrectItems={setCorrectItems} setObjects={setObjects}/>)
 
         }
-    }, [currentPage, selected, objects, correctItems]);
+    }, [currentPage, selected, objects, correctItems, showHelp]);
 
     useEffect(() => {
         document.title = i18n._(t`Lauter langweilige Sachen?`)

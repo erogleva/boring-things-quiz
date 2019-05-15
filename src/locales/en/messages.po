@@ -17,7 +17,7 @@ msgstr ""
 msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
 msgstr "Even seemingly boring objects have a story to tell."
 
-#: src/components/level-three/CalculatorWrapper.js:24
+#: src/components/level-three/CalculatorWrapper.js:28
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Use Schickards calculator to solve the problem!"
 
@@ -25,10 +25,14 @@ msgstr "Use Schickards calculator to solve the problem!"
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Please select three objects!"
 
-#: src/App.tsx:85
-#: src/components/HelpPage.tsx:29
+#: src/App.tsx:87
+#: src/components/HelpPage.tsx:25
 msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
+
+#: src/components/level-three/CalculatorHelp.tsx:10
+msgid "Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <0>Eingeben!</0> um dein Ergebnis zu überprüfen."
+msgstr "The final result is shown in the coloured fields. Click <0>Submit</0> to enter your result."
 
 #: src/components/level-one/ObjectsGrid.tsx:58
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
@@ -38,9 +42,9 @@ msgstr "Three of these objects are part of the exhibition in the museum - can yo
 msgid "Eingeben!"
 msgstr "Submit!"
 
-#: src/components/HelpPage.tsx:19
-msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
-msgstr "Now enter the second number. The calculator automatically tracks the changes."
+#: src/components/level-three/CalculatorHelp.tsx:7
+msgid "Fange an, indem du die erste Zahl in die Rechenmaschine eingibst. Dazu klickst du die Scheiben unter den bunten Nullen. Die farbigen Felder von links nach rechts stehen für Einser, Zehner, Hunderter usw. Daher musst du immer von links nach rechts arbeiten."
+msgstr "Begin by entering the first number. You do this by clicking on the dials under the coloured zeros. The coloured  fields represent ones, tens, hundreds etc from left to right respectively. Remember always to work from left to right. "
 
 #: src/components/level-one/ObjectsGrid.tsx:38
 #: src/components/level-two/TextsQuiz.tsx:27
@@ -55,19 +59,19 @@ msgstr "Are there more \"boring\" things in Stadtmuseum Tübingen?"
 msgid "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 msgstr "Congratulations! All descriptions are now matched correctly!"
 
-#: src/components/HelpPage.tsx:16
+#: src/components/HelpPage.tsx:17
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Each text matches with one image. Drag the text to the matching image."
+
+#: src/components/level-three/CalculatorHelp.tsx:5
+msgid "Jetzt ist es an der Zeit, Schickarts Rechenmaschine auszuprobieren!"
+msgstr "Now it’s time to try our Schickart’s Calculator!"
 
 #: src/components/level-two/TextsQuiz.tsx:66
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 msgstr "Let’s make it a bit more challenging. Can you match the description with the correct object?"
 
-#: src/components/HelpPage.tsx:18
-msgid "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dran, von Rechts nach Links zu arbeiten!"
-msgstr "Click on the dials to enter the first number. Always start with the digit on the right and then move left!"
-
-#: src/components/HelpPage.tsx:14
+#: src/components/HelpPage.tsx:15
 msgid "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
 msgstr "Select an image by clicking on it. If you want undo the selection you have to click on the image a second time."
 
@@ -75,7 +79,7 @@ msgstr "Select an image by clicking on it. If you want undo the selection you ha
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
 msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the <0>Stadtmuseum Tübingen </0>."
 
-#: src/App.tsx:65
+#: src/App.tsx:67
 #: src/components/landing-page/LandingPage.tsx:14
 msgid "Lauter langweilige Sachen?"
 msgstr "A Bunch of Boring Things?"
@@ -100,9 +104,17 @@ msgstr "Play again"
 msgid "Neustart"
 msgstr "Reset"
 
+#: src/components/level-three/CalculatorHelp.tsx:9
+msgid "Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen. Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!"
+msgstr "Now you are ready to enter the second number. There is no need to add a plus operator (+). The machine does this automatically. Now you can follow the same steps as before. Make sure to count how many times you click! The calculator simultaneously adds each click to the sum."
+
 #: src/components/level-two/TextsQuiz.tsx:68
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "If you are correct you will see a green tick. "
+
+#: src/components/level-three/CalculatorHelp.tsx:6
+msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
+msgstr "At the top of the calculator you will find a sum to calculate. There are three questions in total."
 
 #: src/components/level-one/ObjectsGrid.tsx:67
 msgid "Senden"
@@ -112,21 +124,21 @@ msgstr "Submit"
 msgid "Super! Du hast alle Objekte richtig identifiziert!"
 msgstr "Great! You have identified all correct objects!"
 
-#: src/components/HelpPage.tsx:21
-msgid "Um neu anzufangen drücke auf Neustart."
-msgstr "Click on Reset to reset the calculator."
+#: src/components/level-three/CalculatorHelp.tsx:11
+msgid "Unter <0>Brauchst du Hilfe?</0> findest du auch eine Videoanleitung für die Maschine."
+msgstr "Clicking on <0>Do you need help?</0> will lead you to a video tutorial of the machine."
+
+#: src/components/level-three/CalculatorHelp.tsx:12
+msgid "Viel Spaß!"
+msgstr "Have fun!"
 
 #: src/components/level-three/sketch.js:151
 msgid "Weiter!"
 msgstr "Next!"
 
-#: src/components/HelpPage.tsx:20
-msgid "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekommst du einen Punkt."
-msgstr "Click on Done! when you have entered the second number. If the answer is correct you will receive a point."
-
-#: src/components/HelpPage.tsx:22
-msgid "Wir wünschen dir viel Spaß!"
-msgstr "We wish you a lot of fun!"
+#: src/components/level-three/CalculatorHelp.tsx:8
+msgid "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von Links drei klickst, dann gehst du eine Scheibe nach rechts und klickst zwei mal."
+msgstr "If the sum is 23+45 you would enter the 3 first by clicking on the outer left dial three times. Then enter the 2 by moving one dial to the right and clicking twice."
 
 #: src/components/landing-page/LandingPage.tsx:22
 msgid "Wähle deine Sprache"
@@ -140,7 +152,7 @@ msgstr "Drag one of the pictures here"
 msgid "Zurück"
 msgstr "Close"
 
-#: src/components/HelpPage.tsx:32
+#: src/components/HelpPage.tsx:28
 msgid "Zurück zum Spiel"
 msgstr "Go back"
 

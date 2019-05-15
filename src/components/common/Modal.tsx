@@ -4,9 +4,10 @@ import {Button, Col, Icon, Modal, Row} from 'react-materialize';
 import {Trans} from '@lingui/macro';
 
 interface Props {
-    trigger: ReactElement,
+    trigger?: ReactElement,
     content: ReactElement,
-    options?: object
+    options?: object,
+    open?: boolean
 }
 
 const ModalDialog = (props: Props) => {
@@ -19,7 +20,7 @@ const ModalDialog = (props: Props) => {
         }
     });
 
-    return <Modal ref={(modal: Element) => modalRef = modal} trigger={props.trigger} options={props.options}
+    return <Modal ref={(modal: Element) => modalRef = modal} open={props.open} trigger={props.trigger} options={props.options}
                   actions={<Button waves="green" modal="close" flat><Trans>Zurück</Trans></Button>}>
         {props.content}
     </Modal>

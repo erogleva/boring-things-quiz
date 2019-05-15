@@ -215,7 +215,7 @@ export default function sketch(p) {
     }
 
     // when user clicks mouse
-    p.mousePressed = (event) => {
+    p.mouseClicked = (event) => {
         context.resume();
         // Goes through all the button objects
         buttonArray.forEach(function (buttonElement, i) {
@@ -249,7 +249,9 @@ export default function sketch(p) {
             }
         }
 
-        if (event.target.className === 'p5Canvas') {
+        console.log(event.target.tagName);
+
+        if (event.target.tagName.toLowerCase() === 'canvas') {
             return false
         }
     }

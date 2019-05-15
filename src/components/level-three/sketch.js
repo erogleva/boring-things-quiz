@@ -156,7 +156,7 @@ export default function sketch(p) {
         ibutton3.show(blinkFlag);
 
         ibutton4.update(imgPosX + (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
-        ibutton4.setText(i18n._(t`Fertig!`));
+        ibutton4.setText(i18n._(t`Eingeben!`));
         ibutton4.show();
 
         // Game is over

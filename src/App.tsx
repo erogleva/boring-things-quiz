@@ -19,6 +19,7 @@ import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
 import {LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE, RESTART_PAGE} from "./constants";
 import RestartPage from "./components/restart-page/RestartPage";
+import { t } from "@lingui/macro"
 
 export type LanguageString = 'en' | 'de'
 export const i18n = setupI18n();
@@ -81,6 +82,10 @@ const App = () => {
         }
     }, [currentPage, selected, objects, correctItems]);
 
+    useEffect(() => {
+        document.title = i18n._(t`Lauter langweilige Sachen?`)
+    });
+
     const handleClick = (level: string) => {
         setCurrentPage(level);
         setShowHelp(false);
@@ -88,7 +93,7 @@ const App = () => {
 
     return (
         <I18nProvider i18n={i18n} language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
-            <div className='app'>
+            <div className={currentPage === LANDING_PAGE ? 'app landing-page' : 'app'}>
                 <nav className="row teal">
                     <div className="nav-wrapper">
                         <div className="col s12">

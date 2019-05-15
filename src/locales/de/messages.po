@@ -13,9 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/landing-page/LandingPage.tsx:14
-msgid "Auch langweilige Sachen können eine Geschichte erzählen."
-msgstr "Auch langweilige Sachen können eine Geschichte erzählen."
+#: src/components/landing-page/LandingPage.tsx:15
+msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
+msgstr "Auch unscheinbare Objekte können eine Geschichte erzählen."
 
 #: src/components/level-three/CalculatorWrapper.js:24
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
@@ -25,7 +25,7 @@ msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Bitte wähle drei Objekte aus!"
 
-#: src/App.tsx:81
+#: src/App.tsx:85
 #: src/components/HelpPage.tsx:29
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
@@ -35,8 +35,8 @@ msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du er
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
 #: src/components/level-three/sketch.js:159
-msgid "Fertig!"
-msgstr "Fertig!"
+msgid "Eingeben!"
+msgstr "Eingeben!"
 
 #: src/components/HelpPage.tsx:19
 msgid "Gebe nun die zweite Zahl ein. Die Rechenmaschine zählt automatisch mit."
@@ -71,15 +71,20 @@ msgstr "Klicke auf die Zifferblätter um die Ausgangszahl einzustellen. Denk dra
 msgid "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
 msgstr "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
 
-#: src/components/landing-page/LandingPage.tsx:18
+#: src/components/landing-page/LandingPage.tsx:19
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
 msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
+
+#: src/App.tsx:65
+#: src/components/landing-page/LandingPage.tsx:14
+msgid "Lauter langweilige Sachen?"
+msgstr "Lauter langweilige Sachen?"
 
 #: src/components/level-one/ObjectsGrid.tsx:49
 msgid "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
 msgstr "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
 
-#: src/components/landing-page/LandingPage.tsx:32
+#: src/components/landing-page/LandingPage.tsx:33
 msgid "Los geht’s!"
 msgstr "Los geht’s!"
 
@@ -123,7 +128,7 @@ msgstr "Wenn du fertig bist drücke auf Fertig! Ist das Ergebnis richtig bekomms
 msgid "Wir wünschen dir viel Spaß!"
 msgstr "Wir wünschen dir viel Spaß!"
 
-#: src/components/landing-page/LandingPage.tsx:21
+#: src/components/landing-page/LandingPage.tsx:22
 msgid "Wähle deine Sprache"
 msgstr "Wähle deine Sprache"
 

@@ -20,9 +20,10 @@ const LandingPage = (props: Props) => {
     };
 
 
-    return <div className="landing-page">
+    return <div className="landing-page-text">
+        <Trans render="h1">Lauter langweilige Sachen?</Trans>
         <Trans render="h6">
-            Auch langweilige Sachen können eine Geschichte erzählen.
+            Auch unscheinbare Objekte können eine Geschichte erzählen.
         </Trans>
 
         <Trans render="h6">Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen,

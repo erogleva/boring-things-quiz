@@ -37,6 +37,8 @@ export default function sketch(p) {
     var buttonArray = [];
     var displayArray = [];
 
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
     function interateNumbers() {
         if (numLevel === 10){
             number.generateRandomNumbers(numLevel * 10, 1);
@@ -220,8 +222,7 @@ export default function sketch(p) {
         return value;
     }
 
-    // when user clicks mouse
-    p.mouseClicked = (event) => {
+    function handleClick(event) {
         context.resume();
         // Goes through all the button objects
         buttonArray.forEach(function (buttonElement, i) {
@@ -255,10 +256,23 @@ export default function sketch(p) {
             }
         }
 
-        console.log(event.target.tagName);
-
-        if (event.target.tagName.toLowerCase() === 'canvas') {
+        if (calculator && p.mouseY > calculator.getButtonY() && event.target.tagName.toLowerCase() === 'canvas') {
             return false
+        }
+    }
+
+    // when user clicks mouse
+    p.mousePressed = (event) => {
+        if(iOS) {
+            handleClick(event)
+        }
+
+    };
+
+    p.mouseClicked = (event) => {
+        console.log(iOS)
+        if(!iOS) {
+            handleClick(event)
         }
     }
 }

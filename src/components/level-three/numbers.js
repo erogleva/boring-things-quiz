@@ -13,7 +13,6 @@ export default class numberObj{
             this.n[i] = parseInt(this.p.random(base)+offset);
           }
     }
-    // not used
     setNumber(n,value){
         if(n < this.n.length){
             this.n[n] = parseInt(value);

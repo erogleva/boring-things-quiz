@@ -38,7 +38,13 @@ export default function sketch(p) {
     var displayArray = [];
 
     function interateNumbers() {
-        number.generateRandomNumbers(numLevel * 10, 1);
+        if (numLevel === 10){
+            number.generateRandomNumbers(numLevel * 10, 1);
+        }
+        else{
+            number.setNumber(0,p.random(numLevel/10,numLevel*10));
+            number.setNumber(1,p.random(numLevel/10,numLevel));    
+        }
         numLevel = numLevel * 10;
         if (numLevel >= numLevelMax) numLevel = numLevelMax;
     }

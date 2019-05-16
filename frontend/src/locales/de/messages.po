@@ -78,8 +78,8 @@ msgid "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild
 msgstr "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
 
 #: src/components/landing-page/LandingPage.tsx:19
-msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
-msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die im <0>Stadtmuseum Tübingen </0> ausgestellt sind."
+msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
+msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
 
 #: src/App.tsx:67
 #: src/components/landing-page/LandingPage.tsx:14

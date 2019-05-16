@@ -27,7 +27,7 @@ const LandingPage = (props: Props) => {
         </Trans>
 
         <Trans render="h6">Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen,
-            die im <a href="https://www.tuebingen.de/stadtmuseum/" target="_blank">Stadtmuseum Tübingen </a> ausgestellt sind.</Trans>
+            die ausgestellt sind im <br/>  <a href="https://www.tuebingen.de/stadtmuseum/" target="_blank">Stadtmuseum Tübingen</a>.</Trans>
 
         <Trans render="h6" className='choose-language'>Wähle deine Sprache</Trans>
 

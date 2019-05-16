@@ -42,7 +42,9 @@
 }
 
 .landing-page-text a {
-    color: #096693;
+    color: #58c5fa;
+    font-weight: 600;
+    font-size: 1.40rem;
 }
 
 .landing-page {

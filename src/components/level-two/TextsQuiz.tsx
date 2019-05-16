@@ -45,10 +45,6 @@ const TextsQuiz = (props: Props) => {
         return <I18n>
             {({i18n}) => (
                 <div className='modal-content'>
-                    {showContinue &&
-                    <Continue text={i18n._(t`Glückwunsch, alle Objekte sind richtig zugeordnet!`)}
-                              buttonText={i18n._(t`Gehe zu Level ${'3'}`)}
-                              handleClick={() => props.setCurrentPage(LEVEL_THREE)}/>}
 
                     <div className='image-wrapper'>
                         <img src={require(`../../assets/img/${item.src}`)}/>
@@ -56,6 +52,11 @@ const TextsQuiz = (props: Props) => {
                     <div className='text-wrapper'>
                         <p>{item.detailedDescription}</p>
                     </div>
+
+                    {showContinue &&
+                    <Continue text={i18n._(t`Glückwunsch, alle Objekte sind richtig zugeordnet!`)}
+                              buttonText={i18n._(t`Gehe zu Level ${'3'}`)}
+                              handleClick={() => props.setCurrentPage(LEVEL_THREE)}/>}
                 </div>
             )}
         </I18n>
@@ -95,70 +96,82 @@ const TextsQuiz = (props: Props) => {
         setDescriptions(shuffleArray(items));
     }, [items]);
 
-    return <div className='level-two-objects'>
-        <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent}/>
-        <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
-            zuordnen? </Trans>
-        <Trans render="h6">Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst.</Trans>
-        <DragDropContext onDragEnd={onDragEnd}>
-            <Droppable droppableId='images' isDropDisabled={true} direction='horizontal'>
-                {(provided) => (
-                    <div className='row images-droppable'
-                         ref={provided.innerRef}
-                         {...provided.droppableProps}>
+    return <I18n>
+        {({i18n}) => (
+            <div className='level-two-objects'>
+                {correctlyIdentifiedDescriptions.length === 3 && <Continue text={i18n._(t`Glückwunsch, alle Objekte sind richtig zugeordnet!`)}
+                                                                           buttonText={i18n._(t`Gehe zu Level ${'3'}`)}
+                                                                           handleClick={() => props.setCurrentPage(LEVEL_THREE)}/>}
+                <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent}/>
+                <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
+                    zuordnen? </Trans>
+                <Trans render="h6">Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst.</Trans>
 
-                        {items.filter(item => !correctlyIdentifiedDescriptions.includes(item.id)).map((item, index) => {
-                            return <Draggable key={item.id} draggableId={item.id} index={index}>
-                                {(provided, snapshot) => (
-                                    <img src={require(`../../assets/img/${item.src}`)} alt={item.name}
-                                         ref={provided.innerRef}
-                                         {...provided.draggableProps}
-                                         {...provided.dragHandleProps}
-                                         style={getItemStyle(provided.draggableProps.style, snapshot.isDragging)}/>
-                                )}
-                            </Draggable>
-                        })}
-                        {provided.placeholder}
-                    </div>
-                )}
-            </Droppable>
-            <div className='row'>
-                <Col s={6} className='descriptions'>
-                    <div className='descriptions-collection'>
-                        {descriptions.map((item, index) => (
-                            <div key={index}
-                                 className={correctlyIdentifiedDescriptions.includes(item.id) ? 'description correct' : 'description'}>
-                                {props.language === 'de' ? item.quizDescription : item.locales.en.quizDescription}
-                                {correctlyIdentifiedDescriptions.includes(item.id) &&
-                                <Icon small>
-                                    check
-                                </Icon>}
-                            </div>))}
-                    </div>
-                </Col>
-                <Col s={6} className='images'>
-                    <div>
-                        {descriptions.map(description =>
-                            <div key={description.src}>
-                                <Droppable droppableId={description.id}>
-                                    {(provided) => (
-                                        <div className='placeholder'
-                                             ref={provided.innerRef}
-                                             {...provided.droppableProps}>
-                                            {correctlyIdentifiedDescriptions.includes(description.id) ?
-                                                <img src={require(`../../assets/img/${description.src}`)}/> :
-                                                <span><Trans>Zieh ein Bild hierher</Trans></span>}
-                                        </div>
-                                    )}
 
-                                </Droppable>
+                <DragDropContext onDragEnd={onDragEnd}>
+                    <Droppable droppableId='images' isDropDisabled={true} direction='horizontal'>
+                        {(provided) => (
+                            <div className='row images-droppable'
+                                 ref={provided.innerRef}
+                                 {...provided.droppableProps}>
+
+                                {items.filter(item => !correctlyIdentifiedDescriptions.includes(item.id)).map((item, index) => {
+                                    return <Draggable key={item.id} draggableId={item.id} index={index}>
+                                        {(provided, snapshot) => (
+                                            <img src={require(`../../assets/img/${item.src}`)} alt={item.name}
+                                                 ref={provided.innerRef}
+                                                 {...provided.draggableProps}
+                                                 {...provided.dragHandleProps}
+                                                 style={getItemStyle(provided.draggableProps.style, snapshot.isDragging)}/>
+                                        )}
+                                    </Draggable>
+                                })}
+                                {provided.placeholder}
                             </div>
                         )}
+                    </Droppable>
+                    <div className='row'>
+                        <Col s={6} className='descriptions'>
+                            <div className='descriptions-collection'>
+                                {descriptions.map((item, index) => (
+                                    <div key={index}
+                                         className={correctlyIdentifiedDescriptions.includes(item.id) ? 'description correct' : 'description'}>
+                                        {props.language === 'de' ? item.quizDescription : item.locales.en.quizDescription}
+                                        {correctlyIdentifiedDescriptions.includes(item.id) &&
+                                        <Icon small>
+                                            check
+                                        </Icon>}
+                                    </div>))}
+                            </div>
+                        </Col>
+                        <Col s={6} className='images'>
+                            <div>
+                                {descriptions.map(description =>
+                                    <div key={description.src}>
+                                        <Droppable droppableId={description.id}>
+                                            {(provided) => (
+                                                <div className='placeholder'
+                                                     ref={provided.innerRef}
+                                                     {...provided.droppableProps}>
+                                                    {correctlyIdentifiedDescriptions.includes(description.id) ?
+                                                        <ModalDialog content={<ModalContent item={description}
+                                                                                            showContinue={false}/>}
+                                                                     trigger={<img
+                                                                         src={require(`../../assets/img/${description.src}`)}/>}/> :
+                                                        <span><Trans>Zieh ein Bild hierher</Trans></span>}
+                                                </div>
+                                            )}
+
+                                        </Droppable>
+                                    </div>
+                                )}
+                            </div>
+                        </Col>
                     </div>
-                </Col>
+                </DragDropContext>
             </div>
-        </DragDropContext>
-    </div>
+        )}
+    </I18n>
 };
 
 export default TextsQuiz;

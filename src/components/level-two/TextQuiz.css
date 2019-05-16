@@ -21,6 +21,10 @@ h6 {
     margin-bottom: 10px;
 }
 
+.placeholder img {
+    cursor: pointer;
+}
+
 .modal-content img {
     float: left;
     margin-right: 20px;

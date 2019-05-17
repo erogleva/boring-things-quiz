@@ -74,8 +74,11 @@ const TinderObjects = (props: Props) => {
             </div>
         </div>
 
-        <Button onClick={props.resetGame}>Spiel neu starten!</Button>
-        {currentObject < 39 && <Button onClick={handleClick}><Trans>Nächstes Objekt bewerten?</Trans></Button>}
+        <div className='cta'>
+
+        <Button onClick={props.resetGame} className='start-again'>Spiel neu starten!</Button>
+        {currentObject < 39 && <Button onClick={handleClick} className='next-object'><Trans>Nächstes Objekt bewerten?</Trans></Button>}
+        </div>
     </div>;
 };
 

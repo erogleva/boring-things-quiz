@@ -15,10 +15,36 @@
     margin-bottom: 30px;
 }
 
+.cta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta .btn {
+    margin: 0 20px 10px;
+}
+
+.cta .start-again {
+    order: 2
+}
+
+.cta .next-object {
+    order: 1
+}
+
+@media screen and (min-width: 600px) {
+    .cta .start-again {
+        order: 1
+    }
+
+    .cta .next-object {
+        order: 2
+    }
+}
+
 .reactions div {
     margin: 0 30px;
 }
 
-.level-four .btn {
-    margin: 0 30px;
-}
+

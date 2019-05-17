@@ -40,3 +40,8 @@ a {
 .app .breadcrumb.active {
     color: #fff;
 }
+
+.app .breadcrumb::before {
+    margin-right: 0 !important;
+    margin-left: 0;
+}

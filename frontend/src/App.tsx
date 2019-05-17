@@ -13,13 +13,12 @@ import {getRandomObjects, shuffleArray} from "./utils/arrayUtils";
 import CalculatorWrapper from "./components/level-three/CalculatorWrapper";
 import {I18nProvider} from '@lingui/react'
 import LandingPage from "./components/landing-page/LandingPage";
-import {Trans} from '@lingui/macro';
-import { setupI18n } from "@lingui/core";
+import {t, Trans} from '@lingui/macro';
+import {setupI18n} from "@lingui/core";
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
-import {LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE, RESTART_PAGE, LEVEL_FOUR} from "./constants";
+import {LANDING_PAGE, LEVEL_FOUR, LEVEL_ONE, LEVEL_THREE, LEVEL_TWO, RESTART_PAGE} from "./constants";
 import RestartPage from "./components/restart-page/RestartPage";
-import { t } from "@lingui/macro"
 import TinderObjects from "./components/level-four/TinderObjects";
 
 export type LanguageString = 'en' | 'de'
@@ -36,11 +35,13 @@ const App = () => {
     const [language, setLanguage] = useState<LanguageString>('de');
     const [correctItems, setCorrectItems] = useState<ExhibitionObject[]>([]);
     const [currentPage, setCurrentPage] = useState<string>(LANDING_PAGE);
-    const [component, setComponent] = useState<JSX.Element>(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
+    const [component, setComponent] = useState<JSX.Element>(<LandingPage setCurrentPage={setCurrentPage}
+                                                                         setLanguage={setLanguage}/>);
     const [showHelp, setShowHelp] = useState<boolean>(false);
+    const [levelFourUnlocked, setLevelFourUnlocked] = useState<boolean>(false);
 
     const resetGame = () => {
-        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects,  [], 3).map(obj => obj.src);
+        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects, [], 3).map(obj => obj.src);
         const randomNonExhibitedObjects: string[] = shuffleArray(nonExhibitedObjects).slice(0, 3);
 
         let correctItems: ExhibitionObject[] = [];
@@ -57,14 +58,13 @@ const App = () => {
         const objectsSet = shuffleArray([...randomExhibitedObjects, ...randomNonExhibitedObjects]);
         setObjects(() => [...objectsSet]);
         setSelected([]);
-        setCurrentPage(LEVEL_ONE)
     };
 
     useEffect(() => {
 
         const calculator = exhibitedObjects.find(obj => obj.id === '06413b');
 
-        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects, calculator ? [calculator]: [], 2).map(obj => obj.src);
+        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects, calculator ? [calculator] : [], 2).map(obj => obj.src);
         const randomNonExhibitedObjects: string[] = shuffleArray(nonExhibitedObjects).slice(0, 3);
 
         let correctItems: ExhibitionObject[] = [];
@@ -92,19 +92,21 @@ const App = () => {
                                           setCurrentPage={setCurrentPage}/>);
                 break;
             case LEVEL_TWO:
-                setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage} language={language}/>);
+                setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage}
+                                        language={language}/>);
                 break;
             case LEVEL_THREE:
-                setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage} modalOpen={!shouldNotShowModal}/>);
+                setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage} modalOpen={!shouldNotShowModal} setLevelFourUnlocked={setLevelFourUnlocked}/>);
                 break;
             case LEVEL_FOUR:
-                setComponent(<TinderObjects correctItems={correctItems} resetGame={resetGame}/>);
+                setComponent(<TinderObjects correctItems={correctItems} resetGame={resetGame}
+                                            setCurrentPage={setCurrentPage} language={language}/>);
                 break;
             case LANDING_PAGE:
                 setComponent(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
                 break;
             case RESTART_PAGE:
-                setComponent(<RestartPage resetGame={resetGame}/>)
+                setComponent(<RestartPage resetGame={resetGame} setCurrentPage={setCurrentPage}/>)
 
         }
     }, [currentPage, selected, objects, correctItems, showHelp]);
@@ -114,7 +116,11 @@ const App = () => {
     });
 
     const handleClick = (level: string) => {
-        setCurrentPage(level);
+        if (currentPage !== level) {
+            setCurrentPage(level);
+            resetGame();
+        }
+
         setShowHelp(false);
     };
 
@@ -123,19 +129,23 @@ const App = () => {
             <div className={currentPage === LANDING_PAGE ? 'app landing-page' : 'app'}>
                 <nav className="row teal">
                     <div className="nav-wrapper">
-                        <div className="col s12">
-                            <a className={currentPage === LEVEL_ONE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => {handleClick(LEVEL_ONE)}}> Level
-                                1 </a>
-                            <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_TWO)}> Level
-                                2 </a>
-                            <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_THREE)}> Level
-                                3 </a>
-                            <a className={currentPage === LEVEL_FOUR ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_FOUR)}> Level
-                                4 </a>
+                        <div className="col s12 ">
+                            <a className={currentPage === LEVEL_ONE ? 'active breadcrumb' : 'breadcrumb'}
+                               onClick={() => {
+                                   handleClick(LEVEL_ONE)
+                               }}> <Trans>Raten</Trans> </a>
+                            <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'}
+                               onClick={() => handleClick(LEVEL_TWO)}> <Trans>Matchen</Trans></a>
+                            <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'}
+                               onClick={() => handleClick(LEVEL_THREE)}> <Trans>Rechnen</Trans></a>
+                            {levelFourUnlocked && <a className={currentPage === LEVEL_FOUR ? 'active breadcrumb' : 'breadcrumb'}
+                               onClick={() => handleClick(LEVEL_FOUR)}> <Trans>Tindern</Trans>
+                            </a>}
                         </div>
                     </div>
                 </nav>
-                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && currentPage !== LEVEL_FOUR && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
+                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && currentPage !== LEVEL_FOUR && !showHelp &&
+                <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}
                 {showHelp && <HelpPage setShowHelp={setShowHelp} currentPage={currentPage}/>}
             </div>

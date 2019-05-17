@@ -10,7 +10,10 @@ class CalculatorWrapper extends Component {
 
     componentDidMount() {
         this.canvas = new window.p5(sketch, 'calculator-container');
-        this.canvas.props = {setCurrentPage: this.props.setCurrentPage};
+        this.canvas.props = {
+            setCurrentPage:
+            this.props.setCurrentPage,
+            setLevelFourUnlocked: this.props.setLevelFourUnlocked};
     }
 
     shouldComponentUpdate() {

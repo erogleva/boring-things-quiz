@@ -170,6 +170,7 @@ export default function sketch(p) {
         // Game is over
         if (score.isMaxScore()){
             // Go to the next page
+            p.props.setLevelFourUnlocked(true);
             p.props.setCurrentPage(RESTART_PAGE);
         }
     };

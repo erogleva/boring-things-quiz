@@ -24,7 +24,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'I´m an old lady and was once carried through town by horses.',
+                        quizDescription: 'I\'m an old lady and was once carried through town by horses.',
                         detailedDescription: 'I am the oldest flag cloth in southwest Germany! My material dates back to around 1200. Duke Ulrich presented me to the people of Tübingin the year 1514. They had helped him quench an uprising and were now allowed to include the stag poles in their coat of arms.'
                     }
             },
@@ -54,7 +54,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'I´m not a backscratcher!',
+                        quizDescription: 'I\'m not a backscratcher!',
                         detailedDescription: 'We are oath staffs. When someone was sworn in or took an oath, he or she had to have us in their hands. We were used in Tübingen until the 19th century.'
                     }
             },
@@ -69,7 +69,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'No, I´m not a rusty nail!',
+                        quizDescription: 'No, I\'m not a rusty nail!',
                         detailedDescription: 'That\'s right! I\'m not a nail, but a cloak pin. In the Bronze Age I was used to keep your robes in place. I come from a settlement that existed before the first mention of Tübingen in the 11th/12th century.'
                     }
             },
@@ -85,7 +85,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
                 en:
                     {
                         quizDescription: 'I went for a long swim.',
-                        detailedDescription: 'I am what is left of the original figure from George\'s Fountain at the "Holzmarkt" (Wood Market) from 1523. In 1841 the fountain was demoslished and I disappeared in the river Neckar until 1911. In 1976 the foubtain was reconstructed and I acted as a model. If you want to see my whole body, come and see the fountain for yourself!'
+                        detailedDescription: 'I am what is left of the original figure from George\'s Fountain at the "Holzmarkt" (Wood Market) from 1523. In 1841 the fountain was demolished and I disappeared in the river Neckar until 1911. In 1976 the fountain was reconstructed and I acted as a model. If you want to see my whole body, come and see the fountain for yourself!'
                     }
             },
         src: '02585_Fragmente Georgsbrunnen.jpg'
@@ -129,7 +129,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'If you don´t know the trick, I will not disclose my secret.',
+                        quizDescription: 'If you don\'t know the trick, I will not disclose my secret.',
                         detailedDescription: 'I look like an ordinary chest, but I have a secret lock on my lid. I used to work for the city treasury.'
                     }
             },
@@ -174,7 +174,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'Nowadays I´m not needed anymore!',
+                        quizDescription: 'Nowadays I\'m not needed anymore!',
                         detailedDescription: 'I am the old executioner\'s sword of the city of Tübingen. Fortunately I have been retired for a long time. '
                     }
             },
@@ -234,8 +234,8 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'I´m the original, in the Rathausgasse you find only a copy of myself.',
-                        detailedDescription: 'Does your family have its own emblem? This emplem stone belongs to the Breuning/Braeuning family, one of the most powerful and oldest families in Tübingen. The govenor Konrad Breunig helped quench the rising of the "poor Konrad" (Armer Konrad) in 1514. Nevertheless he was tortured and executed by duke Ulrich for high treason.'
+                        quizDescription: 'I\'m the original, in the Rathausgasse you find only a copy of myself.',
+                        detailedDescription: 'Does your family have its own emblem? I am an emblem stone which belonged to the Breuning/Braeuning family, one of the most powerful and oldest families in Tübingen. The governor Konrad Breunig helped quench the rising of the "poor Konrad" (Armer Konrad) in 1514. Nevertheless he was tortured and executed by duke Ulrich for high treason.'
                     }
             },
         src: '04729 Wappen Breuning.jpg'
@@ -280,7 +280,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
                 en:
                     {
                         quizDescription: 'I once brought the fuehrer cult into the children\'s room.',
-                        detailedDescription: 'We are 7 cm small versions of Göring, Hitler and soldiers. After 1933, plastic figures like us and toys that embodied the organizations, colors and personalities of the Nazi state were particularly popular. You could buy figures like us for 30 Pfennig  and we carried the Führer cult into the children\'s rooms.'
+                        detailedDescription: 'We are 7 cm small versions of Göring, Hitler and soldiers. After 1933, plastic figures like us and toys that embodied the organizations, colours and personalities of the Nazi state were particularly popular. You could buy figures like us for 30 Pfennig  and we carried the Führer cult into the children\'s rooms.'
                     }
             },
         src: '05572 Spielzeugfiguren Hitler Göring.jpg'
@@ -294,7 +294,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'Whenever you need to see a man about a dog.',
+                        quizDescription: 'I\'m there for you whenever you need to see a man about a dog.',
                         detailedDescription: 'Aren\'t I camouflaged well? Whenever you needed to see a man about a dog (i.e. go to the toilet) I was there to help. Did you think I was a chamber pot? Until the end of the 19th century, chamber pots were part of the inventory of many households because thee was no separate bathroom.'
                     }
             },
@@ -304,7 +304,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '03642',
         name: 'Textil: Staubtuch',
         quizDescription: 'Ich bin ein Artefakt der prüden 50er Jahre.',
-        detailedDescription: 'Ich bin ein Staubtuch, aber mein eigentlicher Zweck war Literatur mit unmoralischen oder minderwertigen Inhalten anzuprangern, wie etwa Trivialromane oder Comics. Ein Zusammenschluss Tübinger Staatsbürgerinnen, deren Ziel es war Frauen in allen Bereichen der politischen Öffentlichkeit zu etablieren und sie in rechlichen Grundlagen und Rhetorik zu schulen. Ich wurde verkauft um eine Kinderlesestube zu finanzieren, in der es aber nur Bücher ohne "Schmutz und Schund“ geben sollte.',
+        detailedDescription: 'Ich bin ein Staubtuch, aber mein eigentlicher Zweck war Literatur mit unmoralischen oder minderwertigen Inhalten anzuprangern, wie etwa Trivialromane oder Comics. Ein Zusammenschluss Tübinger Staatsbürgerinnen, deren Ziel es war Frauen in allen Bereichen der politischen Öffentlichkeit zu etablieren und sie in rechtlichen Grundlagen und Rhetorik zu schulen. Ich wurde verkauft um eine Kinderlesestube zu finanzieren, in der es aber nur Bücher ohne "Schmutz und Schund“ geben sollte.',
         locales:
             {
                 en:
@@ -319,7 +319,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '06413b',
         name: 'Bruno Baron Freytag-Löringhoff: Rekonstruktion: Schickards Rechenmaschine / Die Schickard\'sche Rechenmaschine',
         quizDescription: 'Ich kann bereits addieren, subtrahieren, multiplizieren und dividieren.',
-        detailedDescription: 'Ich bin die erste Rechenmaschine der Welt! Wilhelm Schickard, Tübinger Professor für Hebraistik, Mathematik und Astronomie, baute mich im Jahr 1623. Ich hatte Konkurrenz, aber die Rechenmaschine von Johannes Keppler verbrannte ehe er sie fertigstellen konnte.  \nIch kann addieren, subtrahieren, multiplizieren und dividieren. Du must nur die richtigen Rädchen drehen. Hat man einmal den Trick raus, geht es auch ganz leicht!  \n',
+        detailedDescription: 'Ich bin die erste Rechenmaschine der Welt! Wilhelm Schickard, Tübinger Professor für Hebraistik, Mathematik und Astronomie, baute mich im Jahr 1623. Ich hatte Konkurrenz, aber die Rechenmaschine von Johannes Keppler verbrannte ehe er sie fertigstellen konnte.  \nIch kann addieren, subtrahieren, multiplizieren und dividieren. Du musst nur die richtigen Rädchen drehen. Hat man einmal den Trick raus, geht es auch ganz leicht!  \n',
         locales:
             {
                 en:
@@ -339,7 +339,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'I´m an emancipation machine!',
+                        quizDescription: 'I\'m an emancipation machine!',
                         detailedDescription: 'In the 1920s, new job opportunities opened up for women. I am Klara Haug\'s sewing machine. Klara founded her own tailoring studio and conquered a male profession. '
                     }
             },
@@ -364,7 +364,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '09177',
         name: 'Bekleidung: T-Shirt Nordtangente',
         quizDescription: 'Ich sag ja zum Nein.',
-        detailedDescription: 'Ich bin ein Protest-T-Shirt und wurde von Gegnern der Nordtangente getragen. Zu Beginn der 1970er Jahre nahm die Motorisierung in Tübingen enorm zu. Als das Straßenbild und die Bausubstanz der Stadt bedroht warendurch die Nordtangente formte sich eine Bürgerinitiative gegen den Bau. Das Ergenbis des ersten Bürgerentscheids in der Geschichte der Stadt im Jahr 1979 war mit 16745 zu 3188 Stimmen "Ja" es soll keine Nordtangente gebaut werden. ',
+        detailedDescription: 'Ich bin ein Protest-T-Shirt und wurde von Gegnern der Nordtangente getragen. Zu Beginn der 1970er Jahre nahm die Motorisierung in Tübingen enorm zu. Als das Straßenbild und die Bausubstanz der Stadt bedroht warendurch die Nordtangente formte sich eine Bürgerinitiative gegen den Bau. Das Ergebnis des ersten Bürgerentscheids in der Geschichte der Stadt im Jahr 1979 war mit 16745 zu 3188 Stimmen "Ja" es soll keine Nordtangente gebaut werden. ',
         locales:
             {
                 en:
@@ -394,7 +394,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '09765a',
         name: 'Radio Zauberdose der Firma LTP',
         quizDescription: 'Hörgenuss, erfunden in Tübingen.',
-        detailedDescription: 'Wärst du auf die Idee gekommen ein Radio in eine Keramikvase zu stecken? Willy Bürkle wollte in den 40er Jahren so eine bessere Klangübertragung garantieren! Leider meldete der Tongefäßhersteller 1949 Konkurs, und somit auch die inTübingen ansässige Firma LTP. Insgesamt wurden circa 700 Radios in Tübingen hergestellt.  ',
+        detailedDescription: 'Wärst du auf die Idee gekommen ein Radio in eine Keramikvase zu stecken? Willy Bürkle wollte in den 40er Jahren so eine bessere Klangübertragung garantieren! Leider meldete der Tongefäßhersteller 1949 Konkurs, und somit auch die in Tübingen ansässige Firma LTP. Insgesamt wurden circa 700 Radios in Tübingen hergestellt.  ',
         locales:
             {
                 en:
@@ -439,7 +439,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '10094',
         name: 'Ziegel: Feierabendziegel',
         quizDescription: 'Siehst du meine Hexenbesen?',
-        detailedDescription: 'Sehen deine Dachziegel heute auch noch so aus? Ich bin ein Biberschawanzziegel mit einee Sonnenartigen Verzierung. Die Sonnenmotive werden in der Überlieferung auch „Hexenbesen“ genannt und als Abwehrzauber gedeutet.',
+        detailedDescription: 'Sehen deine Dachziegel heute auch noch so aus? Ich bin ein Biberschawanzziegel mit eine Sonnenartigen Verzierung. Die Sonnenmotive werden in der Überlieferung auch „Hexenbesen“ genannt und als Abwehrzauber gedeutet.',
         locales:
             {
                 en:
@@ -474,7 +474,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
             {
                 en:
                     {
-                        quizDescription: 'I´m decorated with rosettes and arabesques.',
+                        quizDescription: 'I\'m decorated with rosettes and arabesques.',
                         detailedDescription: 'I used to decorate the ceiling of the "good room" of the house Lazarettgasse 14. My measurements are 3.35 by 3.80 meters and therefore I am just as big as the room. My individual tiles filled with plaster are about 70 x 80 centimetres in size. \nThe house I lived in was almost exclusively owned by wine growers from the 16th to the 19th century. '
                     }
             },
@@ -499,7 +499,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '11241',
         name: 'Eisen: Kerzenleuchter / Kerzenhalter',
         quizDescription: 'Das lichtscheue Gesindel verzichtet auf mich.',
-        detailedDescription: 'Ich bin ein Kerzenständer mit herzförmigen Auffangbecken. Bevor es Elektritität gab war ich in jedem Haus unersetzlich wenn man nachts den Weg durchs Haus finden wollte. Auch wer nach Einbruch der Dunkelheit auf die (unbeleuchtete) Straße ging und nicht für „lichtscheues Gesindel“ gehalten werden wollte, musste eine Lichtquelle wie mich mit sich führen. ',
+        detailedDescription: 'Ich bin ein Kerzenständer mit herzförmigen Auffangbecken. Bevor es Elektrizität gab war ich in jedem Haus unersetzlich wenn man nachts den Weg durchs Haus finden wollte. Auch wer nach Einbruch der Dunkelheit auf die (unbeleuchtete) Straße ging und nicht für „lichtscheues Gesindel“ gehalten werden wollte, musste eine Lichtquelle wie mich mit sich führen. ',
         locales:
             {
                 en:
@@ -514,7 +514,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '11247',
         name: 'Teichel',
         quizDescription: 'Ich bin eine hölzerne Teichel.',
-        detailedDescription: 'Ich bin eine Teichel, der Vorgänger der heutigen Wasserrohre. Ich bin ein ausgehöhlter Baumstamm und in meinem Innerern befindet sich ein Metallrohr. Bis zum 19. Jahrhundert wurde ich in Tübingen verwendet um Wasser aus Quellen oder Brunnenstuben in die Stadt zu leiten. ',
+        detailedDescription: 'Ich bin eine Teichel, der Vorgänger der heutigen Wasserrohre. Ich bin ein ausgehöhlter Baumstamm und in meinem Inneren befindet sich ein Metallrohr. Bis zum 19. Jahrhundert wurde ich in Tübingen verwendet um Wasser aus Quellen oder Brunnenstuben in die Stadt zu leiten. ',
         locales:
             {
                 en:
@@ -529,13 +529,13 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '11248',
         name: 'Spitalzeichen / Symbol der Armenfürsorge / Teil des Wappens des Tübinger Spitals',
         quizDescription: 'Was soll der Wecken in meiner Hand?',
-        detailedDescription: 'Ich bin der Wappenstein des Tübinger Spitals aus dem Jahr 1743. Mein Wappen ist eine Hand mit einem Wecken weil das Spital lange die städtische Haupt.Sozialeinrichtung war. Hier wurden die Armen-, Waisen, Alten, Alleinstehenden und Kranken versorgt, auch mit Essen. ',
+        detailedDescription: 'Ich bin der Wappenstein des Tübinger Spitals aus dem Jahr 1743. Mein Wappen ist eine Hand mit einem Wecken weil das Spital lange die städtische Haupt-Sozialeinrichtung war. Hier wurden die Armen-, Waisen, Alten, Alleinstehenden und Kranken versorgt, auch mit Essen. ',
         locales:
             {
                 en:
                     {
                         quizDescription: 'What is this bun in my hand for?',
-                        detailedDescription: 'I am theemblem stone of the Tübinger hospital from 1743. The emblem is a hand with a bun because the hospital was for a long time the citiy\'s main social institution. Here the poor, orphans, old people, single people and the sick were cared for and provided with food.'
+                        detailedDescription: 'I am the emblem stone of the Tübinger hospital from 1743. The emblem is a hand with a bun because the hospital was for a long time the city\'s main social institution. Here the poor, orphans, old people, single people and the sick were cared for and provided with food.'
                     }
             },
         src: '11248 Spitalzeichen.jpg'
@@ -550,7 +550,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
                 en:
                     {
                         quizDescription: 'I\'ve gone past my window of opportunity',
-                        detailedDescription: 'I am a painted window and was at home in Günther Dwenger\'s "Political bookshop" until it closed in 1988. The bookshop was an important place for the Tübinger Linke (left wing party). I present a variantion of Eugène Delacroix\'s "Die Freiheit führt das Volk an"( Liberty guides the people). My painter Orion Arkomanis was active in the resistance against dictatorships and fascism. He was an expatriate who came to Tübingen in 1972.'
+                        detailedDescription: 'I am a painted window and was at home in Günther Dwenger\'s "Political bookshop" until it closed in 1988. The bookshop was an important place for the Tübinger Linke (left wing party). I present a variation of Eugène Delacroix\'s "Die Freiheit führt das Volk an"( Liberty guides the people). My painter Orion Arkomanis was active in the resistance against dictatorships and fascism. He was an expatriate who came to Tübingen in 1972.'
                     }
             },
         src: '14080_Fenster_Dwengersche Buchhandlung.jpg'
@@ -574,7 +574,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '14094',
         name: 'Judaica: Jüdische Gebetsriemen (Tefillin) von Josef Wochenmark in Textilbeutel und Textiltasche',
         quizDescription: 'Mich trägt man um den schwachen Arm!',
-        detailedDescription: 'Ich bin eine Paar lederneer Gebetsriemen mit je einem kleinen Gehäuse aus Holz. Auf beiden meiner Seiten sind Stickereien mit blassgelbem Fadenzu sehen. Ich gehörte eins dem Josef Wochenmark. Dieser war von 1925 bis 1934 der Vorsänger der jüdischen Gemeinde Tübingen-Reutlingen. Um der Deportation in ein Konzentrationslager zu entgehen, beging er im März 1943 Selbstmord. Seine Söhne schafften es in die USA zu fliehen. ',
+        detailedDescription: 'Ich bin eine Paar lederner Gebetsriemen mit je einem kleinen Gehäuse aus Holz. Auf beiden meiner Seiten sind Stickereien mit blassgelbem Faden zu sehen. Ich gehörte einst dem Josef Wochenmark. Dieser war von 1925 bis 1934 der Vorsänger der jüdischen Gemeinde Tübingen-Reutlingen. Um der Deportation in ein Konzentrationslager zu entgehen, beging er im März 1943 Selbstmord. Seine Söhne schafften es in die USA zu fliehen. ',
         locales:
             {
                 en:
@@ -589,13 +589,13 @@ export const exhibitedObjects: ExhibitionObject[] = [{
         id: '14095',
         name: 'Konvolut Wochenmark: Weiden-Reisekorb von Arnold Wochenmark',
         quizDescription: 'Nach langer Reise endlich zurück in Tübingen!',
-        detailedDescription: 'Ich begleitete Arnold Wochenmark auf seiner Flucht vom Dritten Reich bis in die USA. Arnolds Vater Joseph Wochenmark war der Vorsänger der jüdischen Gemeinde Tübingens von 1925 bis 1934. Als seine Söhne fliehten blieb Joseph in Tübingen und beging Selbstmord in 1943, um der Deportation zu entgehen.',
+        detailedDescription: 'Ich bin ein Reisekorb und begleitete Arnold Wochenmark auf seiner Flucht vom Dritten Reich bis in die USA. Arnolds Vater Joseph Wochenmark war der Vorsänger der jüdischen Gemeinde Tübingens von 1925 bis 1934. Als seine Söhne flohen blieb Joseph in Tübingen und beging Selbstmord in 1943, um der Deportation zu entgehen.',
         locales:
             {
                 en:
                     {
-                        quizDescription: 'After a long journey I´m finally back in Tübingen.',
-                        detailedDescription: 'I accompanied Arnold Wochenmark as his fled from the Third Reich all the way to the USA. Arnold\'s father Joseph Wochenmark was the precentor of Tübingen\'s Jewish community from 1925 to 1934. When his sons fled, Joseph stayed in Tübingen, and committed suicide in 1943 to escape deportation.'
+                        quizDescription: 'After a long journey I\'m finally back in Tübingen.',
+                        detailedDescription: 'I\'m a travel basket and accompanied Arnold Wochenmark as he fled from the Third Reich all the way to the USA. Arnold\'s father Joseph Wochenmark was the precentor of Tübingen\'s Jewish community from 1925 to 1934. When his sons fled, Joseph stayed in Tübingen, and committed suicide in 1943 to escape deportation.'
                     }
             },
         src: '14095 Koffer Wochenmark.jpg'

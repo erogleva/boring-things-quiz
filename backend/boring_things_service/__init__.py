@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_restplus import Api
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 
 
 MONGO_URL = os.environ.get('MONGO_URL')
@@ -13,6 +14,7 @@ app = Flask(__name__)
 app.config['MONGO_URI'] = MONGO_URL
 mongo = PyMongo(app)
 
+CORS(app)
 api = Api(app)
 
 from boring_things_service.resources import items_ns

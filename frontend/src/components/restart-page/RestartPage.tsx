@@ -12,34 +12,10 @@ import confetti from 'canvas-confetti';
 
 
 interface Props {
-    setCurrentPage: Dispatch<SetStateAction<string>>,
-    setCorrectItems: Dispatch<SetStateAction<ExhibitionObject[]>>,
-    setObjects: Dispatch<SetStateAction<string[]>>,
-    setSelected: Dispatch<SetStateAction<string[]>>
+    resetGame: () => void;
 }
 
 const RestartPage = (props: Props) => {
-
-    const handleClick = () => {
-        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects,  [], 3).map(obj => obj.src);
-        const randomNonExhibitedObjects: string[] = shuffleArray(nonExhibitedObjects).slice(0, 3);
-
-        let correctItems: ExhibitionObject[] = [];
-
-        for (let objectSrc of randomExhibitedObjects) {
-            const object = exhibitedObjects.find(object => object.src === objectSrc);
-
-            if (object) {
-                correctItems.push(object);
-            }
-        }
-
-        props.setCorrectItems(() => ([...correctItems]));
-        const objectsSet = shuffleArray([...randomExhibitedObjects, ...randomNonExhibitedObjects]);
-        props.setObjects(() => [...objectsSet]);
-        props.setSelected([]);
-        props.setCurrentPage(LEVEL_ONE)
-    };
 
     const end = Date.now() + (3 * 1000);
 
@@ -85,7 +61,7 @@ const RestartPage = (props: Props) => {
         <Trans render={renderTitle}>Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?</Trans>
         <Trans render={renderTitle}>Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!</Trans>
 
-        <Button onClick={handleClick}><Trans>Neue Runde</Trans></Button>
+        <Button onClick={props.resetGame}><Trans>Neue Runde</Trans></Button>
     </div>
 };
 

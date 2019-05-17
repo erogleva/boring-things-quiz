@@ -17,9 +17,10 @@ import {Trans} from '@lingui/macro';
 import { setupI18n } from "@lingui/core";
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
-import {LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE, RESTART_PAGE} from "./constants";
+import {LANDING_PAGE, LEVEL_THREE, LEVEL_TWO, LEVEL_ONE, RESTART_PAGE, LEVEL_FOUR} from "./constants";
 import RestartPage from "./components/restart-page/RestartPage";
 import { t } from "@lingui/macro"
+import TinderObjects from "./components/level-four/TinderObjects";
 
 export type LanguageString = 'en' | 'de'
 export const i18n = setupI18n();
@@ -38,6 +39,26 @@ const App = () => {
     const [component, setComponent] = useState<JSX.Element>(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
     const [showHelp, setShowHelp] = useState<boolean>(false);
 
+    const resetGame = () => {
+        const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects,  [], 3).map(obj => obj.src);
+        const randomNonExhibitedObjects: string[] = shuffleArray(nonExhibitedObjects).slice(0, 3);
+
+        let correctItems: ExhibitionObject[] = [];
+
+        for (let objectSrc of randomExhibitedObjects) {
+            const object = exhibitedObjects.find(object => object.src === objectSrc);
+
+            if (object) {
+                correctItems.push(object);
+            }
+        }
+
+        setCorrectItems(() => ([...correctItems]));
+        const objectsSet = shuffleArray([...randomExhibitedObjects, ...randomNonExhibitedObjects]);
+        setObjects(() => [...objectsSet]);
+        setSelected([]);
+        setCurrentPage(LEVEL_ONE)
+    };
 
     useEffect(() => {
 
@@ -76,11 +97,14 @@ const App = () => {
             case LEVEL_THREE:
                 setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage} modalOpen={!shouldNotShowModal}/>);
                 break;
+            case LEVEL_FOUR:
+                setComponent(<TinderObjects correctItems={correctItems} resetGame={resetGame}/>);
+                break;
             case LANDING_PAGE:
                 setComponent(<LandingPage setCurrentPage={setCurrentPage} setLanguage={setLanguage}/>);
                 break;
             case RESTART_PAGE:
-                setComponent(<RestartPage setCurrentPage={setCurrentPage} setSelected={setSelected} setCorrectItems={setCorrectItems} setObjects={setObjects}/>)
+                setComponent(<RestartPage resetGame={resetGame}/>)
 
         }
     }, [currentPage, selected, objects, correctItems, showHelp]);
@@ -106,10 +130,12 @@ const App = () => {
                                 2 </a>
                             <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_THREE)}> Level
                                 3 </a>
+                            <a className={currentPage === LEVEL_FOUR ? 'active breadcrumb' : 'breadcrumb'} onClick={() => handleClick(LEVEL_FOUR)}> Level
+                                4 </a>
                         </div>
                     </div>
                 </nav>
-                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
+                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && currentPage !== LEVEL_FOUR && !showHelp && <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}
                 {showHelp && <HelpPage setShowHelp={setShowHelp} currentPage={currentPage}/>}
             </div>

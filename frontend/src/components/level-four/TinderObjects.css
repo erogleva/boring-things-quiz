@@ -1,6 +1,7 @@
 .level-four img {
     max-height: 400px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .reactions img {

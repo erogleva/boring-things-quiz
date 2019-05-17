@@ -13,9 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/level-four/TinderObjects.tsx:59
-msgid "<0>Auf dem Server ist ein interner Fehler  </0>"
-msgstr "<0>Auf dem Server ist ein interner Fehler  </0>"
+#: src/components/level-four/TinderObjects.tsx:67
+msgid "<0>Auf dem Server ist ein interner Fehler aufgetreten.</0>"
+msgstr "<0>Auf dem Server ist ein interner Fehler aufgetreten.</0>"
 
 #: src/components/landing-page/LandingPage.tsx:15
 msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
@@ -29,7 +29,7 @@ msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Bitte wähle drei Objekte aus!"
 
-#: src/App.tsx:109
+#: src/App.tsx:110
 #: src/components/HelpPage.tsx:25
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
@@ -50,15 +50,15 @@ msgstr "Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bu
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
-#: src/components/restart-page/RestartPage.tsx:42
+#: src/components/restart-page/RestartPage.tsx:47
 msgid "Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
 msgstr "Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
 
-#: src/components/restart-page/RestartPage.tsx:41
+#: src/components/restart-page/RestartPage.tsx:46
 msgid "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
 msgstr "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
 
-#: src/components/restart-page/RestartPage.tsx:44
+#: src/components/restart-page/RestartPage.tsx:49
 msgid "Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
 msgstr "Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
 
@@ -80,7 +80,7 @@ msgstr "Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unt
 msgid "Gehe zu Level {0}"
 msgstr "Gehe zu Level {0}"
 
-#: src/components/restart-page/RestartPage.tsx:40
+#: src/components/restart-page/RestartPage.tsx:45
 msgid "Glückwunsch!"
 msgstr "Glückwunsch!"
 
@@ -93,9 +93,9 @@ msgstr "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 
-#: src/components/level-four/TinderObjects.tsx:55
-msgid "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht?"
-msgstr "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht?"
+#: src/components/level-four/TinderObjects.tsx:61
+msgid "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht? <0/> Klicke auf das Bild, um mehr über das Objekt zu erfahren."
+msgstr "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht? <0/> Klicke auf das Bild, um mehr über das Objekt zu erfahren."
 
 #: src/components/level-three/CalculatorHelp.tsx:5
 msgid "Jetzt ist es an der Zeit, Schickarts Rechenmaschine auszuprobieren!"
@@ -113,7 +113,7 @@ msgstr "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bil
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
 msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
 
-#: src/App.tsx:87
+#: src/App.tsx:85
 #: src/components/landing-page/LandingPage.tsx:14
 msgid "Lauter langweilige Sachen?"
 msgstr "Lauter langweilige Sachen?"
@@ -130,7 +130,11 @@ msgstr "Los geht’s!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 
-#: src/components/restart-page/RestartPage.tsx:47
+#: src/App.tsx:102
+msgid "Matchen"
+msgstr "Matchen"
+
+#: src/components/restart-page/RestartPage.tsx:52
 msgid "Neue Runde"
 msgstr "Neue Runde"
 
@@ -142,7 +146,7 @@ msgstr "Neustart"
 msgid "Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen. Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!"
 msgstr "Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen. Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!"
 
-#: src/components/level-four/TinderObjects.tsx:72
+#: src/components/level-four/TinderObjects.tsx:81
 msgid "Nächstes Objekt bewerten?"
 msgstr "Nächstes Objekt bewerten?"
 
@@ -154,7 +158,15 @@ msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 msgstr "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 
-#: src/components/restart-page/RestartPage.tsx:43
+#: src/App.tsx:101
+msgid "Raten"
+msgstr "Raten"
+
+#: src/App.tsx:103
+msgid "Rechnen"
+msgstr "Rechnen"
+
+#: src/components/restart-page/RestartPage.tsx:48
 msgid "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!"
 msgstr "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!"
 
@@ -162,9 +174,17 @@ msgstr "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrac
 msgid "Senden"
 msgstr "Senden"
 
+#: src/components/level-four/TinderObjects.tsx:79
+msgid "Spiel von vorne starten!"
+msgstr "Spiel von vorne starten!"
+
 #: src/components/level-one/ObjectsGrid.tsx:38
 msgid "Super! Du hast alle Objekte richtig identifiziert!"
 msgstr "Super! Du hast alle Objekte richtig identifiziert!"
+
+#: src/App.tsx:104
+msgid "Tindern"
+msgstr "Tindern"
 
 #: src/components/level-three/CalculatorHelp.tsx:11
 msgid "Unter <0>Brauchst du Hilfe?</0> findest du auch eine Videoanleitung für die Maschine."
@@ -182,7 +202,7 @@ msgstr "Weiter!"
 msgid "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 msgstr "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 
-#: src/components/restart-page/RestartPage.tsx:45
+#: src/components/restart-page/RestartPage.tsx:50
 msgid "Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!"
 msgstr "Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!"
 
@@ -206,6 +226,6 @@ msgstr "Zurück zum Spiel"
 msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
 msgstr "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
 
-#: src/components/level-four/TinderObjects.tsx:58
-msgid "{likesPercentage} Prozent der Nutzer fanden dieses Objekt nicht langweilig!"
-msgstr "{likesPercentage} Prozent der Nutzer fanden dieses Objekt nicht langweilig!"
+#: src/components/level-four/TinderObjects.tsx:65
+msgid "{likesPercentage} Prozent der Nutzer fanden dieses Objekt interessant!"
+msgstr "{likesPercentage} Prozent der Nutzer fanden dieses Objekt interessant!"

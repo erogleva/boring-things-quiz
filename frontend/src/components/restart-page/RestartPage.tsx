@@ -13,12 +13,17 @@ import confetti from 'canvas-confetti';
 
 interface Props {
     resetGame: () => void;
+    setCurrentPage: Dispatch<SetStateAction<string>>
 }
 
 const RestartPage = (props: Props) => {
 
     const end = Date.now() + (3 * 1000);
 
+    const resetGame = () => {
+        props.resetGame();
+        props.setCurrentPage(LEVEL_ONE)
+    };
 
     const colors = ['#009688', '#9a2aec', '#f5cf0a'];
 
@@ -61,7 +66,7 @@ const RestartPage = (props: Props) => {
         <Trans render={renderTitle}>Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?</Trans>
         <Trans render={renderTitle}>Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!</Trans>
 
-        <Button onClick={props.resetGame}><Trans>Neue Runde</Trans></Button>
+        <Button onClick={resetGame}><Trans>Neue Runde</Trans></Button>
     </div>
 };
 

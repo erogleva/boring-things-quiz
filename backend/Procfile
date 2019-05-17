@@ -1,0 +1,1 @@
+web: gunicorn boring_things_service:app

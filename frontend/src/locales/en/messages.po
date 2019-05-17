@@ -38,6 +38,18 @@ msgstr "The final result is shown in the coloured fields. Click <0>Submit</0> to
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which ones?"
 
+#: src/components/restart-page/RestartPage.tsx:59
+msgid "Drei von vierzig Objekte hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
+msgstr ""
+
+#: src/components/restart-page/RestartPage.tsx:58
+msgid "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
+msgstr "You have successfully used Schickard's calculator and have now reached the end of our game!"
+
+#: src/components/restart-page/RestartPage.tsx:61
+msgid "Ein geheim Tip: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
+msgstr "Insider tip: You can also use Schickard's calculator at the museum! Feel like trying out a multiplication question?"
+
 #: src/components/level-three/sketch.js:167
 msgid "Eingeben!"
 msgstr "Submit!"
@@ -52,9 +64,9 @@ msgstr "Begin by entering the first number. You do this by clicking on the dials
 msgid "Gehe zu Level {0}"
 msgstr "Go to level {0}"
 
-#: src/components/restart-page/RestartPage.tsx:27
-msgid "Gibt es im Stadtmuseum Tübingen noch mehr \"langweilige Sachen\"?"
-msgstr "Are there more \"boring\" things in Stadtmuseum Tübingen?"
+#: src/components/restart-page/RestartPage.tsx:57
+msgid "Glückwunsch!"
+msgstr "Congratulations!"
 
 #: src/components/level-two/TextsQuiz.tsx:35
 #: src/components/level-two/TextsQuiz.tsx:67
@@ -98,7 +110,7 @@ msgstr "Off we go!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Some objects may seem boring but actually have an exciting story to tell!"
 
-#: src/components/restart-page/RestartPage.tsx:29
+#: src/components/restart-page/RestartPage.tsx:64
 msgid "Neue Runde"
 msgstr "Play again"
 
@@ -117,6 +129,10 @@ msgstr "If you are correct you will see a green tick. "
 #: src/components/level-three/CalculatorHelp.tsx:6
 msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 msgstr "At the top of the calculator you will find a sum to calculate. There are three questions in total."
+
+#: src/components/restart-page/RestartPage.tsx:60
+msgid "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spanendes entdecken!"
+msgstr "Stop by the museum too! There you can view these objects up close and discover a lot of new ones!"
 
 #: src/components/level-one/ObjectsGrid.tsx:67
 msgid "Senden"
@@ -141,6 +157,10 @@ msgstr "Next!"
 #: src/components/level-three/CalculatorHelp.tsx:8
 msgid "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 msgstr "If the sum is 23+45 you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice."
+
+#: src/components/restart-page/RestartPage.tsx:62
+msgid "Wir wünschen dir viel Spaß beim weiterspielen und hoffen uns dich bald im Museum zu sehen!"
+msgstr "We hope you have fun playing our game and look forward to seeing you at the museum!"
 
 #: src/components/landing-page/LandingPage.tsx:22
 msgid "Wähle deine Sprache"

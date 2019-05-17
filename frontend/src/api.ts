@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const backend = 'https://boring-things-api.herokuapp.com/items/';
+const backend = 'https://boring-things-api.herokuapp.com/items';
 
 export async function likeObject(id: string) {
     return await axios.put(`${backend}/${id}/like`, {})

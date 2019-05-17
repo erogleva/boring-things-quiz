@@ -6,7 +6,8 @@ export interface ExhibitionObject {
     detailedDescription: string,
     locales: {
         en: {
-            quizDescription: string
+            quizDescription: string,
+            detailedDescription: string
         }
     }
 }

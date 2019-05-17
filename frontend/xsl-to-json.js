@@ -12,7 +12,7 @@ const util = require('util');
 const objects = [];
 
 // parse the contents of the excel file
-const workSheetsFromFile = xlsx.parse(`${__dirname}/Gametext_01.xls`);
+const workSheetsFromFile = xlsx.parse(`${__dirname}/Kopie von Gametext_01_vanessa.xls`);
 
 workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
 
@@ -38,9 +38,12 @@ workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
     const quizDescription = object[13];
     const quizDescriptionEN = object[14];
 
-    const detailedDescription = object[15];
+    const detailedDescription = object[16];
+    const detailedDescriptionEN = object[17]
 
-    objects.push({id, name, quizDescription, detailedDescription, locales: { en: { quizDescription: quizDescriptionEN }}})
+    // console.log(object);
+
+    objects.push({id, name, quizDescription, detailedDescription, locales: { en: { quizDescription: quizDescriptionEN, detailedDescription: detailedDescriptionEN }}})
 }));
 
 // read the files

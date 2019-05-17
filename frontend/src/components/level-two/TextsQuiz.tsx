@@ -15,7 +15,8 @@ import Continue from '../common/Continue';
 
 interface ModalContentProps {
     item: ExhibitionObject,
-    showContinue: boolean
+    showContinue: boolean,
+    language: string
 }
 
 
@@ -40,7 +41,7 @@ const TextsQuiz = (props: Props) => {
         }
     };
 
-    const ModalContent = ({item, showContinue}: ModalContentProps) => {
+    const ModalContent = ({item, showContinue, language}: ModalContentProps) => {
 
         return <I18n>
             {({i18n}) => (
@@ -50,7 +51,7 @@ const TextsQuiz = (props: Props) => {
                         <img src={require(`../../assets/img/${item.src}`)}/>
                     </div>
                     <div className='text-wrapper'>
-                        <p>{item.detailedDescription}</p>
+                        <p>{props.language === 'de' ? item.detailedDescription : item.locales.en.detailedDescription}</p>
                     </div>
 
                     {showContinue &&
@@ -73,7 +74,7 @@ const TextsQuiz = (props: Props) => {
             const item = items.find(item => item.id === result.draggableId);
             if (item) {
 
-                setModalContent(<ModalContent item={item} showContinue={shouldShowContinue}/>);
+                setModalContent(<ModalContent item={item} showContinue={shouldShowContinue} language={props.language}/>);
                 // setItems(prevState => prevState.filter(item => item.id !== result.draggableId))
                 modalTriggerRef.click();
 
@@ -155,7 +156,8 @@ const TextsQuiz = (props: Props) => {
                                                      {...provided.droppableProps}>
                                                     {correctlyIdentifiedDescriptions.includes(description.id) ?
                                                         <ModalDialog content={<ModalContent item={description}
-                                                                                            showContinue={false}/>}
+                                                                                            showContinue={false}
+                                                                                            language={props.language}/>}
                                                                      trigger={<img
                                                                          src={require(`../../assets/img/${description.src}`)}/>}/> :
                                                         <span><Trans>Zieh ein Bild hierher</Trans></span>}

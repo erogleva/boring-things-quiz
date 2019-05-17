@@ -3,6 +3,7 @@ import sketch from './sketch';
 import { Trans } from '@lingui/macro';
 import ModalDialog from "../common/Modal";
 import CalculatorHelp from "./CalculatorHelp";
+import './CalculatorWrapper.css';
 
 
 class CalculatorWrapper extends Component {
@@ -23,14 +24,18 @@ class CalculatorWrapper extends Component {
     }
 
     render() {
-        return <React.Fragment>
+        const renderTitle = 'h6'
+        return <div className='calculator-wrapper'>
             <ModalDialog open={this.props.modalOpen} content={<CalculatorHelp isHelpPage={false}/>}/>
-            <Trans render="h6">Benutze Schickards Rechenmaschine um die Lösung zu finden!</Trans>
+            <Trans render={renderTitle}>Benutze Schickards Rechenmaschine um die Lösung zu finden!</Trans>
+                <Trans render={renderTitle}>Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unter den bunten Feldern klickst. </Trans>
+                <Trans render={renderTitle}>Die Felder stehen für Einser, Zehner, Hunderter usw. </Trans>
+                <Trans render={renderTitle}>Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bunten Feldern.</Trans>
             <div
             id="calculator-container"
             style={{ width: "100%", textAlign: "center" }}
         />
-        </React.Fragment>
+        </div>
     }
 }
 

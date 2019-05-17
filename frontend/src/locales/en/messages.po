@@ -17,7 +17,7 @@ msgstr ""
 msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
 msgstr "Even seemingly boring objects have a story to tell."
 
-#: src/components/level-three/CalculatorWrapper.js:28
+#: src/components/level-three/CalculatorWrapper.js:30
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Use Schickards calculator to solve the problem!"
 
@@ -34,13 +34,21 @@ msgstr "Do you need help?"
 msgid "Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <0>Eingeben!</0> um dein Ergebnis zu überprüfen."
 msgstr "The final result is shown in the coloured fields. Click <0>Submit</0> to enter your result."
 
+#: src/components/level-three/CalculatorWrapper.js:32
+msgid "Die Felder stehen für Einser, Zehner, Hunderter usw."
+msgstr "The fields stand for ones, tens, hundreds etc."
+
+#: src/components/level-three/CalculatorWrapper.js:33
+msgid "Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bunten Feldern."
+msgstr "The calculator adds automatically. Your answer is displayed in the coloured fields."
+
 #: src/components/level-one/ObjectsGrid.tsx:58
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which ones?"
 
 #: src/components/restart-page/RestartPage.tsx:59
 msgid "Drei von vierzig Objekte hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
-msgstr ""
+msgstr "You are now familiar with three out of forty objects in our game. Feel free to play the game again to discover more objects from our collection."
 
 #: src/components/restart-page/RestartPage.tsx:58
 msgid "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
@@ -57,6 +65,10 @@ msgstr "Submit!"
 #: src/components/level-three/CalculatorHelp.tsx:7
 msgid "Fange an, indem du die erste Zahl in die Rechenmaschine eingibst. Dazu klickst du die Scheiben unter den bunten Nullen. Die farbigen Felder von rechts nach links stehen für Einser, Zehner, Hunderter usw. Daher musst du immer von rechts nach links arbeiten."
 msgstr "Begin by entering the first number. You do this by clicking on the dials under the colourful zeros. The colourful fields represent ones, tens, hundreds etc from right to left respectively. Therefore, it is important to work from right to left. "
+
+#: src/components/level-three/CalculatorWrapper.js:31
+msgid "Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unter den bunten Feldern klickst."
+msgstr "Enter the numbers from right to left by clicking on the dials under the coloured fields."
 
 #: src/components/level-one/ObjectsGrid.tsx:38
 #: src/components/level-two/TextsQuiz.tsx:35

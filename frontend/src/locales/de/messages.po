@@ -46,17 +46,17 @@ msgstr "Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bu
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
-#: src/components/restart-page/RestartPage.tsx:59
-msgid "Drei von vierzig Objekte hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
-msgstr "Drei von vierzig Objekte hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
+#: src/components/restart-page/RestartPage.tsx:61
+msgid "Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
+msgstr "Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
 
-#: src/components/restart-page/RestartPage.tsx:58
+#: src/components/restart-page/RestartPage.tsx:60
 msgid "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
 msgstr "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
 
-#: src/components/restart-page/RestartPage.tsx:61
-msgid "Ein geheim Tip: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
-msgstr "Ein geheim Tip: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
+#: src/components/restart-page/RestartPage.tsx:63
+msgid "Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
+msgstr "Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
 
 #: src/components/level-three/sketch.js:167
 msgid "Eingeben!"
@@ -76,7 +76,7 @@ msgstr "Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unt
 msgid "Gehe zu Level {0}"
 msgstr "Gehe zu Level {0}"
 
-#: src/components/restart-page/RestartPage.tsx:57
+#: src/components/restart-page/RestartPage.tsx:59
 msgid "Glückwunsch!"
 msgstr "Glückwunsch!"
 
@@ -122,7 +122,7 @@ msgstr "Los geht’s!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 
-#: src/components/restart-page/RestartPage.tsx:64
+#: src/components/restart-page/RestartPage.tsx:66
 msgid "Neue Runde"
 msgstr "Neue Runde"
 
@@ -142,9 +142,9 @@ msgstr "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 msgstr "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 
-#: src/components/restart-page/RestartPage.tsx:60
-msgid "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spanendes entdecken!"
-msgstr "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spanendes entdecken!"
+#: src/components/restart-page/RestartPage.tsx:62
+msgid "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!"
+msgstr "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!"
 
 #: src/components/level-one/ObjectsGrid.tsx:67
 msgid "Senden"
@@ -170,9 +170,9 @@ msgstr "Weiter!"
 msgid "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 msgstr "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 
-#: src/components/restart-page/RestartPage.tsx:62
-msgid "Wir wünschen dir viel Spaß beim weiterspielen und hoffen uns dich bald im Museum zu sehen!"
-msgstr "Wir wünschen dir viel Spaß beim weiterspielen und hoffen uns dich bald im Museum zu sehen!"
+#: src/components/restart-page/RestartPage.tsx:64
+msgid "Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!"
+msgstr "Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!"
 
 #: src/components/landing-page/LandingPage.tsx:22
 msgid "Wähle deine Sprache"

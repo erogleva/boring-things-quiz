@@ -74,13 +74,16 @@ const RestartPage = (props: Props) => {
         frame();
     }, []);
 
+    const renderTitle = "h5";
+
     return <div className='restart-page'>
+
         <Trans render='h3'>Glückwunsch!</Trans>
-        <Trans render='h5'> Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!</Trans>
-        <Trans render='h5'>Drei von vierzig Objekte hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal. </Trans>
-        <Trans render='h5'>Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spanendes entdecken!</Trans>
-        <Trans render='h5'>Ein geheim Tip: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?</Trans>
-        <Trans render='h5'>Wir wünschen dir viel Spaß beim weiterspielen und hoffen uns dich bald im Museum zu sehen!</Trans>
+        <Trans render={renderTitle}> Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!</Trans>
+        <Trans render={renderTitle}>Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal. </Trans>
+        <Trans render={renderTitle}>Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!</Trans>
+        <Trans render={renderTitle}>Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?</Trans>
+        <Trans render={renderTitle}>Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!</Trans>
 
         <Button onClick={handleClick}><Trans>Neue Runde</Trans></Button>
     </div>

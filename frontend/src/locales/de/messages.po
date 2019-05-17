@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/level-four/TinderObjects.tsx:67
+#: src/components/level-four/TinderObjects.tsx:74
 msgid "<0>Auf dem Server ist ein interner Fehler aufgetreten.</0>"
 msgstr "<0>Auf dem Server ist ein interner Fehler aufgetreten.</0>"
 
@@ -85,7 +85,7 @@ msgstr "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 
-#: src/components/level-four/TinderObjects.tsx:61
+#: src/components/level-four/TinderObjects.tsx:64
 msgid "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht? <0/> Klicke auf das Bild, um mehr über das Objekt zu erfahren."
 msgstr "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht? <0/> Klicke auf das Bild, um mehr über das Objekt zu erfahren."
 
@@ -134,7 +134,7 @@ msgstr "Neustart"
 msgid "Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen. Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!"
 msgstr "Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen. Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!"
 
-#: src/components/level-four/TinderObjects.tsx:81
+#: src/components/level-four/TinderObjects.tsx:88
 msgid "Nächstes Objekt bewerten?"
 msgstr "Nächstes Objekt bewerten?"
 
@@ -158,7 +158,7 @@ msgstr "Rechnen"
 msgid "Senden"
 msgstr "Senden"
 
-#: src/components/level-four/TinderObjects.tsx:79
+#: src/components/level-four/TinderObjects.tsx:86
 msgid "Spiel von vorne starten!"
 msgstr "Spiel von vorne starten!"
 
@@ -207,6 +207,10 @@ msgstr "Zurück zum Spiel"
 msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
 msgstr "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
 
-#: src/components/level-four/TinderObjects.tsx:65
-msgid "{likesPercentage} Prozent der Nutzer fanden dieses Objekt interessant!"
-msgstr "{likesPercentage} Prozent der Nutzer fanden dieses Objekt interessant!"
+#: src/components/level-four/TinderObjects.tsx:71
+msgid "{dislikePercentage} Prozent der Nutzer fanden dieses Objekt auch langweilig!"
+msgstr "{dislikePercentage} Prozent der Nutzer fanden dieses Objekt auch langweilig!"
+
+#: src/components/level-four/TinderObjects.tsx:69
+msgid "{likesPercentage} Prozent der Nutzer fanden dieses Objekt auch interessant!"
+msgstr "{likesPercentage} Prozent der Nutzer fanden dieses Objekt auch interessant!"

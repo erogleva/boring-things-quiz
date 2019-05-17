@@ -2,18 +2,20 @@
     max-height: 400px;
     margin-top: 20px;
     cursor: pointer;
+    max-width: 70%;
 }
 
 .reactions img {
     height: 70px;
     width: auto;
     cursor: pointer;
+    max-width: 100%;
 }
 
 .reactions {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .cta {
@@ -23,15 +25,16 @@
 }
 
 .cta .btn {
-    margin: 30px 20px 10px;
+    margin: 10px 20px 5px;
 }
 
 .cta .start-again {
-    order: 2
+    order: 2;
+    margin-bottom: 15px;
 }
 
 .cta .next-object {
-    order: 1
+    order: 1;
 }
 
 .error {
@@ -40,11 +43,16 @@
 
 @media screen and (min-width: 600px) {
     .cta .start-again {
-        order: 1
+        order: 1;
+        margin-bottom: 0;
     }
 
     .cta .next-object {
-        order: 2
+        order: 2;
+    }
+
+    .reactions {
+        margin-bottom: 20px;
     }
 }
 

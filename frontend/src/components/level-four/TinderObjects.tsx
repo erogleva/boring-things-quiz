@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, useState} from 'react';
+import React, {Dispatch, SetStateAction, useEffect, useState} from 'react';
 import {ExhibitionObject} from "../../interfaces/ExhibitionObject";
 import {Trans} from '@lingui/macro';
 import "./TinderObjects.css";
@@ -8,6 +8,7 @@ import {dislikeObject, likeObject} from "../../api";
 import {exhibitedObjects} from "../../data";
 import {LEVEL_ONE} from "../../constants";
 import ModalDialog from "../common/Modal";
+import {shuffleArray} from "../../utils/arrayUtils";
 
 interface Props {
     correctItems: ExhibitionObject[];
@@ -23,7 +24,9 @@ const reactionTypes = {
 
 const TinderObjects = (props: Props) => {
 
-    const objects = [...exhibitedObjects];
+    useEffect(() => {
+        setObjects(shuffleArray([...exhibitedObjects]))
+    }, []);
 
     const handleClick = () => {
         setCurrentObject(prevState => {
@@ -41,6 +44,7 @@ const TinderObjects = (props: Props) => {
 
     const handleReaction = async (type: string) => {
         setError(false);
+        setReactionType(type);
         let res;
         const id = objects[currentObject].id;
 
@@ -67,15 +71,22 @@ const TinderObjects = (props: Props) => {
     const [currentObject, setCurrentObject] = useState(0);
     const [likesPercentage, setLikesPercentage] = useState<null | number>(null);
     const [error, setError] = useState(false);
+    const [reactionType, setReactionType] = useState(reactionTypes.LIKE);
+    const [objects, setObjects] = useState<ExhibitionObject[]>([]);
 
     const renderTitle = 'h6';
+    const dislikePercentage = likesPercentage !== null ? 100 - likesPercentage : null;
     return <div className='level-four'>
         <Trans render={renderTitle}>Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt
             "langweilig" oder nicht? <br/> Klicke auf das Bild, um mehr über das Objekt zu erfahren. </Trans>
-        <ModalDialog content={<div>{props.language === 'de' ? objects[currentObject].detailedDescription : objects[currentObject].locales.en.detailedDescription}</div>} trigger={<img src={require(`../../assets/img/${objects[currentObject].src}`)}
-                                              alt={objects[currentObject].name}/>}/>
-        {likesPercentage !== null &&
-        <Trans render={renderTitle}>{likesPercentage} Prozent der Nutzer fanden dieses Objekt interessant!</Trans>}
+        {objects.length > 0 && <ModalDialog content={<div>{props.language === 'de' ? objects[currentObject].detailedDescription : objects[currentObject].locales.en.detailedDescription}</div>} trigger={<img src={require(`../../assets/img/${objects[currentObject].src}`)}
+                                              alt={objects[currentObject].name}/>}/>}
+
+        {likesPercentage !== null && reactionType === reactionTypes.LIKE &&
+        <Trans render={renderTitle}>{likesPercentage} Prozent der Nutzer fanden dieses Objekt auch interessant!</Trans>}
+        {dislikePercentage !== null && reactionType === reactionTypes.DISLIKE &&
+        <Trans render={renderTitle}>{dislikePercentage} Prozent der Nutzer fanden dieses Objekt auch langweilig!</Trans>}
+
         {error &&
         <Trans render={renderTitle}> <span className='error'>Auf dem Server ist ein interner Fehler aufgetreten.</span></Trans>}
         <div className='reactions'>

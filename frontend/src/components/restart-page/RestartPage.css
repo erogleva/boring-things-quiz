@@ -13,10 +13,20 @@
 
 .restart-page h5 {
     font-size: 1.2rem;
+    line-height: 1.5;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 990px) {
     .restart-page h5 {
         font-size: 1.5rem
     }
+
+    .restart-page {
+        padding: 20px 15%;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+
 }

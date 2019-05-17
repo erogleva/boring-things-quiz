@@ -1,7 +1,7 @@
 import React, {Dispatch, SetStateAction, useEffect} from 'react';
 import { Trans } from '@lingui/macro';
 import './RestartPage.css';
-import {LEVEL_ONE} from "../../constants";
+import {LEVEL_FOUR, LEVEL_ONE} from "../../constants";
 //@ts-ignore
 import {  Button  } from 'react-materialize';
 import {getRandomObjects, shuffleArray} from "../../utils/arrayUtils";
@@ -19,11 +19,6 @@ interface Props {
 const RestartPage = (props: Props) => {
 
     const end = Date.now() + (3 * 1000);
-
-    const resetGame = () => {
-        props.resetGame();
-        props.setCurrentPage(LEVEL_ONE)
-    };
 
     const colors = ['#009688', '#9a2aec', '#f5cf0a'];
 
@@ -60,13 +55,15 @@ const RestartPage = (props: Props) => {
     return <div className='restart-page'>
 
         <Trans render='h3'>Glückwunsch!</Trans>
-        <Trans render={renderTitle}> Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!</Trans>
-        <Trans render={renderTitle}>Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal. </Trans>
-        <Trans render={renderTitle}>Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!</Trans>
-        <Trans render={renderTitle}>Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?</Trans>
-        <Trans render={renderTitle}>Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!</Trans>
+        <Trans render='h5'>
+            Du hast nun alle drei Spiele erfolgreich gelöst. Schau doch auch im Museum vorbei! Dort kannst du bereits bekannte und neue spannende Sachen entdecken! <br />
+            Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! <br/>
+            Falls du die Sammlung online weiter erkunden willst, kannst du jedes Spiel nochmal spielen indem du auf das Icon oben klickst. Die Objekte ändern sich jedes Mal. <br />
+            Du hast jetzt unser Bonus Spiel freigeschaltet und kannst Objekte „tindern“. <br />
+            Wir wünschen dir viel Spaß beim Weiterspielen! <br/>
+        </Trans>
 
-        <Button onClick={resetGame}><Trans>Neue Runde</Trans></Button>
+        <Button onClick={() => props.setCurrentPage(LEVEL_FOUR)}><Trans>Tindern</Trans></Button>
     </div>
 };
 

@@ -599,7 +599,7 @@ export const exhibitedObjects: ExhibitionObject[] = [{
                     }
             },
         src: '14095 Koffer Wochenmark.jpg'
-    }]
+    }];
 
 export const nonExhibitedObjects: string[] = [
     'other/Klassische_Archaeologie.jpg',

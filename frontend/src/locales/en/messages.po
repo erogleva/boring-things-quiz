@@ -21,7 +21,7 @@ msgstr "<0>A error ocurred while processing the request.<0>"
 msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
 msgstr "Even seemingly boring objects have a story to tell."
 
-#: src/components/level-three/CalculatorWrapper.js:30
+#: src/components/level-three/CalculatorWrapper.js:33
 msgid "Benutze Schickards Rechenmaschine um die Lösung zu finden!"
 msgstr "Use Schickards calculator to solve the problem!"
 
@@ -29,7 +29,7 @@ msgstr "Use Schickards calculator to solve the problem!"
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Please select three objects!"
 
-#: src/App.tsx:110
+#: src/App.tsx:111
 #: src/components/HelpPage.tsx:25
 msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
@@ -38,11 +38,11 @@ msgstr "Do you need help?"
 msgid "Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <0>Eingeben!</0> um dein Ergebnis zu überprüfen."
 msgstr "The final result is shown in the coloured fields. Click <0>Submit</0> to enter your result."
 
-#: src/components/level-three/CalculatorWrapper.js:32
+#: src/components/level-three/CalculatorWrapper.js:35
 msgid "Die Felder stehen für Einser, Zehner, Hunderter usw."
 msgstr "The fields stand for ones, tens, hundreds etc."
 
-#: src/components/level-three/CalculatorWrapper.js:33
+#: src/components/level-three/CalculatorWrapper.js:36
 msgid "Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bunten Feldern."
 msgstr "The calculator adds automatically. Your answer is displayed in the coloured fields."
 
@@ -50,17 +50,9 @@ msgstr "The calculator adds automatically. Your answer is displayed in the colou
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which ones?"
 
-#: src/components/restart-page/RestartPage.tsx:47
-msgid "Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
-msgstr "You are now familiar with three out of forty objects in our game. Feel free to play the game again to discover more objects from our collection. The objects change each time."
-
-#: src/components/restart-page/RestartPage.tsx:46
-msgid "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
-msgstr "You have successfully used Schickard's calculator and have now reached the end of our game!"
-
-#: src/components/restart-page/RestartPage.tsx:49
-msgid "Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
-msgstr "Insider tip: You can also use Schickard's calculator at the museum! Feel like trying out a multiplication question?"
+#: src/components/restart-page/RestartPage.tsx:42
+msgid "Du hast nun alle drei Spiele erfolgreich gelöst. Schau doch auch im Museum vorbei! Dort kannst du bereits bekannte und neue spannende Sachen entdecken! <0/>Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! <1/>Falls du die Sammlung online weiter erkunden willst, kannst du jedes Spiel nochmal spielen indem du auf das Icon oben klickst. Die Objekte ändern sich jedes Mal. <2/>Du hast jetzt unser Bonus Spiel freigeschaltet und kannst Objekte „tindern“. <3/>Wir wünschen dir viel Spaß beim Weiterspielen! <4/>"
+msgstr "You have now solved all three games successfully. Why not visit the museum? There you can discover already known and new exciting things! <0/> An insider tip: You can also use Schickard's calculating machine in the museum! <1/> If you want to explore the collection further, you can play each game again by clicking on the icon above. The objects change each time. <2/> You have now unlocked our bonus game and can \"tinder\" objects. <3/>We wish you a lot of fun playing the game! <4/>"
 
 #: src/components/level-three/sketch.js:167
 msgid "Eingeben!"
@@ -70,7 +62,7 @@ msgstr "Submit!"
 msgid "Fange an, indem du die erste Zahl in die Rechenmaschine eingibst. Dazu klickst du die Scheiben unter den bunten Nullen. Die farbigen Felder von rechts nach links stehen für Einser, Zehner, Hunderter usw. Daher musst du immer von rechts nach links arbeiten."
 msgstr "Begin by entering the first number. You do this by clicking on the dials under the colourful zeros. The colourful fields represent ones, tens, hundreds etc from right to left respectively. Therefore, it is important to work from right to left. "
 
-#: src/components/level-three/CalculatorWrapper.js:31
+#: src/components/level-three/CalculatorWrapper.js:34
 msgid "Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unter den bunten Feldern klickst."
 msgstr "Enter the numbers from right to left by clicking on the dials under the coloured fields."
 
@@ -80,7 +72,7 @@ msgstr "Enter the numbers from right to left by clicking on the dials under the 
 msgid "Gehe zu Level {0}"
 msgstr "Go to level {0}"
 
-#: src/components/restart-page/RestartPage.tsx:45
+#: src/components/restart-page/RestartPage.tsx:41
 msgid "Glückwunsch!"
 msgstr "Congratulations!"
 
@@ -113,7 +105,7 @@ msgstr "Select an image by clicking on it. If you want undo the selection you ha
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
 msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the <0/> <1>Stadtmuseum Tübingen</1>."
 
-#: src/App.tsx:85
+#: src/App.tsx:86
 #: src/components/landing-page/LandingPage.tsx:14
 msgid "Lauter langweilige Sachen?"
 msgstr "A Bunch of Boring Things?"
@@ -130,13 +122,9 @@ msgstr "Off we go!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Some objects may seem boring but actually have an exciting story to tell!"
 
-#: src/App.tsx:102
+#: src/App.tsx:103
 msgid "Matchen"
 msgstr "Match"
-
-#: src/components/restart-page/RestartPage.tsx:52
-msgid "Neue Runde"
-msgstr "Play again"
 
 #: src/components/level-three/sketch.js:162
 msgid "Neustart"
@@ -158,17 +146,13 @@ msgstr "If you are correct you will see a green tick. "
 msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 msgstr "At the top of the calculator you will find a sum to calculate. There are three questions in total."
 
-#: src/App.tsx:101
+#: src/App.tsx:102
 msgid "Raten"
 msgstr "Guess"
 
-#: src/App.tsx:103
+#: src/App.tsx:104
 msgid "Rechnen"
 msgstr "Calculate"
-
-#: src/components/restart-page/RestartPage.tsx:48
-msgid "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!"
-msgstr "Stop by the museum too! There you can view these objects up close and discover a lot of new ones!"
 
 #: src/components/level-one/ObjectsGrid.tsx:67
 msgid "Senden"
@@ -182,7 +166,8 @@ msgstr "Start over"
 msgid "Super! Du hast alle Objekte richtig identifiziert!"
 msgstr "Great! You have identified all correct objects!"
 
-#: src/App.tsx:104
+#: src/App.tsx:105
+#: src/components/restart-page/RestartPage.tsx:50
 msgid "Tindern"
 msgstr "Your pick?"
 
@@ -201,10 +186,6 @@ msgstr "Next!"
 #: src/components/level-three/CalculatorHelp.tsx:8
 msgid "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 msgstr "If the sum is 23+45 you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice."
-
-#: src/components/restart-page/RestartPage.tsx:50
-msgid "Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!"
-msgstr "We hope you have fun playing our game and look forward to seeing you at the museum!"
 
 #: src/components/landing-page/LandingPage.tsx:22
 msgid "Wähle deine Sprache"

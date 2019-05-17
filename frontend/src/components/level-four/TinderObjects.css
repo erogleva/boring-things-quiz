@@ -22,7 +22,7 @@
 }
 
 .cta .btn {
-    margin: 0 20px 10px;
+    margin: 30px 20px 10px;
 }
 
 .cta .start-again {
@@ -31,6 +31,10 @@
 
 .cta .next-object {
     order: 1
+}
+
+.error {
+    color: #e51c23;
 }
 
 @media screen and (min-width: 600px) {

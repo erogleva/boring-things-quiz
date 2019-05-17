@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/level-four/TinderObjects.tsx:59
+msgid "<0>Auf dem Server ist ein interner Fehler  </0>"
+msgstr ""
+
 #: src/components/landing-page/LandingPage.tsx:15
 msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
 msgstr "Even seemingly boring objects have a story to tell."
@@ -25,7 +29,7 @@ msgstr "Use Schickards calculator to solve the problem!"
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Please select three objects!"
 
-#: src/App.tsx:87
+#: src/App.tsx:109
 #: src/components/HelpPage.tsx:25
 msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
@@ -46,15 +50,15 @@ msgstr "The calculator adds automatically. Your answer is displayed in the colou
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Three of these objects are part of the exhibition in the museum - can you guess which ones?"
 
-#: src/components/restart-page/RestartPage.tsx:61
+#: src/components/restart-page/RestartPage.tsx:42
 msgid "Drei von vierzig Objekten hast du bereits kennengelernt. Falls du die Sammlung weiter erkunden willst, kannst du das Spiel nochmal spielen. Die Objekte ändern sich mit jedem Mal."
 msgstr "You are now familiar with three out of forty objects in our game. Feel free to play the game again to discover more objects from our collection. The objects change each time."
 
-#: src/components/restart-page/RestartPage.tsx:60
+#: src/components/restart-page/RestartPage.tsx:41
 msgid "Du hast die Rechenmaschine erfolgreich benutzt und hast nun das Ende des Spiels erreicht!"
 msgstr "You have successfully used Schickard's calculator and have now reached the end of our game!"
 
-#: src/components/restart-page/RestartPage.tsx:63
+#: src/components/restart-page/RestartPage.tsx:44
 msgid "Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! Vielleicht schaffst du es ja etwas zu multiplizieren?"
 msgstr "Insider tip: You can also use Schickard's calculator at the museum! Feel like trying out a multiplication question?"
 
@@ -76,7 +80,7 @@ msgstr "Enter the numbers from right to left by clicking on the dials under the 
 msgid "Gehe zu Level {0}"
 msgstr "Go to level {0}"
 
-#: src/components/restart-page/RestartPage.tsx:59
+#: src/components/restart-page/RestartPage.tsx:40
 msgid "Glückwunsch!"
 msgstr "Congratulations!"
 
@@ -88,6 +92,10 @@ msgstr "Congratulations! All descriptions are now matched correctly!"
 #: src/components/HelpPage.tsx:17
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Each text matches with one image. Drag the text to the matching image."
+
+#: src/components/level-four/TinderObjects.tsx:55
+msgid "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht?"
+msgstr ""
 
 #: src/components/level-three/CalculatorHelp.tsx:5
 msgid "Jetzt ist es an der Zeit, Schickarts Rechenmaschine auszuprobieren!"
@@ -105,7 +113,7 @@ msgstr "Select an image by clicking on it. If you want undo the selection you ha
 msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
 msgstr "Let’s go on an expedition and explore the exciting objects that are exhibited at the <0/> <1>Stadtmuseum Tübingen</1>."
 
-#: src/App.tsx:67
+#: src/App.tsx:87
 #: src/components/landing-page/LandingPage.tsx:14
 msgid "Lauter langweilige Sachen?"
 msgstr "A Bunch of Boring Things?"
@@ -122,7 +130,7 @@ msgstr "Off we go!"
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Some objects may seem boring but actually have an exciting story to tell!"
 
-#: src/components/restart-page/RestartPage.tsx:66
+#: src/components/restart-page/RestartPage.tsx:47
 msgid "Neue Runde"
 msgstr "Play again"
 
@@ -134,6 +142,10 @@ msgstr "Reset"
 msgid "Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen. Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!"
 msgstr "Now you are ready to enter the second number. There is no need to add a plus operator (+). The machine does this automatically. Now you can follow the same steps as before. Make sure to count how many times you click! The calculator simultaneously adds each click to the sum."
 
+#: src/components/level-four/TinderObjects.tsx:72
+msgid "Nächstes Objekt bewerten?"
+msgstr ""
+
 #: src/components/level-two/TextsQuiz.tsx:71
 msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
 msgstr "If you are correct you will see a green tick. "
@@ -142,7 +154,7 @@ msgstr "If you are correct you will see a green tick. "
 msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."
 msgstr "At the top of the calculator you will find a sum to calculate. There are three questions in total."
 
-#: src/components/restart-page/RestartPage.tsx:62
+#: src/components/restart-page/RestartPage.tsx:43
 msgid "Schau auch im Museum vorbei! Dort kannst du die Objekte von nahem betrachten und noch mehr Spannendes entdecken!"
 msgstr "Stop by the museum too! There you can view these objects up close and discover a lot of new ones!"
 
@@ -170,7 +182,7 @@ msgstr "Next!"
 msgid "Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal."
 msgstr "If the sum is 23+45 you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice."
 
-#: src/components/restart-page/RestartPage.tsx:64
+#: src/components/restart-page/RestartPage.tsx:45
 msgid "Wir wünschen dir viel Spaß beim weiterspielen und hoffen dich bald im Museum zu sehen!"
 msgstr "We hope you have fun playing our game and look forward to seeing you at the museum!"
 
@@ -193,3 +205,7 @@ msgstr "Go back"
 #: src/components/level-one/ObjectsGrid.tsx:43
 msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
 msgstr "{0, plural, one {Unfortunately you have identified only one object correctly. Try again!} other {Unfortunately you have identified only # objects correctly. Try again!}}"
+
+#: src/components/level-four/TinderObjects.tsx:58
+msgid "{likesPercentage} Prozent der Nutzer fanden dieses Objekt nicht langweilig!"
+msgstr "{likesPercentage} percent of the users did not find the object boring!"

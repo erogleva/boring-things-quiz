@@ -28,7 +28,7 @@ export default function sketch(p) {
     var display1, display2, display3, display4, display5, display6;
     var ibutton1, ibutton2, ibutton3, ibutton4;
     var score;
-    const maxScore = 3;
+    const maxScore = 2;
 
     var context = new AudioContext();
     //let backgroundTint = "#009688"; //Original

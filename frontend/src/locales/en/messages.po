@@ -94,8 +94,8 @@ msgid "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"lang
 msgstr "Now it's time to hear your opinion! Do you think the object is boring or not? <0/> You can click on the image to learn more about it!"
 
 #: src/components/level-three/CalculatorHelp.tsx:5
-msgid "Jetzt ist es an der Zeit, Schickarts Rechenmaschine auszuprobieren!"
-msgstr "Now it’s time to try our Schickart’s Calculator!"
+msgid "Jetzt ist es an der Zeit, Schickards Rechenmaschine auszuprobieren!"
+msgstr "Now it’s time to try our Schickard’s Calculator!"
 
 #: src/components/level-two/TextsQuiz.tsx:69
 msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
@@ -143,8 +143,8 @@ msgid "Nächstes Objekt bewerten?"
 msgstr "Rate next object"
 
 #: src/components/level-two/TextsQuiz.tsx:71
-msgid "Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst."
-msgstr "If you are correct you will see a green tick. "
+msgid "Ob du wirklich richtig liegst, merkst du, wenn du das Häckchen siehst."
+msgstr "If you are correct you will see a green tick."
 
 #: src/components/level-three/CalculatorHelp.tsx:6
 msgid "Oben siehst du eine Aufgabe, die du ausrechnen sollst. Es gibt insgesamt drei Aufgaben."

@@ -106,7 +106,7 @@ const TextsQuiz = (props: Props) => {
                 <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent}/>
                 <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
                     zuordnen? </Trans>
-                <Trans render="h6">Ob du wirklich richtig liegst, siehst du, wenn du das Häckchen siehst.</Trans>
+                <Trans render="h6">Ob du wirklich richtig liegst, merkst du, wenn du das Häckchen siehst.</Trans>
 
 
                 <DragDropContext onDragEnd={onDragEnd}>

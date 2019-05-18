@@ -63,7 +63,7 @@ const RestartPage = (props: Props) => {
             Wir wünschen dir viel Spaß beim Weiterspielen! <br/>
         </Trans>
 
-        <Button onClick={() => props.setCurrentPage(LEVEL_FOUR)}><Trans>Tindern</Trans></Button>
+        <Button onClick={() => props.setCurrentPage(LEVEL_FOUR)}><Trans>Geheimes Level</Trans></Button>
     </div>
 };
 

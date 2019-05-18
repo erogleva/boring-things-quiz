@@ -39,7 +39,7 @@ workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
     const quizDescriptionEN = object[14];
 
     const detailedDescription = object[16];
-    const detailedDescriptionEN = object[17]
+    const detailedDescriptionEN = object[17];
 
     // console.log(object);
 

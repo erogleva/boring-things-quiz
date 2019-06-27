@@ -18,7 +18,7 @@ import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
 import {LANDING_PAGE, LEVEL_THREE, LEVEL_ONE, LEVEL_TWO, RESTART_PAGE} from "./constants";
 import RestartPage from "./components/restart-page/RestartPage";
-import TinderObjects from "./components/level-four/TinderObjects";
+import TinderObjects from "./components/level-three/TinderObjects";
 import Navigation from "./components/navigation/Navigation";
 
 export type LanguageString = 'en' | 'de'

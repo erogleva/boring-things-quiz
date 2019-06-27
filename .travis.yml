@@ -15,7 +15,7 @@ script:
   - npm run build
 
 env:
-  - REACT_APP_BACKEND_URL=https://boring-things-api.herokuapp.com/items
+  - REACT_APP_BACKEND_URL=https://boring-things-api.herokuapp.com
 
 deploy:
   provider: pages

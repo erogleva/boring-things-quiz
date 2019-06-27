@@ -19,6 +19,7 @@ import catalog_de from "./locales/de/messages";
 import {LANDING_PAGE, LEVEL_THREE, LEVEL_ONE, LEVEL_TWO, RESTART_PAGE} from "./constants";
 import RestartPage from "./components/restart-page/RestartPage";
 import TinderObjects from "./components/level-four/TinderObjects";
+import Navigation from "./components/navigation/Navigation";
 
 export type LanguageString = 'en' | 'de'
 export const i18n = setupI18n();
@@ -109,34 +110,10 @@ const App = () => {
         document.title = i18n._(t`Lauter langweilige Sachen?`)
     });
 
-    const handleClick = (level: string) => {
-        if (currentPage !== level) {
-            setCurrentPage(level);
-            resetGame();
-        }
-
-        setShowHelp(false);
-    };
-
     return (
         <I18nProvider i18n={i18n} language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
             <div className={currentPage === LANDING_PAGE ? 'app landing-page' : 'app'}>
-                <nav className="row teal">
-                    <div className="nav-wrapper">
-                        <div className="col s12 ">
-                            <a className={currentPage === LEVEL_ONE ? 'active breadcrumb' : 'breadcrumb'}
-                               onClick={() => {
-                                   handleClick(LEVEL_ONE)
-                               }}> <Trans>Raten</Trans> </a>
-                            <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'}
-                               onClick={() => handleClick(LEVEL_TWO)}> <Trans>Matchen</Trans></a>
-                            {levelThreeUnlocked &&
-                            <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'}
-                               onClick={() => handleClick(LEVEL_THREE)}> <Trans>Tindern</Trans>
-                            </a>}
-                        </div>
-                    </div>
-                </nav>
+                <Navigation currentPage={currentPage} levelThreeUnlocked={levelThreeUnlocked} setCurrentPage={setCurrentPage} setShowHelp={setShowHelp} resetGame={resetGame}/>
                 {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && currentPage !== LEVEL_THREE && !showHelp &&
                 <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}

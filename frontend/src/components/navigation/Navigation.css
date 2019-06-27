@@ -1,0 +1,12 @@
+.breadcrumb:last-child {
+    color: rgba(255,255,255,0.7);
+}
+
+.breadcrumb.active {
+    color: #fff;
+}
+
+.breadcrumb::before {
+    margin-right: 0 !important;
+    margin-left: 0;
+}

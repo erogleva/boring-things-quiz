@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-27 11:48+0200\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: de\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/calculator/CalculatorWrapper.js:58
+msgid "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschine."
+msgstr "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschine."
+
+#: src/calculator/CalculatorHelp.js:13
+msgid "Brauchst du Hilfe?"
+msgstr "Brauchst du Hilfe?"
+
+#: src/calculator/sketch.js:168
+msgid "Eingeben!"
+msgstr "Eingeben!"
+
+#: src/calculator/sketch.js:163
+msgid "Neustart"
+msgstr "Neustart"
+
+#: src/calculator/sketch.js:160
+msgid "Weiter!"
+msgstr "Weiter!"
+
+#: src/calculator/CalculatorWrapper.js:43
+msgid "Wähle deine Sprache"
+msgstr "Wähle deine Sprache"
+
+#: src/calculator/CalculatorHelp.js:35
+msgid "Zurück zum Spiel"
+msgstr "Zurück zum Spiel"
+
+#: src/calculator/CalculatorHelp.js:15
+msgid "calculatorHelpPage"
+msgstr "Oben siehst du eine Aufgabe, die du ausrechnen sollst. <0/>Fange an, indem du die erste Zahl in die Rechenmaschine eingibst. Dazu klickst du die Scheiben unter den bunten Nullen. Die farbigen Felder von rechts nach links stehen für Einser, Zehner, Hunderter usw. Daher musst du immer von rechts nach links arbeiten.<1/>Wenn die Aufgabe 23 + 45 ist, gibst du erst die Drei ein, indem du drei mal auf die erste Scheibe von rechts klickst, dann gehst du eine Scheibe nach links und klickst zwei mal. <2/>Nun kannst du die zweite Zahl addieren. Die Maschine macht die Addition automatisch. Man braucht kein Pluszeichen.<3/>Die zweite Zahl gibst du genau so wie die Erste ein, aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit!<4/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <5>Eingeben!</5> um dein Ergebnis zu überprüfen.<6/>Viel Spaß!"
+
+#: src/calculator/CalculatorWrapper.js:54
+msgid "calculatorMainPage"
+msgstr "Benutze Schickards Rechenmaschine um die Lösung zu finden! <0/>Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unter den bunten Feldern klickst. <1/>Die Felder stehen für Einser, Zehner, Hunderter usw. <2/>Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bunten Feldern."

@@ -1,0 +1,52 @@
+.calculator-wrapper {
+    background-color: #7fcac3;
+    color: #000;
+    padding-top: 10px;
+}
+
+.calculator-wrapper h6 {
+    font-weight: 500;
+}
+
+.button-link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.button-link:hover,
+.button-link:focus {
+    text-decoration: none;
+}
+
+.select-wrapper {
+    max-width: 300px;
+    margin: 10px auto;
+    color: black;
+}
+
+.select-dropdown.dropdown-trigger {
+    color: black;
+}
+
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid black;
+}
+
+.select-dropdown.dropdown-content li.selected {
+    background-color: white !important;
+}
+
+.select-wrapper .caret {
+    fill: white;
+}
+
+.select-dropdown.dropdown-content li:hover {
+    background-color: #eeeeee !important;
+}
+
+

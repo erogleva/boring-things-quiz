@@ -1,0 +1,27 @@
+{
+  "Wähle deine Sprache": {
+    "origin": [
+      [
+        "src/calculator/CalculatorWrapper.js",
+        43
+      ]
+    ]
+  },
+  "calculatorMainPage": {
+    "defaults": "Benutze Schickards Rechenmaschine um die Lösung zu finden! <0/>Gebe die Zahlen von Rechts nach Links ein, indem du auf die Scheiben unter den bunten Feldern klickst. <1/>Die Felder stehen für Einser, Zehner, Hunderter usw. <2/>Die Rechenmaschine addiert automatisch, das Ergebnis siehst du in den bunten Feldern.",
+    "origin": [
+      [
+        "src/calculator/CalculatorWrapper.js",
+        54
+      ]
+    ]
+  },
+  "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschine.": {
+    "origin": [
+      [
+        "src/calculator/CalculatorWrapper.js",
+        58
+      ]
+    ]
+  }
+}

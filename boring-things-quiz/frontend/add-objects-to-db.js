@@ -1,6 +1,7 @@
 const xlsx = require('node-xlsx');
 const fs = require('fs');
 const util = require('util');
+const axios = require('axios');
 
 /*
 *
@@ -12,7 +13,7 @@ const util = require('util');
 const objects = [];
 
 // parse the contents of the excel file
-const workSheetsFromFile = xlsx.parse(`${__dirname}/Kopie von Gametext_01_vanessa.xls`);
+const workSheetsFromFile = xlsx.parse(`${__dirname}/Gametexte.xls`);
 
 workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
 
@@ -46,24 +47,13 @@ workSheetsFromFile.forEach(sheet => sheet.data.forEach((object, index) => {
     objects.push({id, name, quizDescription, detailedDescription, locales: { en: { quizDescription: quizDescriptionEN, detailedDescription: detailedDescriptionEN }}})
 }));
 
-// read the files
-function readFiles(dirname) {
-    return new Promise((resolve, reject) => {
-        fs.readdir(dirname, function (err, filenames) {
-            if (err) {
-                console.log(err);
-                reject(err);
-            }
-            resolve(filenames)
-        });
-    })
-}
+(async function () {
+  for (let object of objects) {
+      try {
+          await axios.post(`${process.argv[2]}/items/`, object);
+      } catch (e) {
+          console.log(e);
+      }
+  }
+})();
 
-// display the result on the console
-readFiles('src/assets/img/')
-    .then((fileNames) => console.log(util.inspect(objects.map((object, index) => {
-            const src = fileNames.find(file => file.includes(object.id));
-            return Object.assign({}, object, {src})
-        }
-    ), {showHidden: false, depth: null})))
-    .catch(err => console.log(err));

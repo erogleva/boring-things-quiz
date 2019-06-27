@@ -6,10 +6,10 @@ node_js:
 
 cache:
   directories:
-  - frontend/node_modules
+  - boring-things-quiz/frontend/node_modules
 
 script:
-  - cd frontend
+  - cd boring-things-quiz/frontend
   - npm ci
   - npm run compile
   - npm run build
@@ -21,6 +21,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
-  local_dir: frontend/build
+  local_dir: boring-things-quiz/frontend/build
   on:
    branch: master

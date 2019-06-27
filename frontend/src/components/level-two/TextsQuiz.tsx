@@ -8,7 +8,7 @@ import {shuffleArray} from "../../utils/arrayUtils";
 import {t, Trans} from '@lingui/macro';
 import {LanguageString} from "../../App";
 import ModalDialog from "../common/Modal";
-import {LEVEL_THREE} from "../../constants";
+import {RESTART_PAGE} from "../../constants";
 import {I18n} from "@lingui/react";
 import Continue from '../common/Continue';
 
@@ -23,13 +23,13 @@ interface ModalContentProps {
 interface Props {
     correctItems: ExhibitionObject[];
     setCurrentPage: Dispatch<SetStateAction<string>>
-    language: LanguageString
+    language: LanguageString,
+    setLevelThreeUnlocked: Dispatch<SetStateAction<boolean>>
 }
 
 const TextsQuiz = (props: Props) => {
 
     let modalTriggerRef: any;
-    let modalRef: any;
 
     const getItemStyle = (draggablePropsStyle: any, isDragging: boolean) => {
         if (!isDragging) {
@@ -39,6 +39,11 @@ const TextsQuiz = (props: Props) => {
                 ...draggablePropsStyle,
             }
         }
+    };
+
+    const handleClick = () => {
+        props.setCurrentPage(RESTART_PAGE);
+        props.setLevelThreeUnlocked(true);
     };
 
     const ModalContent = ({item, showContinue, language}: ModalContentProps) => {
@@ -57,7 +62,7 @@ const TextsQuiz = (props: Props) => {
                     {showContinue &&
                     <Continue text={i18n._(t`Glückwunsch, alle Objekte sind richtig zugeordnet!`)}
                               buttonText={i18n._(t`Gehe zu Level ${'3'}`)}
-                              handleClick={() => props.setCurrentPage(LEVEL_THREE)}/>}
+                              handleClick={handleClick}/>}
                 </div>
             )}
         </I18n>
@@ -74,8 +79,8 @@ const TextsQuiz = (props: Props) => {
             const item = items.find(item => item.id === result.draggableId);
             if (item) {
 
-                setModalContent(<ModalContent item={item} showContinue={shouldShowContinue} language={props.language}/>);
-                // setItems(prevState => prevState.filter(item => item.id !== result.draggableId))
+                setModalContent(<ModalContent item={item} showContinue={shouldShowContinue}
+                                              language={props.language}/>);
                 modalTriggerRef.click();
 
             }
@@ -88,11 +93,6 @@ const TextsQuiz = (props: Props) => {
     const [correctlyIdentifiedDescriptions, setCorrectlyIdentifiedDescriptions] = useState<string[]>([]);
     const [modalContent, setModalContent] = useState<ReactElement>(<React.Fragment/>);
 
-    // useEffect(() => {
-    //     const additionalItems = getRandomObjects(exhibitedObjects, props.correctItems);
-    //     setItems([...additionalItems]);
-    // }, [props.correctItems]);
-
     useEffect(() => {
         setDescriptions(shuffleArray(items));
     }, [items]);
@@ -100,9 +100,10 @@ const TextsQuiz = (props: Props) => {
     return <I18n>
         {({i18n}) => (
             <div className='level-two-objects'>
-                {correctlyIdentifiedDescriptions.length === 3 && <Continue text={i18n._(t`Glückwunsch, alle Objekte sind richtig zugeordnet!`)}
-                                                                           buttonText={i18n._(t`Gehe zu Level ${'3'}`)}
-                                                                           handleClick={() => props.setCurrentPage(LEVEL_THREE)}/>}
+                {correctlyIdentifiedDescriptions.length === 3 &&
+                <Continue text={i18n._(t`Glückwunsch, alle Objekte sind richtig zugeordnet!`)}
+                          buttonText={i18n._(t`Gehe zu Level ${'3'}`)}
+                          handleClick={handleClick}/>}
                 <ModalDialog trigger={<a ref={(anchor) => modalTriggerRef = anchor}/>} content={modalContent}/>
                 <Trans render="h6">Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt
                     zuordnen? </Trans>

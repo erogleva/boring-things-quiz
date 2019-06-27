@@ -1,7 +1,7 @@
 import React, {Dispatch, SetStateAction, useEffect} from 'react';
 import { Trans } from '@lingui/macro';
 import './RestartPage.css';
-import {LEVEL_FOUR, LEVEL_ONE} from "../../constants";
+import {LEVEL_THREE, LEVEL_ONE} from "../../constants";
 //@ts-ignore
 import {  Button  } from 'react-materialize';
 import {getRandomObjects, shuffleArray} from "../../utils/arrayUtils";
@@ -55,15 +55,14 @@ const RestartPage = (props: Props) => {
     return <div className='restart-page'>
 
         <Trans render='h3'>Glückwunsch!</Trans>
-        <Trans render='h5'>
-            Du hast nun alle drei Spiele erfolgreich gelöst. Schau doch auch im Museum vorbei! Dort kannst du bereits bekannte und neue spannende Sachen entdecken! <br />
-            Ein Geheimtipp: Schickards Rechenmaschine kannst du im Museum auch benutzen! <br/>
+        <Trans render='h5' id="restartPageText">
+            Du hast nun alle drei Spiele erfolgreich gelöst. <br/>
             Falls du die Sammlung online weiter erkunden willst, kannst du jedes Spiel nochmal spielen indem du auf das Icon oben klickst. Die Objekte ändern sich jedes Mal. <br />
             Du hast jetzt unser Bonus Spiel freigeschaltet und kannst Objekte „tindern“. <br />
             Wir wünschen dir viel Spaß beim Weiterspielen! <br/>
         </Trans>
 
-        <Button onClick={() => props.setCurrentPage(LEVEL_FOUR)}><Trans>Geheimes Level</Trans></Button>
+        <Button onClick={() => props.setCurrentPage(LEVEL_THREE)}><Trans>Geheimes Level</Trans></Button>
     </div>
 };
 

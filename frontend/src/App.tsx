@@ -10,14 +10,13 @@ import {exhibitedObjects, nonExhibitedObjects} from "./data";
 import TextsQuiz from "./components/level-two/TextsQuiz";
 import {ExhibitionObject} from "./interfaces/ExhibitionObject";
 import {getRandomObjects, shuffleArray} from "./utils/arrayUtils";
-import CalculatorWrapper from "./components/level-three/CalculatorWrapper";
 import {I18nProvider} from '@lingui/react'
 import LandingPage from "./components/landing-page/LandingPage";
 import {t, Trans} from '@lingui/macro';
 import {setupI18n} from "@lingui/core";
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";
-import {LANDING_PAGE, LEVEL_FOUR, LEVEL_ONE, LEVEL_THREE, LEVEL_TWO, RESTART_PAGE} from "./constants";
+import {LANDING_PAGE, LEVEL_THREE, LEVEL_ONE, LEVEL_TWO, RESTART_PAGE} from "./constants";
 import RestartPage from "./components/restart-page/RestartPage";
 import TinderObjects from "./components/level-four/TinderObjects";
 
@@ -38,7 +37,7 @@ const App = () => {
     const [component, setComponent] = useState<JSX.Element>(<LandingPage setCurrentPage={setCurrentPage}
                                                                          setLanguage={setLanguage}/>);
     const [showHelp, setShowHelp] = useState<boolean>(false);
-    const [levelFourUnlocked, setLevelFourUnlocked] = useState<boolean>(false);
+    const [levelThreeUnlocked, setLevelThreeUnlocked] = useState<boolean>(false);
 
     const resetGame = () => {
         const randomExhibitedObjects: string[] = getRandomObjects(exhibitedObjects, [], 3).map(obj => obj.src);
@@ -84,8 +83,6 @@ const App = () => {
 
     useEffect(() => {
 
-        // determines whether to show the modal dialog
-        const shouldNotShowModal = currentPage === LEVEL_THREE && showHelp;
         switch (currentPage) {
             case LEVEL_ONE:
                 setComponent(<ObjectsGrid selected={selected} setSelected={setSelected} objects={objects}
@@ -93,12 +90,9 @@ const App = () => {
                 break;
             case LEVEL_TWO:
                 setComponent(<TextsQuiz correctItems={correctItems} setCurrentPage={setCurrentPage}
-                                        language={language}/>);
+                                        language={language} setLevelThreeUnlocked={setLevelThreeUnlocked}/>);
                 break;
             case LEVEL_THREE:
-                setComponent(<CalculatorWrapper setCurrentPage={setCurrentPage} modalOpen={!shouldNotShowModal} setLevelFourUnlocked={setLevelFourUnlocked}/>);
-                break;
-            case LEVEL_FOUR:
                 setComponent(<TinderObjects correctItems={correctItems} resetGame={resetGame}
                                             setCurrentPage={setCurrentPage} language={language}/>);
                 break;
@@ -136,15 +130,14 @@ const App = () => {
                                }}> <Trans>Raten</Trans> </a>
                             <a className={currentPage === LEVEL_TWO ? 'active breadcrumb' : 'breadcrumb'}
                                onClick={() => handleClick(LEVEL_TWO)}> <Trans>Matchen</Trans></a>
+                            {levelThreeUnlocked &&
                             <a className={currentPage === LEVEL_THREE ? 'active breadcrumb' : 'breadcrumb'}
-                               onClick={() => handleClick(LEVEL_THREE)}> <Trans>Rechnen</Trans></a>
-                            {levelFourUnlocked && <a className={currentPage === LEVEL_FOUR ? 'active breadcrumb' : 'breadcrumb'}
-                               onClick={() => handleClick(LEVEL_FOUR)}> <Trans>Tindern</Trans>
+                               onClick={() => handleClick(LEVEL_THREE)}> <Trans>Tindern</Trans>
                             </a>}
                         </div>
                     </div>
                 </nav>
-                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && currentPage !== LEVEL_FOUR && !showHelp &&
+                {currentPage !== LANDING_PAGE && currentPage !== RESTART_PAGE && currentPage !== LEVEL_THREE && !showHelp &&
                 <a onClick={() => setShowHelp(true)}><Trans>Brauchst du Hilfe?</Trans></a>}
                 {!showHelp && component}
                 {showHelp && <HelpPage setShowHelp={setShowHelp} currentPage={currentPage}/>}

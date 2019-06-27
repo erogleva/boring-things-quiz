@@ -7,8 +7,7 @@ import "video-react/dist/video-react.css";
 //@ts-ignore
 import { Player } from 'video-react';
 
-import { LEVEL_ONE, LEVEL_TWO, LEVEL_THREE} from '../constants';
-import CalculatorHelp from "./level-three/CalculatorHelp";
+import { LEVEL_ONE, LEVEL_TWO} from '../constants';
 
 interface Props {
     setShowHelp (shouldShowHelp: boolean): void,
@@ -23,13 +22,6 @@ const HelpPage = (props: Props) => {
                 return <Trans>Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken.</Trans>;
             case LEVEL_TWO:
                 return <Trans>Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild.</Trans>;
-            case LEVEL_THREE:
-                return <React.Fragment><CalculatorHelp isHelpPage={true}/>
-                    <Player
-                        playsInline
-                        src={require('../assets/videos/screencast_calculator.mp4')}
-                    />
-                </React.Fragment>
         }
     };
 

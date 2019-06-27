@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const backend = 'https://boring-things-api.herokuapp.com/items';
+const backend = process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : 'http://localhost:5000';
 
 export async function likeObject(id: string) {
     return await axios.put(`${backend}/${id}/like`, {})

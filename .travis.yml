@@ -1,15 +1,21 @@
 
 language: node_js
+
 node_js:
   - "stable"
+
 cache:
   directories:
   - frontend/node_modules
+
 script:
   - cd frontend
   - npm ci
   - npm run compile
   - npm run build
+
+env:
+  - REACT_APP_BACKEND_URL=https://boring-things-api.herokuapp.com/items
 
 deploy:
   provider: pages

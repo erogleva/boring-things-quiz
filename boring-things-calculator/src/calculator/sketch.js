@@ -159,9 +159,10 @@ export default function sketch(p) {
         if (number.isActive()){
             ibutton3.setText(i18n._(t`Weiter!`));
         }
-        else{
-            ibutton3.setText(i18n._(t`Neustart`));
-        }
+        else if((CalculateMainNumber() !== 0)){
+            ibutton3.setText(`Löschen`);
+        }else
+        { ibutton3.setText(i18n._(t`Neustart`));}
         ibutton3.show(blinkFlag);
 
         ibutton4.update(imgPosX + (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
@@ -226,19 +227,31 @@ export default function sketch(p) {
         });
 
         // Check if reset button is pressed
-        if ((ibutton3 && ibutton3.isPressed()) && (CalculateMainNumber() !== 0)) {
-            if (number.isActive()){
-                // "Confirm with reset"
+        if (ibutton3 && ibutton3.isPressed()) {
+            if (CalculateMainNumber() !== 0){
+                // Go further to next numbers/level
+                if (number.isActive()){
+                    // "Confirm with reset"
+                    interateNumbers();
+                    number.deactivate();
+                    blinkFlag = false;
+                }
+                resetButtons();
+                score.setResetSymbol();
+            }else{
+                //Reset button pressed when no numbers are given on the button, reset program
+                numLevel = 10;
                 interateNumbers();
-                number.deactivate();
-                blinkFlag = false;
+                score.resetPoints();
+                buttonSound.setVolume(0.4);
+                buttonSound.play();
+
             }
-            resetButtons();
-            score.setResetSymbol();
         }
         // Check if "done" button is pressed
         if ((ibutton4 && ibutton4.isPressed()) && (!number.isActive())) {
             if (number.checkNumber(CalculateMainNumber())) {
+                // Number is calculated correctly
                 number.activate();
                 score.setSymbol(CalculateMainNumber());
                 score.addPoint();

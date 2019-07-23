@@ -4,6 +4,7 @@ import button from './button';
 import display from './display';
 import infoButton from './smallbuttons';
 import scoreObj from './score';
+import Drops from './rain';
 
 import { i18n } from "./../App";
 import { t } from "@lingui/macro"
@@ -27,6 +28,7 @@ export default function sketch(p) {
     var display1, display2, display3, display4, display5, display6;
     var ibutton1, ibutton2, ibutton3, ibutton4;
     var score;
+    var confetti;
     const maxScore = 2;
 
     var context = new AudioContext();
@@ -90,6 +92,7 @@ export default function sketch(p) {
 
         calculator = new picture(imgPosX,imgPosY, machinePic,resizeFactor,p);
 
+        confetti = new Drops(imgPosX,0,20,20,100,resizeFactor,height+(100/resizeFactor),p);
 
         // Create number Generator
         number = new numberObj(2, p);
@@ -168,6 +171,12 @@ export default function sketch(p) {
         ibutton4.update(imgPosX + (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
         ibutton4.setText(i18n._(t`Eingeben!`));
         ibutton4.show();
+
+        // Test confetti
+        if (!confetti.isDown()){
+            confetti.show();
+            confetti.fall();    
+        }
     };
 
     p.windowResized = () => {
@@ -228,6 +237,7 @@ export default function sketch(p) {
 
         // Check if reset button is pressed
         if (ibutton3 && ibutton3.isPressed()) {
+
             if (CalculateMainNumber() !== 0){
                 // Go further to next numbers/level
                 if (number.isActive()){
@@ -256,6 +266,10 @@ export default function sketch(p) {
                 score.setSymbol(CalculateMainNumber());
                 score.addPoint();
                 playSound(correctSound);
+
+                if (score.getPoints()>=3){
+                    confetti.reset();
+                }
             }
             else {
                 // False answer

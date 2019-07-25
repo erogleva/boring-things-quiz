@@ -21,15 +21,19 @@ msgstr "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschin
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
 
-#: src/calculator/sketch.js:168
-msgid "Eingeben!"
-msgstr "Eingeben!"
+#: src/calculator/sketch.js:172
+msgid "Eingabe!"
+msgstr "Eingabe!"
 
-#: src/calculator/sketch.js:163
+#: src/calculator/sketch.js:166
+msgid "Löschen"
+msgstr "Löschen"
+
+#: src/calculator/sketch.js:168
 msgid "Neustart"
 msgstr "Neustart"
 
-#: src/calculator/sketch.js:160
+#: src/calculator/sketch.js:163
 msgid "Weiter!"
 msgstr "Weiter!"
 

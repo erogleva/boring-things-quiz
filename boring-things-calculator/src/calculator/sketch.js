@@ -163,19 +163,19 @@ export default function sketch(p) {
             ibutton3.setText(i18n._(t`Weiter!`));
         }
         else if((CalculateMainNumber() !== 0)){
-            ibutton3.setText(`Löschen`);
+            ibutton3.setText(i18n._(t`Löschen`));
         }else
         { ibutton3.setText(i18n._(t`Neustart`));}
         ibutton3.show(blinkFlag);
 
         ibutton4.update(imgPosX + (1 / 5) * calculator.getWidth(), calculator.getY() + (0.83) * calculator.getHeight(), 200, 50);
-        ibutton4.setText(i18n._(t`Eingeben!`));
+        ibutton4.setText(i18n._(t`Eingabe!`));
         ibutton4.show();
 
         // Test confetti
         if (!confetti.isDown()){
             confetti.show();
-            confetti.fall();    
+            confetti.fall();
         }
     };
 

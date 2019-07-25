@@ -21,15 +21,20 @@ msgstr "<0> Here </0> you can also find a video tutorial for the calculator."
 msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
 
-#: src/calculator/sketch.js:168
-msgid "Eingeben!"
-msgstr "Submit!"
+#: src/calculator/sketch.js:172
+msgid "Eingabe!"
+msgstr "Enter!"
 
-#: src/calculator/sketch.js:163
+
+#: src/calculator/sketch.js:166
+msgid "Löschen"
+msgstr "Clear"
+
+#: src/calculator/sketch.js:168
 msgid "Neustart"
 msgstr "Reset"
 
-#: src/calculator/sketch.js:160
+#: src/calculator/sketch.js:163
 msgid "Weiter!"
 msgstr "Next!"
 

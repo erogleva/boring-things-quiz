@@ -41,7 +41,7 @@ class CalculatorWrapper extends Component {
         return <div className='calculator-wrapper'>
 
             <Trans render={renderTitle}> Wähle deine Sprache </Trans>
-            <Select onChange={this.selectLanguage}>
+            <Select onChange={this.selectLanguage} value={this.props.language}>
                 <option value="de">
                     Deutsch
                 </option>

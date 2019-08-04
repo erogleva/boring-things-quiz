@@ -6,7 +6,7 @@
   "dependencies": {
     "@lingui/core": "^2.8.3",
     "@lingui/react": "^2.8.3",
-    "materialize-css": "1.0.0-rc.2",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-materialize": "^3.3.1",

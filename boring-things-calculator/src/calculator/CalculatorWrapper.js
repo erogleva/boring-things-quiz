@@ -18,9 +18,6 @@ class CalculatorWrapper extends Component {
         this.canvas = new window.p5(sketch, 'calculator-container');
     }
 
-    shouldComponentUpdate() {
-        return false
-    }
 
     componentWillUnmount() {
         if (this.canvas) {

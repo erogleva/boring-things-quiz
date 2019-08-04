@@ -51,4 +51,4 @@ msgstr "At the top of the calculator you will find a sum to calculate. <0/>Begin
 
 #: src/calculator/CalculatorWrapper.js:54
 msgid "calculatorMainPage"
-msgstr "Use Schickards calculator to solve the problem! <0/>Enter the numbers from right to left by clicking on the dials under the coloured fields. <1/> The fields stand for ones, tens, hundreds etc. <2/>The calculator adds automatically. Your answer is displayed in the coloured fields."
+msgstr "Use Schickards calculator to solve the problem! <0/>Enter the numbers from right to left by clicking on the dials underneath the coloured fields. <1/> The fields stand for ones, tens, hundreds etc. <2/>The calculator adds automatically. Your answer is displayed in the coloured fields."

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import CalculatorWrapper from "./calculator/CalculatorWrapper";
-import {I18nProvider} from '@lingui/react';
+import { I18nProvider } from '@lingui/react';
 import { setupI18n } from '@lingui/core';
 import catalog_en from "./locales/en/messages";
 import catalog_de from "./locales/de/messages";

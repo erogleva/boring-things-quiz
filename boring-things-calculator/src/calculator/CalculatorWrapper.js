@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import sketch from './sketch';
 import { Trans } from '@lingui/macro';
-import './CalculatorWrapper.css';
 import { Select } from 'react-materialize';
 
 
@@ -35,7 +34,7 @@ class CalculatorWrapper extends Component {
 
     render() {
         const renderTitle = 'h6';
-        return <div className='calculator-wrapper'>
+        return <div className='calculator-main-page'>
 
             <Trans render={renderTitle}> Wähle deine Sprache </Trans>
             <Select onChange={this.selectLanguage} value={this.props.language}>
@@ -64,7 +63,6 @@ class CalculatorWrapper extends Component {
             <Trans render={renderTitle}> <button className='button-link' onClick={this.showHelp}> Hier </button> findest du auch eine Videoanleitung für die Rechenmaschine. </Trans>
             <div
             id="calculator-container"
-            style={{ width: "100%", textAlign: "center" }}
         />
         </div>
     }

@@ -7,7 +7,7 @@ import {Button, Row} from 'react-materialize';
 
 const CalculatorHelp = (props) => {
 
-    return <div style={{padding: '1.5em 0.2em', maxWidth: '900px', margin: '0 auto'}}>
+    return <div className='calculator-help-page'>
 
         <Player
             playsInline

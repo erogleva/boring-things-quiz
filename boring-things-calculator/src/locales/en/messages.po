@@ -22,7 +22,7 @@ msgid "Brauchst du Hilfe?"
 msgstr "Do you need help?"
 
 #: src/calculator/sketch.js:172
-msgid "Eingabe!"
+msgid "Enter!"
 msgstr "Enter!"
 
 #: src/calculator/sketch.js:166

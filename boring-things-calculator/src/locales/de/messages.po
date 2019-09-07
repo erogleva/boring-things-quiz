@@ -22,8 +22,8 @@ msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
 
 #: src/calculator/sketch.js:172
-msgid "Eingabe!"
-msgstr "Eingabe!"
+msgid "Enter!"
+msgstr "Enter!"
 
 #: src/calculator/sketch.js:166
 msgid "Löschen"

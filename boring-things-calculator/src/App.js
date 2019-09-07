@@ -18,7 +18,7 @@ function App() {
 
     return (
         <I18nProvider i18n={i18n} language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
-            <div className="App">
+            <div>
                 {!showHelp && <CalculatorWrapper setShowHelp={setShowHelp} setLanguage={setLanguage} language={language}/>}
                 {showHelp && <CalculatorHelp setShowHelp={setShowHelp}/>}
             </div>

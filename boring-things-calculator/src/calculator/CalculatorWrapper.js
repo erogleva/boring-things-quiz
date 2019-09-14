@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import sketch from './sketch';
 import { Trans } from '@lingui/macro';
-import { Select } from 'react-materialize';
+import ReactFlagsSelect from 'react-flags-select';
+import 'react-flags-select/css/react-flags-select.css';
 
 
 class CalculatorWrapper extends Component {
@@ -28,25 +29,30 @@ class CalculatorWrapper extends Component {
         this.props.setShowHelp(true);
     }
 
-    selectLanguage(event) {
-        this.props.setLanguage(event.target.value)
+    selectLanguage(countryCode) {
+        if (countryCode === "GB") {
+            this.props.setLanguage('en')
+        } else {
+            this.props.setLanguage('de')
+        }
     }
 
     render() {
         const renderTitle = 'h6';
         return <div className='calculator-main-page'>
 
-            <Trans render={renderTitle}> Wähle deine Sprache </Trans>
-            <Select onChange={this.selectLanguage} value={this.props.language}>
-                <option value="de">
-                    Deutsch
-                </option>
-                <option value="en">
-                    English
-                </option>
-            </Select>
-            <Trans render={renderTitle} > Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen! <br />
+            <ReactFlagsSelect
+                className="menu-flags"
+                defaultCountry={this.props.language === 'en' ? 'GB': 'DE'}
+                countries={["GB", "DE"]}
+                customLabels={{"GB": "English","DE": "Deutsch"}}
+                onSelect={this.selectLanguage}
+                showSelectedLabel={true}
+            />
 
+            <Trans render='h5'>Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen!</Trans>
+
+            <Trans render={renderTitle} >
                 Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst.
                 Die Felder stehen für Einser, Zehner, Hunderter usw.
                 Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <br />

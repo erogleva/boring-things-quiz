@@ -20,6 +20,13 @@
   line-height: 1.6;
 }
 
+.flag-select.menu-flags {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+
 #calculator-container {
   width: 100%;
 }

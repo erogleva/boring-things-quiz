@@ -11,8 +11,7 @@
     "react-dom": "^16.8.6",
     "react-flags-select": "^1.1.10",
     "react-materialize": "^3.3.1",
-    "react-scripts": "3.0.1",
-    "video-react": "^0.14.0"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

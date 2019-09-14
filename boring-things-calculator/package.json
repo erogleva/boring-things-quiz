@@ -2,7 +2,7 @@
   "name": "boring-things-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://erogleva.github.io/calculator-gh-pages/",
   "dependencies": {
     "@lingui/core": "^2.8.3",
     "@lingui/react": "^2.8.3",

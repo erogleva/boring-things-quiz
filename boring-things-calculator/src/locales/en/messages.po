@@ -13,17 +13,26 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/calculator/CalculatorWrapper.js:63
+#: src/calculator/CalculatorWrapper.js:69
 msgid "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschine."
 msgstr "<0> Here </0> you can also find a video tutorial for the calculator."
 
+#: src/calculator/CalculatorWrapper.js:53
+msgid "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen!"
+msgstr "Use Schickards calculator to solve the problem!"
+
 #: src/calculator/CalculatorWrapper.js:48
-msgid "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen! <0/>Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <1/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <2/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <3>Enter!</3> um dein Ergebnis zu überprüfen. <4/>Viel Spaß!"
-msgstr "Use Schickards calculator to solve the problem! <0/> Enter the first number by clicking on the dials under the coloured fields. The fields represent ones, tens, hundreds etc from right to left respectively. Therefore, it is important to work from right to left and to begin with the ones. <1/> If the sum is 23+45, you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice. Now you are ready to enter the second number by following the same steps as before. There is no need to reset or to add a plus operator (+). The machine does this automatically. Make sure to count how many times you click! The calculator simultaneously adds each click to the sum. <2/> The final result is shown in the coloured fields. Click <3>Enter!</3> to submit your result. <4/> Have fun!"
+#~ msgid "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen! <0/>Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <1/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <2/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <3>Enter!</3> um dein Ergebnis zu überprüfen. <4/>Viel Spaß!"
+#~ msgstr "Enter the first number by clicking on the dials under the coloured fields. The fields represent ones, tens, hundreds etc from right to left respectively. Therefore, it is important to work from right to left and to begin with the ones. <1/> If the sum is 23+45, you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice. Now you are ready to enter the second number by following the same steps as before. There is no need to reset or to add a plus operator (+). The machine does this automatically. Make sure to count how many times you click! The calculator simultaneously adds each click to the sum. <2/> The final result is shown in the coloured fields. Click <3>Enter!</3> to submit your result. <4/> Have fun!"
 
 #: src/calculator/sketch.js:172
 msgid "Enter!"
 msgstr "Enter!"
+
+#: src/calculator/CalculatorWrapper.js:55
+msgid "Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <0/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <1/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <2>Enter!</2> um dein Ergebnis zu überprüfen. <3/>Viel Spaß!"
+msgstr "Enter the first number by clicking on the dials under the coloured fields. The fields represent ones, tens, hundreds etc from right to left respectively. Therefore, it is important to work from right to left and to begin with the ones. <0/> If the sum is 23+45, you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice. Now you are ready to enter the second number by following the same steps as before. There is no need to reset or to add a plus operator (+). The machine does this automatically. Make sure to count how many times you click! The calculator simultaneously adds each click to the sum. <1/> The final result is shown in the coloured fields. Click <2>Enter!</2> to submit your result. <3/> Have fun!"
+
 
 #: src/calculator/sketch.js:166
 msgid "Löschen"
@@ -38,13 +47,9 @@ msgid "Weiter!"
 msgstr "Next!"
 
 #: src/calculator/CalculatorWrapper.js:39
-msgid "Wähle deine Sprache"
-msgstr "Choose your language"
+#~ msgid "Wähle deine Sprache"
+#~ msgstr "Choose your language"
 
-#: src/calculator/CalculatorHelp.js:17
+#: src/calculator/CalculatorHelp.js:18
 msgid "Zurück zum Spiel"
 msgstr "Go back"
-
-#: src/calculator/CalculatorWrapper.js:49
-#~ msgid "calculatorMainPage"
-#~ msgstr "Use Schickards calculator to solve the problem! <0/> Enter the first number by clicking on the dials under the coloured fields. The fields represent ones, tens, hundreds etc from right to left respectively. Therefore, it is important to work from right to left and to begin with the ones. <1/> If the sum is 23+45, you would enter the 3 first by clicking on the outer right dial three times. Then enter the 2 by moving one dial to the left and clicking twice. Now you are ready to enter the second number by following the same steps as before. There is no need to reset or to add a plus operator (+). The machine does this automatically. Make sure to count how many times you click! The calculator simultaneously adds each click to the sum. <2/> The final result is shown in the coloured fields. Click <3>Enter!</3> to submit your result. <4/> Have fun!"

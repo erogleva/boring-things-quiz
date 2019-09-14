@@ -228,59 +228,62 @@ export default function sketch(p) {
     }
 
     function handleClick(event) {
-        context.resume();
-        // Goes through all the button objects
-        buttonArray.forEach(function (buttonElement, i) {
-            // Calls the Button pressed function for each object with the connected display
-            ButtonPressed(buttonElement, displayArray[i]);
-        });
+        if (context) {
+            context.resume();
+            // Goes through all the button objects
+            buttonArray.forEach(function (buttonElement, i) {
+                // Calls the Button pressed function for each object with the connected display
+                ButtonPressed(buttonElement, displayArray[i]);
+            });
 
-        // Check if reset button is pressed
-        if (ibutton3 && ibutton3.isPressed()) {
+            // Check if reset button is pressed
+            if (ibutton3 && ibutton3.isPressed()) {
 
-            if (CalculateMainNumber() !== 0){
-                // Go further to next numbers/level
-                if (number.isActive()){
-                    // "Confirm with reset"
+                if (CalculateMainNumber() !== 0){
+                    // Go further to next numbers/level
+                    if (number.isActive()){
+                        // "Confirm with reset"
+                        interateNumbers();
+                        number.deactivate();
+                        blinkFlag = false;
+                    }
+                    resetButtons();
+                    score.setResetSymbol();
+                }else{
+                    //Reset button pressed when no numbers are given on the button, reset program
+                    numLevel = 10;
                     interateNumbers();
-                    number.deactivate();
-                    blinkFlag = false;
-                }
-                resetButtons();
-                score.setResetSymbol();
-            }else{
-                //Reset button pressed when no numbers are given on the button, reset program
-                numLevel = 10;
-                interateNumbers();
-                score.resetPoints();
-                buttonSound.setVolume(0.4);
-                buttonSound.play();
+                    score.resetPoints();
+                    buttonSound.setVolume(0.4);
+                    buttonSound.play();
 
-            }
-        }
-        // Check if "done" button is pressed
-        if ((ibutton4 && ibutton4.isPressed()) && (!number.isActive())) {
-            if (number.checkNumber(CalculateMainNumber())) {
-                // Number is calculated correctly
-                number.activate();
-                score.setSymbol(CalculateMainNumber());
-                score.addPoint();
-                playSound(correctSound);
-
-                if (score.getPoints()>=3){
-                    confetti.reset();
                 }
             }
-            else {
-                // False answer
-                //score.setFalseSymbol();
-                playSound(falseSound);
+            // Check if "done" button is pressed
+            if ((ibutton4 && ibutton4.isPressed()) && (!number.isActive())) {
+                if (number.checkNumber(CalculateMainNumber())) {
+                    // Number is calculated correctly
+                    number.activate();
+                    score.setSymbol(CalculateMainNumber());
+                    score.addPoint();
+                    playSound(correctSound);
+
+                    if (score.getPoints()>=3){
+                        confetti.reset();
+                    }
+                }
+                else {
+                    // False answer
+                    //score.setFalseSymbol();
+                    playSound(falseSound);
+                }
+            }
+
+            if (calculator && p.mouseY > calculator.getButtonY() && event.target.tagName.toLowerCase() === 'canvas') {
+                return false
             }
         }
 
-        if (calculator && p.mouseY > calculator.getButtonY() && event.target.tagName.toLowerCase() === 'canvas') {
-            return false
-        }
     }
 
     // when user clicks mouse

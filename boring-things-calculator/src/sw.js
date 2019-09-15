@@ -31,7 +31,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     /.*\.mp4/,
-    new workbox.strategies.CacheFirst({
+    new workbox.strategies.CacheOnly({
         cacheName: 'videos',
         plugins: [
             new workbox.rangeRequests.Plugin(),

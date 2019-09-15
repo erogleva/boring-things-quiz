@@ -3,7 +3,9 @@ import sketch from './sketch';
 import { Trans } from '@lingui/macro';
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
-
+import p5 from 'p5';
+import 'p5/lib/addons/p5.dom'
+import 'p5/lib/addons/p5.sound'
 
 class CalculatorWrapper extends Component {
 
@@ -15,7 +17,7 @@ class CalculatorWrapper extends Component {
     }
 
     componentDidMount() {
-        this.canvas = new window.p5(sketch, 'calculator-container');
+        this.canvas = new p5(sketch, 'calculator-container');
     }
 
 

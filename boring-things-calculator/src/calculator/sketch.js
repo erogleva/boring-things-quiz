@@ -286,8 +286,8 @@ export default function sketch(p) {
 
     }
 
-    // when user clicks mouse
-    p.mousePressed = (event) => {
+    // touch event
+    p.touchStarted = (event) => {
         if(iOS) {
             handleClick(event)
         }

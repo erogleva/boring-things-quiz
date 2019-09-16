@@ -26,6 +26,7 @@ export default function sketch(p) {
     var number;
     var button1, button2, button3, button4, button5, button6;
     var display1, display2, display3, display4, display5, display6;
+    var ValueDisplay1, ValueDisplay2, ValueDisplay3, ValueDisplay4, ValueDisplay5, ValueDisplay6;
     var ibutton1, ibutton2, ibutton3, ibutton4;
     var score;
     var confetti;
@@ -37,6 +38,8 @@ export default function sketch(p) {
     var blinkFlag = false;
     var buttonArray = [];
     var displayArray = [];
+    var ValueDisplayArray = [];
+    const buttonValues = ["100000","10000","1000","100","10","1"];
 
     const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -111,15 +114,30 @@ export default function sketch(p) {
         buttonArray.push(button1, button2, button3, button4, button5, button6);
 
         // Construct display classes
-        display1 = new display(50, 28, 10,resizeFactor, p); // round edge does not work
-        display2 = new display(50, 28, 10,resizeFactor, p);
-        display3 = new display(50, 28, 10,resizeFactor, p);
-        display4 = new display(50, 28, 10,resizeFactor, p);
-        display5 = new display(50, 28, 10,resizeFactor, p);
-        display6 = new display(50, 28, 10,resizeFactor, p);
+        display1 = new display(50, 28, 10,resizeFactor,25, p); // round edge does not work
+        display2 = new display(50, 28, 10,resizeFactor,25, p);
+        display3 = new display(50, 28, 10,resizeFactor,25, p);
+        display4 = new display(50, 28, 10,resizeFactor,25, p);
+        display5 = new display(50, 28, 10,resizeFactor,25, p);
+        display6 = new display(50, 28, 10,resizeFactor,25, p);
+
+        ValueDisplay1 = new display(56, 20, 10,resizeFactor,15, p);
+        ValueDisplay2 = new display(56, 20, 10,resizeFactor,15, p);
+        ValueDisplay3 = new display(56, 20, 10,resizeFactor,15, p);
+        ValueDisplay4 = new display(56, 20, 10,resizeFactor,15, p);
+        ValueDisplay5 = new display(56, 20, 10,resizeFactor,15, p);
+        ValueDisplay6 = new display(56, 20, 10,resizeFactor,15, p);
+
+        ValueDisplay1.setColor("#cbe9e7");
+        ValueDisplay2.setColor("#cbe9e7");
+        ValueDisplay3.setColor("#cbe9e7");
+        ValueDisplay4.setColor("#cbe9e7");
+        ValueDisplay5.setColor("#cbe9e7");
+        ValueDisplay6.setColor("#cbe9e7");
 
         // Create display array. The index refers to the button with the same index in buttonarray
         displayArray.push(display1, display2, display3, display4, display5, display6);
+        ValueDisplayArray.push(ValueDisplay1,ValueDisplay2,ValueDisplay3,ValueDisplay4,ValueDisplay5,ValueDisplay6)
 
         // number pluss number
         ibutton1 = new infoButton(250, 20,resizeFactor, p);
@@ -148,6 +166,10 @@ export default function sketch(p) {
         // Goes through all the display objects
         displayArray.forEach(function (displayElement, i) {
             displayElement.show(calculator.getButtonX(i), calculator.getButtonY() - (58/resizeFactor), p.str(buttonArray[i].getPosition()));
+        });
+
+        ValueDisplayArray.forEach(function (ValueDisplayElement, i) {
+            ValueDisplayElement.show(calculator.getButtonX(i), calculator.getButtonY() + (48/resizeFactor), buttonValues[i]);
         });
 
         ibutton1.update(imgPosX, calculator.getY() + 0.168 * calculator.getHeight(), 300, 45);

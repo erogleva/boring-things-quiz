@@ -16,6 +16,12 @@ function App() {
     const [showHelp, setShowHelp] = useState(false);
     const [language, setLanguage] = useState('de');
 
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') {
+            window.location.reload(false)
+        }
+    });
+
     return (
         <I18nProvider i18n={i18n} language={language} catalogs={{'en': catalog_en, 'de': catalog_de}}>
             <div>

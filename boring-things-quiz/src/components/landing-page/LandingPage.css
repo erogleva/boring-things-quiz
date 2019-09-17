@@ -1,0 +1,82 @@
+.select-wrapper {
+    max-width: 300px;
+    margin: 10px auto;
+    color: white;
+}
+
+.select-dropdown.dropdown-trigger {
+    color: white;
+}
+
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid white;
+}
+
+.select-dropdown.dropdown-content li.selected {
+    background-color: white !important;
+}
+
+.select-wrapper .caret {
+    fill: white;
+}
+
+.select-dropdown.dropdown-content li:hover {
+    background-color: #eeeeee !important;
+}
+
+.choose-language {
+    margin-top: 40px;
+}
+
+.landing-page-text {
+    padding: 20px;
+    background-color: #009688;
+    max-width: 80%;
+    margin: 2.2em auto;
+    color: #fff;
+}
+
+.landing-page-text h1 {
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+
+.landing-page-text a {
+    color: #58c5fa;
+    font-weight: 600;
+    font-size: 1.40rem;
+}
+
+.landing-page {
+    background-image: url("./../../assets/img/landing-page/titlepage.jpg");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.landing-page-text h6 {
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+    .landing-page-text {
+        margin-top: 4.5em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .landing-page-text {
+        width: 60%;
+        font-size: 4.2rem;
+        padding: 20px 40px;
+        margin-top: 2em;
+    }
+
+    .landing-page {
+        min-height: 100vh;
+    }
+
+    .landing-page h6 {
+        font-size: 1.3rem;
+    }
+}

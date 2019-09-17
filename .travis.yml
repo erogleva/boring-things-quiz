@@ -6,21 +6,11 @@ node_js:
 
 cache:
   directories:
-  - boring-things-quiz/frontend/node_modules
+  - boring-things-quiz/node_modules
 
 script:
-  - cd boring-things-quiz/frontend
+  - cd boring-things-quiz
   - npm ci
   - npm run compile
   - npm run build
 
-env:
-  - REACT_APP_BACKEND_URL=https://boring-things-api.herokuapp.com
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: boring-things-quiz/frontend/build
-  on:
-   branch: master

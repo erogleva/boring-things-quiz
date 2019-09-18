@@ -55,6 +55,7 @@
     "react-dev-utils": "^9.0.1",
     "react-dom": "^16.8.6",
     "react-flags-select": "^1.1.10",
+    "react-idle-timer": "^4.2.9",
     "react-materialize": "^3.3.1",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",

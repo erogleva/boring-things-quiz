@@ -1,7 +1,7 @@
 {
   "name": "boring-things-quiz",
   "version": "0.1.0",
-  "homepage": "http://erogleva.github.io/boring-things-quiz",
+  "homepage": "./",
   "private": true,
   "license": "MIT",
   "dependencies": {
@@ -12,7 +12,7 @@
     "@types/react": "16.8.13",
     "@types/react-beautiful-dnd": "^11.0.0",
     "@types/react-dom": "16.8.4",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "canvas-confetti": "^0.2.1",
     "material-icons-react": "^1.0.4",
     "materialize-css": "^1.0.0",
@@ -20,6 +20,7 @@
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.0",
     "react-dom": "^16.8.6",
+    "react-idle-timer": "^4.2.9",
     "react-materialize": "^3.0.5",
     "react-scripts": "^2.1.8",
     "typescript": "3.4.3",

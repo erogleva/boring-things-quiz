@@ -67,13 +67,13 @@ const ObjectsGrid = (props: Props) => {
             } else if (correctObjects.length > 0) {
                 return <Row>
                     <h6><Plural value={correctObjects.length}
-                                one='Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!'
-                                other='Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!'/>
+                                one='Leider hast du nur ein Objekt richtig identifiziert. Versuche es noch einmal!'
+                                other='Leider hast du nur # Objekte richtig identifiziert. Versuche es noch einmal!'/>
                     </h6>
                 </Row>
             } else {
                 return <Row>
-                    <Trans> Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!</Trans>
+                    <Trans> Leider sind das nicht die richtigen Objekte. Versuche es noch einmal!</Trans>
                 </Row>
             }
         }

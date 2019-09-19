@@ -13,28 +13,28 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/level-four/TinderObjects.tsx:78
+#: src/components/level-three/TinderObjects.tsx:76
 msgid "<0>Auf dem Server ist ein interner Fehler aufgetreten.</0>"
 msgstr "<0>Auf dem Server ist ein interner Fehler aufgetreten.</0>"
 
-#: src/components/landing-page/LandingPage.tsx:15
+#: src/components/landing-page/LandingPage.tsx:13
 msgid "Auch unscheinbare Objekte können eine Geschichte erzählen."
 msgstr "Auch unscheinbare Objekte können eine Geschichte erzählen."
 
-#: src/components/level-one/ObjectsGrid.tsx:31
+#: src/components/level-one/ObjectsGrid.tsx:41
 msgid "Bitte wähle drei Objekte aus!"
 msgstr "Bitte wähle drei Objekte aus!"
 
-#: src/App.tsx:87
+#: src/App.tsx:80
 #: src/components/HelpPage.tsx:18
 msgid "Brauchst du Hilfe?"
 msgstr "Brauchst du Hilfe?"
 
-#: src/components/level-one/ObjectsGrid.tsx:58
+#: src/components/level-one/ObjectsGrid.tsx:68
 msgid "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 msgstr "Drei dieser Dinge kannst du im Stadtmuseum Tübingen finden. Kannst du erraten welche?"
 
-#: src/components/level-one/ObjectsGrid.tsx:38
+#: src/components/level-one/ObjectsGrid.tsx:48
 #: src/components/level-two/TextsQuiz.tsx:38
 #: src/components/level-two/TextsQuiz.tsx:66
 msgid "Gehe zu Level {0}"
@@ -57,7 +57,7 @@ msgstr "Glückwunsch, alle Objekte sind richtig zugeordnet!"
 msgid "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 msgstr "Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild."
 
-#: src/components/level-four/TinderObjects.tsx:68
+#: src/components/level-three/TinderObjects.tsx:65
 msgid "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht? <0/> Klicke auf das Bild, um mehr über das Objekt zu erfahren."
 msgstr "Jetzt darfst du uns mal deine Meinung sagen! Findest du das Objekt \"langweilig\" oder nicht? <0/> Klicke auf das Bild, um mehr über das Objekt zu erfahren."
 
@@ -66,27 +66,27 @@ msgid "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibun
 msgstr "Jetzt wird es schon etwas schwieriger. Kannst du die korrekte Beschreibung dem Objekt zuordnen?"
 
 #: src/components/HelpPage.tsx:12
-msgid "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
-msgstr "Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken."
+msgid "Klicke auf ein Bild, um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen, musst du ein zweites Mal auf das Bild drücken."
+msgstr "Klicke auf ein Bild, um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen, musst du ein zweites Mal auf das Bild drücken."
 
-#: src/components/landing-page/LandingPage.tsx:19
-msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
-msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/>  <1>Stadtmuseum Tübingen</1>."
+#: src/components/landing-page/LandingPage.tsx:17
+msgid "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/> Stadtmuseum Tübingen."
+msgstr "Lass uns auf Entdeckungsreise gehen und spannende Objekte kennenlernen, die ausgestellt sind im <0/> Stadtmuseum Tübingen."
 
-#: src/App.tsx:81
-#: src/components/landing-page/LandingPage.tsx:14
+#: src/App.tsx:74
+#: src/components/landing-page/LandingPage.tsx:12
 msgid "Lauter langweilige Sachen?"
 msgstr "Lauter langweilige Sachen?"
 
-#: src/components/level-one/ObjectsGrid.tsx:49
-msgid "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
-msgstr "Leider sind das nicht die richtigen Objekte. Versuch es noch einmal!"
+#: src/components/level-one/ObjectsGrid.tsx:59
+msgid "Leider sind das nicht die richtigen Objekte. Versuche es noch einmal!"
+msgstr "Leider sind das nicht die richtigen Objekte. Versuche es noch einmal!"
 
-#: src/components/landing-page/LandingPage.tsx:33
+#: src/components/landing-page/LandingPage.tsx:31
 msgid "Los geht’s!"
 msgstr "Los geht’s!"
 
-#: src/components/level-one/ObjectsGrid.tsx:55
+#: src/components/level-one/ObjectsGrid.tsx:65
 msgid "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber haben eine spannende Geschichte zu erzählen."
 
@@ -94,7 +94,7 @@ msgstr "Manche Sachen sehen vielleicht auf den ersten Blick langweilig aus, aber
 msgid "Matchen"
 msgstr "Matchen"
 
-#: src/components/level-four/TinderObjects.tsx:92
+#: src/components/level-three/TinderObjects.tsx:90
 msgid "Nächstes Objekt bewerten?"
 msgstr "Nächstes Objekt bewerten?"
 
@@ -106,15 +106,15 @@ msgstr "Ob du wirklich richtig liegst, merkst du, wenn du das Häckchen siehst."
 msgid "Raten"
 msgstr "Raten"
 
-#: src/components/level-one/ObjectsGrid.tsx:67
+#: src/components/level-one/ObjectsGrid.tsx:77
 msgid "Senden"
 msgstr "Senden"
 
-#: src/components/level-four/TinderObjects.tsx:90
+#: src/components/level-three/TinderObjects.tsx:88
 msgid "Spiel von vorne starten!"
 msgstr "Spiel von vorne starten!"
 
-#: src/components/level-one/ObjectsGrid.tsx:38
+#: src/components/level-one/ObjectsGrid.tsx:48
 msgid "Super! Du hast alle Objekte richtig identifiziert!"
 msgstr "Super! Du hast alle Objekte richtig identifiziert!"
 
@@ -122,7 +122,7 @@ msgstr "Super! Du hast alle Objekte richtig identifiziert!"
 msgid "Tindern"
 msgstr "Tindern"
 
-#: src/components/landing-page/LandingPage.tsx:22
+#: src/components/landing-page/LandingPage.tsx:20
 msgid "Wähle deine Sprache"
 msgstr "Wähle deine Sprache"
 
@@ -130,7 +130,7 @@ msgstr "Wähle deine Sprache"
 msgid "Zieh ein Bild hierher"
 msgstr "Zieh ein Bild hierher"
 
-#: src/components/common/Modal.tsx:20
+#: src/components/common/Modal.tsx:21
 msgid "Zurück"
 msgstr "Zurück"
 
@@ -142,14 +142,14 @@ msgstr "Zurück zum Spiel"
 msgid "restartPageText"
 msgstr "Du hast nun die zwei Spiele erfolgreich gelöst. <0/>Falls du die Sammlung online weiter erkunden willst, kannst du jedes Spiel nochmal spielen indem du auf das Icon oben klickst. Die Objekte ändern sich jedes Mal. <1/>Du hast jetzt unser Bonus Spiel freigeschaltet und kannst Objekte „tindern“. <2/>Wir wünschen dir viel Spaß beim Weiterspielen! <3/>"
 
-#: src/components/level-one/ObjectsGrid.tsx:43
-msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
-msgstr "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuch es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuch es noch einmal!}}"
+#: src/components/level-one/ObjectsGrid.tsx:53
+msgid "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuche es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuche es noch einmal!}}"
+msgstr "{0, plural, one {Leider hast du nur ein Objekt richtig identifiziert. Versuche es noch einmal!} other {Leider hast du nur # Objekte richtig identifiziert. Versuche es noch einmal!}}"
 
-#: src/components/level-four/TinderObjects.tsx:75
+#: src/components/level-three/TinderObjects.tsx:72
 msgid "{dislikePercentage} Prozent der Nutzer fanden dieses Objekt auch langweilig!"
 msgstr "{dislikePercentage} Prozent der Nutzer fanden dieses Objekt auch langweilig!"
 
-#: src/components/level-four/TinderObjects.tsx:73
+#: src/components/level-three/TinderObjects.tsx:70
 msgid "{likesPercentage} Prozent der Nutzer fanden dieses Objekt auch interessant!"
 msgstr "{likesPercentage} Prozent der Nutzer fanden dieses Objekt auch interessant!"

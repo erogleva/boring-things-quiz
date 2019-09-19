@@ -19,7 +19,7 @@ const HelpPage = (props: Props) => {
     const getText = () => {
         switch (props.currentPage){
             case LEVEL_ONE:
-                return <Trans>Klicke auf ein Bild um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen musst du ein zweites Mal auf das Bild drücken.</Trans>;
+                return <Trans>Klicke auf ein Bild, um es auszuwählen. Um ein bereits ausgewähltes Bild zu entfernen, musst du ein zweites Mal auf das Bild drücken.</Trans>;
             case LEVEL_TWO:
                 return <Trans>Jeder Text passt zu einem Bild. Zieh den Text zu dem passendem Bild.</Trans>;
         }

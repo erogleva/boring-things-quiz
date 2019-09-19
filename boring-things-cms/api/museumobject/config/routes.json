@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/museumobjects",
+      "handler": "Museumobject.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/museumobjects/count",
+      "handler": "Museumobject.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/museumobjects/:id",
+      "handler": "Museumobject.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/museumobjects",
+      "handler": "Museumobject.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/museumobjects/:id/like",
+      "handler": "Museumobject.like",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/museumobjects/:id/dislike",
+      "handler": "Museumobject.dislike",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/museumobjects/:id",
+      "handler": "Museumobject.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/museumobjects/:id",
+      "handler": "Museumobject.delete",
+      "config": {
+        "policies": []
+      }
+    }    
+  ]
+}

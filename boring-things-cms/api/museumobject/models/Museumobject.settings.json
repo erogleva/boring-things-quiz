@@ -1,0 +1,55 @@
+{
+  "connection": "default",
+  "collectionName": "museumobject",
+  "info": {
+    "name": "museumobject",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true
+    },
+    "likes": {
+      "type": "integer",
+      "default": "0",
+      "required": true
+    },
+    "dislikes": {
+      "type": "integer",
+      "default": "0",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "quizDescriptionDE": {
+      "required": true,
+      "type": "text",
+      "unique": true
+    },
+    "quizDescriptionEN": {
+      "required": true,
+      "type": "text",
+      "unique": true
+    },
+    "detailedDescriptionDE": {
+      "required": true,
+      "type": "text",
+      "unique": true
+    },
+    "detailedDescriptionEN": {
+      "required": true,
+      "unique": true,
+      "type": "text"
+    }
+  }
+}

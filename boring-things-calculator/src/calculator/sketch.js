@@ -39,7 +39,7 @@ export default function sketch(p) {
     var buttonArray = [];
     var displayArray = [];
     var ValueDisplayArray = [];
-    const buttonValues = ["100000","10000","1000","100","10","1"];
+    var buttonValues = [];
 
     const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -121,12 +121,12 @@ export default function sketch(p) {
         display5 = new display(50, 28, 10,resizeFactor,25, p);
         display6 = new display(50, 28, 10,resizeFactor,25, p);
 
-        ValueDisplay1 = new display(56, 20, 10,resizeFactor,15, p);
-        ValueDisplay2 = new display(56, 20, 10,resizeFactor,15, p);
-        ValueDisplay3 = new display(56, 20, 10,resizeFactor,15, p);
-        ValueDisplay4 = new display(56, 20, 10,resizeFactor,15, p);
-        ValueDisplay5 = new display(56, 20, 10,resizeFactor,15, p);
-        ValueDisplay6 = new display(56, 20, 10,resizeFactor,15, p);
+        ValueDisplay1 = new display(64, 20, 10,resizeFactor,13, p);
+        ValueDisplay2 = new display(64, 20, 10,resizeFactor,13, p);
+        ValueDisplay3 = new display(64, 20, 10,resizeFactor,13, p);
+        ValueDisplay4 = new display(64, 20, 10,resizeFactor,13, p);
+        ValueDisplay5 = new display(64, 20, 10,resizeFactor,13, p);
+        ValueDisplay6 = new display(64, 20, 10,resizeFactor,13, p);
 
         ValueDisplay1.setColor("#cbe9e7");
         ValueDisplay2.setColor("#cbe9e7");
@@ -168,6 +168,7 @@ export default function sketch(p) {
             displayElement.show(calculator.getButtonX(i), calculator.getButtonY() - (58/resizeFactor), p.str(buttonArray[i].getPosition()));
         });
 
+        buttonValues = [i18n._(t`100000er`),i18n._(t`10000er`),i18n._(t`1000er`),i18n._(t`100er`),i18n._(t`10er`),i18n._(t`1er`)];
         ValueDisplayArray.forEach(function (ValueDisplayElement, i) {
             ValueDisplayElement.show(calculator.getButtonX(i), calculator.getButtonY() + (48/resizeFactor), buttonValues[i]);
         });

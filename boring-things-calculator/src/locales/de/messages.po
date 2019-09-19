@@ -13,11 +13,35 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/calculator/CalculatorWrapper.js:69
+#: src/calculator/sketch.js:42
+msgid "100000er"
+msgstr "100000er"
+
+#: src/calculator/sketch.js:42
+msgid "10000er"
+msgstr "10000er"
+
+#: src/calculator/sketch.js:42
+msgid "1000er"
+msgstr "1000er"
+
+#: src/calculator/sketch.js:42
+msgid "100er"
+msgstr "100er"
+
+#: src/calculator/sketch.js:42
+msgid "10er"
+msgstr "10er"
+
+#: src/calculator/sketch.js:42
+msgid "1er"
+msgstr "1er"
+
+#: src/calculator/CalculatorWrapper.js:71
 msgid "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschine."
 msgstr "<0> Hier </0> findest du auch eine Videoanleitung für die Rechenmaschine."
 
-#: src/calculator/CalculatorWrapper.js:53
+#: src/calculator/CalculatorWrapper.js:55
 msgid "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen!"
 msgstr "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen!"
 
@@ -25,23 +49,23 @@ msgstr "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen!"
 #~ msgid "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen! <0/>Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <1/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <2/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <3>Enter!</3> um dein Ergebnis zu überprüfen. <4/>Viel Spaß!"
 #~ msgstr "Benutze Schickards Rechenmaschine, um die Aufgabe zu lösen! <0/>Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <1/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <2/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <3>Enter!</3> um dein Ergebnis zu überprüfen. <4/>Viel Spaß!"
 
-#: src/calculator/sketch.js:172
+#: src/calculator/sketch.js:194
 msgid "Enter!"
 msgstr "Enter!"
 
-#: src/calculator/CalculatorWrapper.js:55
+#: src/calculator/CalculatorWrapper.js:57
 msgid "Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <0/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <1/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <2>Enter!</2> um dein Ergebnis zu überprüfen. <3/>Viel Spaß!"
 msgstr "Gebe die Zahlen ein, indem du auf die Räder unter den bunten Feldern klickst. Die Felder stehen für Einser, Zehner, Hunderter usw. Du musst immer von rechts nach links arbeiten – also mit den Einsern beginnen. <0/>Lautet die Aufgabe z.B. 23 + 45, gibst du zuerst die Drei ein, indem du drei Mal auf das erste Ziffernrad von rechts klickst. Dann gehst du ein Ziffernrad nach links und klickst zwei Mal. Jetzt brauchst du weder ein Pluszeichen noch auf null zurückzustellen, sondern klickst einfach die 45 auf die gleiche Weise ein. Aber vergiss nicht zu zählen, wie oft du geklickt hast! Die Rechenmaschine zählt jeden Klick mit und addiert automatisch. <1/>Das Endergebnis wird dir in den farbigen Feldern angezeigt. Drück auf <2>Enter!</2> um dein Ergebnis zu überprüfen. <3/>Viel Spaß!"
 
-#: src/calculator/sketch.js:166
+#: src/calculator/sketch.js:188
 msgid "Löschen"
 msgstr "Löschen"
 
-#: src/calculator/sketch.js:168
+#: src/calculator/sketch.js:190
 msgid "Neustart"
 msgstr "Neustart"
 
-#: src/calculator/sketch.js:163
+#: src/calculator/sketch.js:185
 msgid "Weiter!"
 msgstr "Weiter!"
 
@@ -49,6 +73,6 @@ msgstr "Weiter!"
 #~ msgid "Wähle deine Sprache"
 #~ msgstr "Wähle deine Sprache"
 
-#: src/calculator/CalculatorHelp.js:18
+#: src/calculator/CalculatorHelp.js:19
 msgid "Zurück zum Spiel"
 msgstr "Zurück zum Spiel"

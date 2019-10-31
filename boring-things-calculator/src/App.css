@@ -6,10 +6,9 @@
 }
 
 .calculator-main-page {
-  text-align: center;
   background-color: #7fcac3;
   color: #000;
-  padding: 1.5em 0;
+  padding: 1.5em 1em;
 }
 
 .calculator-main-page h6 {
@@ -70,6 +69,18 @@
 
 .select-dropdown.dropdown-content li:hover {
   background-color: #eeeeee !important;
+}
+
+h5.video-link {
+  font-size: 1.3em;
+}
+
+h5 {
+  text-align: center;
+}
+
+h5 {
+  margin: 0 auto;
 }
 
 

@@ -17,6 +17,7 @@
   max-width: 760px;
   margin: 0 auto;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .flag-select.menu-flags {
